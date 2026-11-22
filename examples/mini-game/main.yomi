@@ -1,0 +1,140 @@
+// 村の依頼 ― 見習い冒険者が、相棒と森の祠へ向かうまでのミニゲーム。
+// 実行: yomi run examples/mini-game/main.yomi --seed 7
+import std::audio
+import std::image
+import std::input
+import chara
+import shop
+import game
+import ending
+
+// 主人公の名前（最初に入力する）
+save var player: str = "ゆうと"
+// 日が暮れるまでに回れる残りの場所の数
+save var turns: int = 5
+// 「次の依頼も一緒に」の約束をしたか
+save var promised: bool = false
+
+label start {
+    @audio.play("bgm", "village_day", fade: 1.0)
+    @image.show("bg", "village_gate", 0.0, 0.0, 0.5)
+    昼下がりの村の門。相棒のリオンが、地図を広げて待っていた。 #vlrwbv
+    @image.show("partner", "rion_travel", 0.7, 0.5, 0.5)
+    相棒「遅いよ！　日が暮れる前に、準備を済ませないと」 #87hoxu
+    if ending.cleared_count() > 0 {
+        不思議と、この景色を前にも見た気がした。 #1mq9we
+        if seen("ending.sealed#seal_last") {
+            あの夜の祠の光を、まだ覚えている。 #bgpbo5
+        }
+    }
+    jump register
+}
+
+// 冒険者ギルドの受付で、名前を書く
+label register {
+    受付「依頼の名簿に、お名前をお願いします」 #ewmpvk
+    player = @input.text("名前は？", "ゆうと", 6) #wlh37x
+    let ok = @input.confirm("${player}で、よろしいですか？") #erbe71
+    if !ok {
+        受付「おや、書き間違えですか。もう一度どうぞ」 #ojypp0
+        jump register
+    }
+    相棒「${player}さん、っと。さあ、行こう！」 #6io7qk
+    @image.hide("bg", 0.5)
+    @image.show("bg", "village_square", 0.0, 0.0, 1.0)
+    @audio.play("bgm", "village_evening", fade: 1.5)
+    jump square
+}
+
+// 村の広場。回れる回数だけ、行き先を選ぶ
+label square {
+    while turns > 0 {
+        「（日暮れまでに、あと ${turns} か所は回れそうだ）」 #yjtlbt
+        match chara.mood_of(chara.trust) {
+            Confident => {
+                リオンは、やる気に満ちている。（信頼度 ${chara.trust}） #2slav2
+            }
+            Normal => {
+                リオンは、いつもどおりの顔をしている。（信頼度 ${chara.trust}） #6wi6kw
+            }
+            Uneasy => {
+                リオンは、少し不安そうだ。（信頼度 ${chara.trust}） #bgoyki
+            }
+        }
+        choice {
+            「道具屋で買い物をする」 #ewtm2h                      => {
+                let gain = call shop.store()
+                chara.trust += gain
+                turns -= 1
+            }
+            「弓の練習場に行く」 once #archery                    => {
+                let prizes = call game.archery()
+                for name in prizes {
+                    call shop.give(name)
+                    chara.trust += 2
+                }
+                turns -= 1
+            }
+            「村の長老に挨拶する」 once #elder                    => {
+                call greet_elder()
+                turns -= 1
+            }
+            「池で釣りをする」 once if shop.money >= 300 #fishing => {
+                let ok = call shop.buy("釣り竿")
+                if ok {
+                    相棒「大物だ！　今夜のごはんにしよう」 #t9z0ys
+                    chara.trust += 2
+                }
+                turns -= 1
+            }
+            「そろそろ森へ向かう」 #83j1e2                        => {
+                turns = 0
+            }
+        }
+    }
+    jump forest
+}
+
+label greet_elder {
+    @image.show("elder", "elder_house", 0.2, 0.5, 0.5)
+    長老「おお、${player}殿とリオンか。よい組み合わせじゃ」 #e92s4l
+    相棒「はい、頼りにしてます」 #hfw81l
+    chara.trust += 1
+    @image.hide("elder", 0.5)
+}
+
+// 森の祠の前。封印の儀式を始める前に、相棒と話す
+label forest {
+    @audio.play("bgm", "forest", fade: 1.0)
+    森の奥へ進むと、村のざわめきが遠くなった。 #tvghl4
+    相棒「ねえ、${player}さん。次の依頼も、一緒に受けてくれる？」 #9z859j
+    choice {
+        「もちろん。約束する」 #94p59w => {
+            promised = true
+            chara.trust += 1
+            相棒「うん、約束だよ」 #9ytruu
+        }
+        「どうだろうね」 #xcagke       => {
+            chara.trust -= 1
+            相棒「……そっか」 #xb5a3h
+        }
+    }
+    if visited("greet_elder") {
+        長老の言葉を思い出して、杖を握り直した。 #drokaa
+    }
+    jump decide
+}
+
+// 信頼度と持ち物で、結末を決める
+label decide {
+    let e = ending.Ending.Quiet
+    if chara.trust <= 2 {
+        e = ending.Ending.Lost
+    } else if chara.trust >= 6 && shop.bag.has("護符") {
+        e = ending.Ending.Sealed
+        if promised && ending.has_cleared(ending.Ending.Sealed) {
+            e = ending.Ending.Promise
+        }
+    }
+    call ending.finish(e)
+}

@@ -1,0 +1,18 @@
+label first {
+}
+save var first: int = 0
+
+save var second: int = 0
+label second {
+}
+
+save var third: int = 0
+save var third: int = 1
+label third {
+}
+label third {
+}
+
+label start {
+  let first = 1
+}

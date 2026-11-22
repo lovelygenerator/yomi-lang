@@ -1,0 +1,15 @@
+警告 6:53 unknown_position position="start#nothing"
+警告 7:12 unknown_position position="start"
+警告 7:29 unknown_position position="nolabel#ok"
+警告 7:51 unknown_position position="nomodule.start#ok"
+警告 8:35 unknown_label_literal label="nolabel"
+警告 8:57 unknown_label_literal label="start#ok"
+警告 8:80 unknown_label_literal label="a.b.c"
+停止 ui.say("もう一つ") #ok
+停止 ui.choose(["「a」"], [Some("opt")])
+選択 0
+停止 ui.say("a")
+停止 ui.say("あ true true false")
+停止 ui.say("い false false false")
+停止 ui.say("う true false false false")
+終了

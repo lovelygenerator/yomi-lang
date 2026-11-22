@@ -1,0 +1,2 @@
+停止 ui.say("あ")
+実行時エラー division_by_zero label=inner line=11

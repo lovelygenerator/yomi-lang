@@ -1,0 +1,6 @@
+import std::image
+
+label start {
+  @image.clear(-1.0)
+  後
+}

@@ -1,0 +1,14 @@
+// sort・sort_by・min_by・max_by・sum は、int・float・str・bool の列（キー）だけ
+struct Unit {
+  name: str,
+  hp: int,
+}
+
+label start {
+  let us = [Unit { name: "a", hp: 1 }]
+  let a = us.sort()
+  let b = us.sort_by(|u| u)
+  let c = us.max_by(|u| [u.hp])
+  let d = ["x"].sum()
+  end
+}

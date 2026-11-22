@@ -1,0 +1,9 @@
+save var n: int = 0
+
+label start {
+  おはよう
+  n += 1
+  こんにちは ${n}
+  n += 1
+  さようなら ${n}
+}

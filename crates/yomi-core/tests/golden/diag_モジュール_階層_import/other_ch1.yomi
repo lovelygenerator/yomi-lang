@@ -1,0 +1,4 @@
+// @module: other::ch1
+label go {
+  end
+}

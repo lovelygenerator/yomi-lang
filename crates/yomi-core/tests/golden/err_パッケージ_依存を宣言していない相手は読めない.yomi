@@ -1,0 +1,6 @@
+// @packages: counter other mirror
+import mirror
+
+label start {
+  ${mirror.peek_other()}
+}

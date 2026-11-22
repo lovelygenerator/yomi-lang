@@ -1,0 +1,6 @@
+label start {
+  jump nowhere
+  if true {
+    jump 別の場所
+  }
+}

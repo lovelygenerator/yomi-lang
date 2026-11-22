@@ -1,0 +1,10 @@
+label start {
+  let f = 2.75
+  切り捨て: ${to_int(f)} ${to_int(-2.75)} ${to_int(0.99)} ${to_int(-0.99)} ${to_int(3.0)}
+  整数から: ${to_float(7)} ${to_float(-3)} ${to_float(0)}
+  to_float(9007199254740993) = ${to_float(9007199254740993)}
+  let n = to_int(f * 4.0) + 1
+  n は ${n}
+  端: ${to_int(9223372036854774784.0)} ${to_int(-9223372036854775808.0)}
+  入れ子: ${to_int(to_float(to_int(1.5) + 2) / 2.0)}
+}

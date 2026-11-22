@@ -1,0 +1,7 @@
+import std::text
+
+label start {
+  前
+  ${text.split("abc", "")}
+  後
+}

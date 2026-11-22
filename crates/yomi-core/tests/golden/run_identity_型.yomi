@@ -1,0 +1,23 @@
+identity 案内人 = "あんないにん"
+identity 門番 = "もんばん"
+
+save var talker: Identity = 案内人
+save var count: map<Identity, int> = map {}
+
+label start {
+  let who: Identity = 門番
+  ${who.id} ${who.name} ${案内人.name}
+  if who != talker {
+    違う
+  }
+  talker = who
+  if who == talker {
+    同じ
+  }
+  let all: list<Identity> = [案内人, 門番]
+  for c in all {
+    count[c] = 1
+  }
+  ${all.len()} ${count[案内人]} ${count.has(門番)}
+  案内人「おはよう」
+}

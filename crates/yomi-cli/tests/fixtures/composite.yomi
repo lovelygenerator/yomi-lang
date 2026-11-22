@@ -1,0 +1,19 @@
+enum Mode { Idle, Run(int) }
+struct Chara { name: str, hp: int, items: list<str> }
+
+save var c: Chara = Chara { name: "案内人", hp: 10, items: [] }
+save var mode: Mode = Mode.Idle
+save var best: Option<int> = None
+
+label start {
+  c.hp -= 3
+  c.items.push("薬")
+  はじまり ${c.hp}
+  mode = Mode.Run(2)
+  best = Some(c.hp)
+  match mode {
+    Idle => 待機
+    Run(n) => ${n}歩
+  }
+  おわり
+}

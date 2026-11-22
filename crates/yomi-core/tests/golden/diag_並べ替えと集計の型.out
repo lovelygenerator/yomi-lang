@@ -1,0 +1,4 @@
+9:11 unsupported_element_type method="sort" type="main.Unit"
+10:11 unsupported_element_type method="sort_by" type="main.Unit"
+11:11 unsupported_element_type method="max_by" type="list<int>"
+12:17 unsupported_element_type method="sum" type="str"

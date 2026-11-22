@@ -1,0 +1,6 @@
+label start {
+  let a = b + 1
+  c = 2
+  ${d}
+  c += e
+}

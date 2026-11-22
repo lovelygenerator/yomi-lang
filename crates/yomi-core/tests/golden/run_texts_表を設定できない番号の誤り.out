@@ -1,0 +1,7 @@
+検査 エラー bad_number key="main.start#a" number=3 count=1
+検査 エラー bad_number key="main.start#b" number=1 count=0
+表の誤り エラー bad_number key="main.start#a" number=3 count=1
+表の誤り エラー bad_number key="main.start#b" number=1 count=0
+停止 ui.say("ひとつ 2") #a
+停止 ui.say("なし") #b
+終了

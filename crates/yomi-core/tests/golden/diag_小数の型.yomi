@@ -1,0 +1,31 @@
+save var a: float = 1
+save var b: float = 1.5
+save var c: int = 1.5
+save var d: float = -2
+save var e: float = 1_.5
+save var f: float = 1.5_
+save var g: float = 1.5.2
+
+label start {
+  let i = 1 + 1.5
+  let j = 1.5 + 1
+  let k = 2.0 % 1.5
+  let l = 7 % 2.0
+  let m = 1.5 < 2
+  let n = 1.5 == 1
+  let o: float = 1
+  let p: int = 2.5
+  b = 1
+  c = 2.5
+  b += 1
+  c += 1.5
+  b %= 2.0
+  let q = -1.5
+  let r: int = q
+  let s = !1.5
+  let t = 1.5 && true
+  if 1.5 {
+  }
+  @game.give("a", 1.5)
+  @game.roll(2.5)
+}

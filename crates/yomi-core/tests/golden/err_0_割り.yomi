@@ -1,0 +1,7 @@
+save var z: int = 0
+
+label start {
+  一
+  ${10 / z}
+  二
+}

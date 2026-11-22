@@ -1,0 +1,21 @@
+fn scaled(x: int, times: int = 2, plus: int = 0) -> int {
+  return x * times + plus
+}
+
+label start {
+  ${scaled(3)} ${scaled(3, 4)} ${scaled(3, plus: 1)} ${scaled(x: 3, times: 1, plus: 5)} ${scaled(3, times: 10)}
+  let r = call greet("案内人")
+  ${r}
+  let r2 = call greet("村長", polite: false)
+  ${r2}
+  @game.give("りんご")
+  @game.give("みかん", count: 3)
+  @game.give(item: "なし")
+}
+
+label greet(who: str, polite: bool = true) -> str {
+  if polite {
+    return "${who}さん"
+  }
+  return who
+}

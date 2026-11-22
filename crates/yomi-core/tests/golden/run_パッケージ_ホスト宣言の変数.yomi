@@ -1,0 +1,13 @@
+// @packages: counter
+// @show: vars
+import counter
+
+label start {
+  初期 ${counter.step} ${counter.best} ${counter.locked} ${counter.title}
+  counter.step = 5
+  counter.step *= 3
+  counter.best -= 2
+  counter.title = "新しい題"
+  変更後 ${counter.step} ${counter.best} ${counter.title}
+  ${counter.step + counter.best}
+}

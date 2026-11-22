@@ -1,0 +1,35 @@
+struct Holder { m: map<float, int> }
+enum E { A(float), B }
+struct K2 { k: map<E, int> }
+struct Ok1 { k: map<Dir, str> }
+enum Dir { N, S(int, str) }
+save var a: map<list<int>, int> = map {}
+save var b: map<str> = map {}
+save var c: map<str, int> = map { "a": 1, "a": 2 }
+save var d: map<str, int> = map { "a": 1.5 }
+save var e: map<str, int> = map {}
+
+label start {
+  let m = map {}
+  let n: map<str, int> = map { "a": "x" }
+  let o: map<str, int> = map { 1: 1 }
+  let p: map<str, int> = map { "a": 1 }
+  let q = p[1]
+  ${p.has(1)}
+  ${p.push(1)}
+  ${p.remove("a")}
+  p.push(1)
+  ${p.nope()}
+  ${p.get()}
+  let f = map { 1.5: 1 }
+  let g = map { [1]: 1 }
+  let h = map { Some(1): 1 }
+  let i = map { 1: 1, "b": 2 }
+  let j: map<int, int> = []
+  let k: list<int> = map { 1: 1 }
+  p[1] = 3
+  p["x"] = "y"
+  p["x"] += 1.5
+  p.remove(1)
+  p.clear(1)
+}

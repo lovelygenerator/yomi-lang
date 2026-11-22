@@ -1,0 +1,10 @@
+import std::image
+
+label start {
+  左は ${image.shown("left")} ${image.name("left")}
+  @image.show("left", "guide", 0.2, 0.3, 0.0)
+  左は ${image.shown("left")} ${image.name("left")}
+  右は ${image.shown("right")} ${image.name("right")}
+  @image.hide("left", 0.0)
+  左は ${image.shown("left")} ${image.name("left")}
+}

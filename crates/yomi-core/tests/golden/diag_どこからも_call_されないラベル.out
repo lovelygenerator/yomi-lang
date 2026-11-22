@@ -1,0 +1,6 @@
+警告 20:7 label_falls_through name="never_called"
+警告 42:7 label_falls_through name="never_called_if"
+警告 48:7 label_falls_through name="orphan"
+停止 ui.say("あ")
+停止 ui.say("場面")
+終了

@@ -1,0 +1,14 @@
+label start {
+  let n = call first_big(3)
+  ${n}
+}
+
+label first_big(limit: int) -> int {
+  let i = 0
+  while true {
+    i += 1
+    if i * i > limit {
+      return i
+    }
+  }
+}

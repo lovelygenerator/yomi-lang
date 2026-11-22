@@ -1,0 +1,16 @@
+停止 ui.say("Day 7 for ミナ (ミナ!)") #p1
+停止 ui.say_as(Some(Identity(案内人, "あんないにん")), "Imouto: 「14 items, ミナ」") #p2
+停止 ui.say("訳のない行") #p3
+停止 ui.say("ID のない行")
+停止 game.give("薬7", 7)
+停止 ui.choose(["「Yes 7」", "「No」", "「保留」"], [Some("yes"), Some("no"), None])
+選択 1
+停止 ui.say("いいえと答えた") #e2
+終了
+描画 main.start#p1 ui.say("Day 7 for ミナ (ミナ!)") 本文=Some("Day 7 for ミナ (ミナ!)")
+描画 main.start#p2 ui.say_as(Some(Identity(案内人, "あんないにん")), "Imouto: 「14 items, ミナ」") 本文=Some("Imouto: 「14 items, ミナ」")
+描画 main.start#p3 ui.say("訳のない行") 本文=Some("訳のない行")
+描画 - ui.say("ID のない行") 本文=Some("ID のない行")
+描画 - game.give("薬7", 7) 本文=None
+描画 - ui.choose(["「Yes 7」", "「No」", "「保留」"], [Some("yes"), Some("no"), None]) 本文=None
+描画 main.start#e2 ui.say("いいえと答えた") 本文=Some("いいえと答えた")

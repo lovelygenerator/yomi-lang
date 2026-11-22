@@ -1,0 +1,8 @@
+// @registry: no-quote
+identity 案内人 = "案内人"
+
+label start {
+  素の行
+  案内人「あ」
+  「い」
+}

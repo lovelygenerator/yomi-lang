@@ -1,0 +1,7 @@
+fn deep(n: int) -> int {
+  return deep(n + 1)
+}
+
+label start {
+  ${deep(0)}
+}

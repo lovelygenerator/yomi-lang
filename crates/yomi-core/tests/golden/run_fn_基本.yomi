@@ -1,0 +1,39 @@
+// @show: vars
+save var base: int = 100
+
+fn double(x: int) -> int {
+  return x * 2
+}
+
+fn plus_base(x: int) -> int {
+  return x + base
+}
+
+fn clamp(x: int, lo: int, hi: int) -> int {
+  if x < lo {
+    return lo
+  } else if x > hi {
+    return hi
+  }
+  return x
+}
+
+fn noop(x: int) {
+  let y = x
+  y += 1
+}
+
+label start {
+  let y = double(21)
+  y は ${y}、二倍の二倍は ${double(double(3))}
+  式の途中: ${1 + double(2) * double(3)} 、base 込み: ${plus_base(1)}
+  clamp: ${clamp(-5, 0, 10)} ${clamp(5, 0, 10)} ${clamp(50, 0, 10)}
+  if double(2) == 4 {
+    条件に使える
+  }
+  @noop(1)
+  let z = @double(4)
+  z は ${z}
+  base = 7
+  ${plus_base(1)}
+}

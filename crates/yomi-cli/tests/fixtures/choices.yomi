@@ -1,0 +1,23 @@
+identity 案内人 = "案内人"
+
+save var 回数: int = 0
+
+label start {
+  案内人「どうする？」
+  「ひとりごと」
+  choice {
+    「話す」 #talk => {
+      回数 += 1
+      話した
+    }
+    「調べる」 once #look => 調べた
+    「帰る」 if 回数 > 0 #leave => jump ending
+  }
+  続き
+  jump start
+}
+
+label ending {
+  さようなら
+  end
+}

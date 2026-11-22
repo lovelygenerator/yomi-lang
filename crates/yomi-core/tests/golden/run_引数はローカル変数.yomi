@@ -1,0 +1,16 @@
+save var total: int = 0
+
+label start {
+  let x = 100
+  call bump(5)
+  xは ${x} totalは ${total}
+  call bump(7)
+  xは ${x} totalは ${total}
+}
+
+label bump(x: int) {
+  let local = x * 2
+  x += 1
+  total += x + local
+  ${x}と${local}
+}

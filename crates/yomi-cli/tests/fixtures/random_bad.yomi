@@ -1,0 +1,6 @@
+save var lo: int = 3
+
+label start {
+  先に #a
+  let n = random(lo, lo - 1)
+}

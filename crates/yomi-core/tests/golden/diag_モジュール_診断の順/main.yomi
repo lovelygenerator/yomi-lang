@@ -1,0 +1,4 @@
+import zeta
+label start {
+  jump nowhere_main
+}

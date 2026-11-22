@@ -1,0 +1,13 @@
+4:12 unexpected_token found="junk"
+6:5 unknown_label name="nowhere"
+10:10 unexpected_token found="x"
+12:5 unknown_label name="nowhere2"
+16:9 unexpected_eol
+19:13 unexpected_token found=")"
+25:5 unexpected_token found="junk"
+29:13 unexpected_token found="余計"
+30:5 unknown_label name="nowhere5"
+32:16 unexpected_token found="余計"
+33:5 unknown_label name="nowhere6"
+34:5 unexpected_token found="junk"
+37:5 unexpected_token found="else"

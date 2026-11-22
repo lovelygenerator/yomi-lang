@@ -1,0 +1,9 @@
+import std::flow
+
+label start {
+  @flow.wait()
+  @flow.wait(1)
+  @flow.wait_input(1.0)
+  @flow.sleep(1.0)
+  let x = flow.wait(1.0)
+}

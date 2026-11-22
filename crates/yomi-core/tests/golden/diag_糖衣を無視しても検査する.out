@@ -1,0 +1,8 @@
+4:9 unknown_name name="nope"
+4:23 type_mismatch expected="int" found="str"
+5:6 unknown_name name="n"
+6:6 unknown_name name="n"
+8:9 once_without_id
+9:8 unknown_name name="nope2"
+9:22 unknown_label name="nowhere"
+10:12 condition_not_bool found="int"

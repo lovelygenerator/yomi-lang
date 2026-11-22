@@ -1,0 +1,23 @@
+save var gold: int = 0
+save var health: int = 0
+save var 信頼度: int = 0
+
+label start {
+  let hero = 1
+  gld += 1
+  heatlh = 1
+  ${好感}
+  ${heroo}
+  ${hxyz}
+  @game.giev("a", 1)
+  @game.pauze()
+  @ui.sai("x")
+  jump strat
+  jump nothing_like_it
+  let z = to_flaot(1)
+  let y = rondom(1)
+}
+
+label strat2 {
+  jump start
+}

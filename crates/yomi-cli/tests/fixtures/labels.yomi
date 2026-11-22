@@ -1,0 +1,8 @@
+label start {
+  最初
+  jump other
+}
+
+label other {
+  別のラベル
+}

@@ -1,0 +1,16 @@
+// 負荷用: 要素数 1 万の list に足して、全要素を更新して、合計する。
+save var xs: list<int> = []
+
+label start {
+    for i in range(0, 10000) {
+        xs.push(i)
+    }
+    for i in range(0, 10000) {
+        xs[i] = xs[i] * 2 + 1
+    }
+    let total = 0
+    for x in xs {
+        total += x
+    }
+    要素数: ${xs.len()}、合計: ${total}
+}

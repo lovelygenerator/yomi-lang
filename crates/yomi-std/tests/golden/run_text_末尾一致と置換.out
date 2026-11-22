@@ -1,0 +1,4 @@
+停止 ui.say("末尾 true false true")
+停止 ui.say("置換 ーいーいー ba abc")
+停止 ui.say("削除 abc 空 ")
+終了

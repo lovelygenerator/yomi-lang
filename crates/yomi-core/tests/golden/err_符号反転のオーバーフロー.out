@@ -1,0 +1,2 @@
+停止 ui.say("-9223372036854775808")
+実行時エラー integer_overflow label=start line=6

@@ -1,0 +1,15 @@
+10:4 missing_return name="f"
+17:10 type_mismatch expected="int" found="str"
+21:3 missing_return_value expected="int"
+25:10 unexpected_return_value
+28:4 duplicate_name name="double"
+32:7 duplicate_name name="score"
+警告 32:7 label_falls_through name="score"
+36:11 unknown_function name="doubel" suggestions=["double"]
+37:11 arg_count name="double" expected=1 found=2
+38:18 type_mismatch expected="int" found="str"
+39:16 type_mismatch expected="str" found="int"
+40:11 call_without_value name="noval"
+41:12 unknown_function name="nothing"
+42:3 unknown_command name="doubl"
+43:14 invalid_stable_id id="a"

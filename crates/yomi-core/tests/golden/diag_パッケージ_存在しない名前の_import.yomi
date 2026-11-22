@@ -1,0 +1,10 @@
+// @packages: counter
+import counte
+import nothing
+import counter
+
+label start {
+  jump counter.start
+  let a = counte.get()
+  let b = nowhere.get()
+}

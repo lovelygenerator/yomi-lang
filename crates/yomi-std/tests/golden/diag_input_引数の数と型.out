@@ -1,0 +1,6 @@
+4:3 arg_count name="input.text" expected=3 found=2
+5:25 type_mismatch expected="int" found="float"
+6:3 arg_count name="input.confirm" expected=1 found=0
+7:3 arg_count name="input.confirm" expected=1 found=2
+8:3 unknown_command name="input.number"
+9:11 invalid_command_use name="input.confirm" kind="stop"

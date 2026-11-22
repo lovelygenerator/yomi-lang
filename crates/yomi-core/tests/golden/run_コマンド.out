@@ -1,0 +1,6 @@
+停止 game.give("りんご", 3)
+停止 game.roll(4)
+停止 game.pause()
+停止 ui.say("直接 10")
+停止 game.give("みかん", 20) #g2
+終了

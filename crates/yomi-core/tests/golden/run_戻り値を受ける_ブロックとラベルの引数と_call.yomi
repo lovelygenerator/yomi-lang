@@ -1,0 +1,33 @@
+// @choose: 0
+label start {
+  let i = 0
+  while i < 2 {
+    let word = @game.ask("言葉${i}")
+    ${i}:${word}
+    i += 1
+  }
+  if i == 2 {
+    let k = @game.roll(i)
+    choice {
+      「はい」 => {
+        let who = @game.ask("誰？")
+        ${who}と${k}
+      }
+      「いいえ」 => {
+        end
+      }
+    }
+  }
+  let t = call tail("甲")
+  結果 ${t}
+}
+
+label tail(who: str) -> int {
+  let r = @game.roll(2)
+  ${who}:${r}
+  if r > 2 {
+    let extra = @game.roll(r)
+    return r + extra
+  }
+  return r
+}

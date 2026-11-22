@@ -1,0 +1,30 @@
+label start {
+  return 1
+}
+
+label a() {
+  return 1
+}
+
+label b() -> int {
+  return
+}
+
+label c() -> int {
+  return "s"
+}
+
+label d() -> int {
+  jump start
+}
+
+label e() -> int {
+  return 1
+}
+
+label f(x: int) {
+  if x > 0 {
+    return
+  }
+  jump start
+}

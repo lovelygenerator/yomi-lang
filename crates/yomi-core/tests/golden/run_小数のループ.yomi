@@ -1,0 +1,13 @@
+label start {
+  let x = 0.0
+  let steps = 0
+  while x < 1.0 {
+    x += 0.25
+    steps += 1
+  }
+  ${x} まで ${steps} 回
+  while to_int(x) < 3 {
+    x = x * 2.0
+  }
+  ${x}
+}

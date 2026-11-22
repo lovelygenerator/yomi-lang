@@ -1,0 +1,12 @@
+import std::text
+
+label start {
+  let s = "あé🇯🇵い"
+  長さ ${text.len(s)}
+  先頭 ${text.slice(s, 0, 1)} 結合 ${text.slice(s, 1, 2) == "é"} 旗 ${text.slice(s, 2, 3) == "🇯🇵"}
+  末尾 ${text.slice(s, 3, 4)} 全体 ${text.slice(s, 0, 4) == s} 空 ${text.slice(s, 2, 2) == ""}
+  連結 ${"${text.slice(s, 0, 2)}${text.slice(s, 2, 4)}" == s}
+  位置 ${text.find("こんにちは世界", "にち")} ${text.find("abc", "")} ${text.find("abc", "x")}
+  途中 ${text.find(s, "e")} ${text.find(s, "い")}
+  ${text.find("abcabc", "c")}
+}

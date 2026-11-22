@@ -1,0 +1,7 @@
+停止 ui.say("10 15")
+停止 ui.say("[30, 10, 40] [3, 4] 8")
+停止 ui.say("true false Some(4) 2")
+停止 ui.say("要素 3")
+停止 ui.say("要素 1")
+停止 ui.say("要素 4")
+終了

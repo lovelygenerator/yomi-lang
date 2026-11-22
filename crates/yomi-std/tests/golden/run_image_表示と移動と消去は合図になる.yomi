@@ -1,0 +1,13 @@
+import std::image
+
+label start {
+  @image.show("bg", "street", 0.0, 0.0, 0.0)
+  @image.show("left", "guide", 0.25, 0.5, 0.5)
+  置いた
+  @image.move("left", 0.4, 0.5, 1.0)
+  動かした
+  @image.hide("left", 0.5)
+  消した
+  @image.clear(1.0)
+  全部消した
+}

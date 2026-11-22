@@ -1,0 +1,3 @@
+2:6 condition_not_bool found="int"
+4:6 condition_not_bool found="str"
+5:13 condition_not_bool found="int"

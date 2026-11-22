@@ -1,0 +1,6 @@
+停止 ui.say("前の行") #before
+停止 ui.choose(["「は」", "「いいえ」"], [Some("yes"), Some("no")])
+選択 1
+停止 ui.say("いいえ")
+停止 ui.say("あとの行") #after
+終了

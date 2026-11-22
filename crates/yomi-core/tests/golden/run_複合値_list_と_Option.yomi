@@ -1,0 +1,26 @@
+// @show: vars
+save var xs: list<int> = [1, 2, 3]
+save var o: Option<str> = None
+save var names: list<str> = []
+
+label start {
+  xs.push(4)
+  xs[0] = 10
+  xs[1] += 5
+  xs.remove(2)
+  names.push("案内人")
+  names.push("門番")
+  let copy = xs
+  copy.push(99)
+  xs.clear()
+  xs.push(7)
+  ${xs.len()} ${copy.len()} ${copy}
+  if copy.contains(99) {
+    あり
+  }
+  o = Some("x")
+  if o != None {
+    ${o}
+  }
+  ${names}
+}

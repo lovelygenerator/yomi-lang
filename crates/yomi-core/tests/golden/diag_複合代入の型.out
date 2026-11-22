@@ -1,0 +1,11 @@
+7:3 invalid_operation op="+=" type="str"
+8:3 invalid_operation op="+=" type="bool"
+9:3 invalid_operation op="-=" type="str"
+10:3 invalid_operation op="*=" type="str"
+11:3 invalid_operation op="/=" type="bool"
+12:3 invalid_operation op="%=" type="str"
+14:3 invalid_operation op="%=" type="float"
+15:8 type_mismatch expected="int" found="float"
+16:8 type_mismatch expected="float" found="int"
+17:8 type_mismatch expected="int" found="str"
+18:3 unknown_name name="q" suggestions=["b", "f", "n"]

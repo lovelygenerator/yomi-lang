@@ -1,0 +1,13 @@
+// @packages: counter
+import counter
+
+label start {
+  @counter.inc()
+  @counter.inc(1, 2)
+  @counter.inc("a")
+  @counter.wait(1.5)
+  let a = counter.describe(1)
+  let b = counter.divide(1.0)
+  let c = counter.get(1)
+  let d: str = counter.get()
+}

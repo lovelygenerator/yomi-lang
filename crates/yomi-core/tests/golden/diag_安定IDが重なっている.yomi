@@ -1,0 +1,9 @@
+label start {
+  一 #same
+  二 #same
+  @game.pause() #same
+}
+
+label other {
+  別のラベルなら良い #same
+}

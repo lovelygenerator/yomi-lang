@@ -1,0 +1,84 @@
+// お金と持ち物、道具屋での買い物。
+import std::text
+import std::audio
+import chara
+
+save var money: int = 1200
+// 持ち物（名前 → 個数）
+save var bag: map<str, int> = map {}
+
+fn price(item: str) -> int {
+    match item {
+        "回復薬" => return 400
+        "携帯食" => return 250
+        "護符" => return 500
+        "釣り竿" => return 300
+        _ => return 0
+    }
+}
+
+// 持ち物の一覧を、桁をそろえた行にして返す
+fn bag_lines() -> list<str> {
+    let lines: list<str> = []
+    for item, n in bag {
+        lines.push("${text.pad_right(item, 6, "　")}×${text.pad_left("${n}", 2, " ")}")
+    }
+    return lines
+}
+
+// 持ち物に 1 つ足す
+label give(item: str) {
+    if bag.has(item) {
+        bag[item] += 1
+    } else {
+        bag[item] = 1
+    }
+}
+
+// 1 品買う。買えたかどうかを返す
+label buy(item: str) -> bool {
+    let cost = price(item)
+    if money < cost {
+        店主「すまないね、${item}は${cost}ゴールドだ。少し足りないよ」 #dm6yin
+        return false
+    }
+    money -= cost
+    call give(item)
+    @audio.se("coin")
+    店主「毎度あり！　${item}、${cost}ゴールドね」 #kbacpk
+    return true
+}
+
+// 道具屋。品書きを見て、1 品だけ買う。相棒の信頼度の増え方を返す
+label store() -> int {
+    let menu = text.split("回復薬,携帯食,護符", ",")
+    店主「いらっしゃい！　今日の品ぞろえは、こうだよ」 #e6r6yg
+    for item in menu {
+        ${text.pad_right(item, 6, "　")}${text.pad_left("${price(item)}", 4, " ")}ゴールド #r0a4wi
+    }
+    choice {
+        「回復薬を買う」 #vit5vc                       => {
+            let ok = call buy("回復薬")
+            if ok {
+                相棒「これで、少しの怪我なら大丈夫だね」 #jgelwf
+                return 1
+            }
+        }
+        「携帯食を買う」 if !bag.has("携帯食") #4gankn => {
+            let ok = call buy("携帯食")
+            if ok {
+                相棒「長い道のりでも、これなら安心だね」 #zwvrj0
+                return 2
+            }
+        }
+        「護符を買う」 once #amulet                    => {
+            let ok = call buy("護符")
+            if ok {
+                相棒「魔除けの護符だ。祠の封印に使えるよ」 #8olq3g
+                return 1
+            }
+        }
+        「やめておく」 #m9c7xq                         => 相棒「えー、見るだけ？」 #s86r5x
+    }
+    return 0
+}

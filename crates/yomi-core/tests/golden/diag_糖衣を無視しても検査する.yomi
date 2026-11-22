@@ -1,0 +1,12 @@
+// @registry: ignore
+identity 案内人 = "案内人"
+label start {
+  案内人「${nope} と ${1 + "a"}」
+  「${n}」 #q1
+  「${n}」 #q1
+  choice {
+    「a」 once => a
+    「${nope2}」 #x => jump nowhere
+    「b」 if 1 #x => b
+  }
+}

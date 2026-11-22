@@ -1,0 +1,3 @@
+停止 input.text("名前は？", "", 2)
+  入力 "abc"
+実行時エラー command_failed label=start line=4

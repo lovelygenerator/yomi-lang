@@ -1,0 +1,7 @@
+import std::text
+
+label start {
+  ${text.upper("Hello, World! あいう ａｂｃ ß é")}
+  ${text.lower("Hello, World! ＡＢＣ É İ")}
+  ${text.upper("")}|
+}

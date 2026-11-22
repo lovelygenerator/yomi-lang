@@ -1,0 +1,8 @@
+// @show: render check
+import scene
+
+label start {
+  メインの行 #m1
+  call scene.intro()
+  戻った #m2
+}

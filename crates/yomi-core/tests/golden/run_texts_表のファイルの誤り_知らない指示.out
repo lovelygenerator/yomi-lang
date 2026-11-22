@@ -1,0 +1,3 @@
+表の誤り unknown_directive (line 1)
+停止 ui.say("一") #a
+終了

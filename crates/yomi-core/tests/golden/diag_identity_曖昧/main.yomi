@@ -1,0 +1,10 @@
+import a
+import b
+
+label start {
+  案内人「どちらの案内人か分からない」
+  a.案内人「こちらは a」
+  b.案内人「こちらは b」
+  c.案内人「import していない」
+  弟「b だけ」
+}

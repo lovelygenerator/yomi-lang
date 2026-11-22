@@ -1,0 +1,5 @@
+// @show: check
+label start {
+  ひとつ ${1 + 1} #a
+  なし #b
+}

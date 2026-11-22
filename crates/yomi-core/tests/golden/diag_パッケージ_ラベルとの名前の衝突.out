@@ -1,0 +1,2 @@
+4:7 duplicate_name name="counter"
+警告 4:7 label_falls_through name="counter"

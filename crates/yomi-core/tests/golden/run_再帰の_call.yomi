@@ -1,0 +1,23 @@
+label start {
+  let r = call fact(5)
+  5の階乗は ${r}
+  let f = call fib(10)
+  fib(10)は ${f}
+}
+
+label fact(n: int) -> int {
+  if n <= 1 {
+    return 1
+  }
+  let sub = call fact(n - 1)
+  return n * sub
+}
+
+label fib(n: int) -> int {
+  if n < 2 {
+    return n
+  }
+  let a = call fib(n - 1)
+  let b = call fib(n - 2)
+  return a + b
+}

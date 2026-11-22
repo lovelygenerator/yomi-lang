@@ -1,0 +1,53 @@
+// @show: vars
+enum Dir { North, South }
+struct Pos { x: int, y: int }
+save var inv: map<str, int> = map { "薬": 2, "鍵": 1 }
+save var visits: map<Dir, int> = map {}
+save var spots: map<Pos, str> = map { Pos { x: 1, y: 2 }: "家" }
+save var flags: map<bool, str> = map { true: "はい", false: "いいえ" }
+
+label start {
+  // 既存のキーへの代入は、位置を変えない。削除して入れ直すと、末尾になる
+  inv["薬"] += 3
+  inv["剣"] = 1
+  inv["鍵"] = 9
+  ${inv}
+  inv.remove("鍵")
+  inv.remove("なし")
+  inv["鍵"] = 5
+  ${inv} ${inv.len()}
+  ${inv.keys()} ${inv.values()}
+  // get は Option、has は bool
+  ${inv.get("薬")} ${inv.get("なし")} ${inv.has("剣")} ${inv.has("盾")}
+  // 値のコピー。コピーのあとの更新は、元に影響しない
+  let copy = inv
+  copy["薬"] = 0
+  copy.clear()
+  ${inv["薬"]} ${copy.len()} ${copy.is_empty()}
+  // 空の map は、文脈から型が決まる
+  visits[Dir.South] = 1
+  visits[Dir.North] = 2
+  visits[Dir.South] += 10
+  ${visits}
+  spots[Pos { x: 3, y: 4 }] = "学校"
+  ${spots[Pos { x: 1, y: 2 }]} ${spots.len()}
+  ${flags[true]} ${flags}
+  // == は、挿入順を比べない
+  let a: map<str, int> = map { "a": 1, "b": 2 }
+  let b: map<str, int> = map { "b": 2, "a": 1 }
+  if a == b {
+    等しい
+  }
+  b["c"] = 3
+  if a != b {
+    違う
+  }
+  // リテラルの重なったキーは、あとの値で更新する
+  let dup = map { 1: "x", 2: "y", 1: "z" }
+  ${dup}
+  // 入れ子
+  let nested: map<str, list<int>> = map { "xs": [1, 2] }
+  nested["xs"].push(3)
+  nested["ys"] = []
+  ${nested}
+}

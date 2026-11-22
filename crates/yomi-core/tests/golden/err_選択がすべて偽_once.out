@@ -1,0 +1,4 @@
+停止 ui.choose(["「一度だけ」"], [Some("only")])
+選択 0
+停止 ui.say("選んだ")
+実行時エラー no_choice_available label=menu line=7

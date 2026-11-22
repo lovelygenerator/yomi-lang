@@ -1,0 +1,10 @@
+save var a: int = 1 // 初期値
+
+label start {
+  let b = a + 1 // 足す
+  ${b}
+  if b == 2 { // 条件
+    二
+  } // 閉じる
+  式の中の // は本文
+}

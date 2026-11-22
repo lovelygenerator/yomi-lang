@@ -1,0 +1,6 @@
+停止 ui.say("あいさつ")
+停止 flow.wait(1.5) #pause
+停止 flow.wait(0.0)
+停止 flow.wait_input() #click
+停止 ui.say("おわり")
+終了

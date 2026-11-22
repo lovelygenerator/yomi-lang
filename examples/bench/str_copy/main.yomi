@@ -1,0 +1,14 @@
+// 負荷用: 10 万文字の str を、ローカル変数へ 2 万回代入する。値の複製で、文字列を写さないことを見る。
+import std::text
+
+label start {
+    let s = text.repeat("あ", 100000)
+    let i = 0
+    let total = 0
+    while i < 20000 {
+        let _t = s
+        total += 1
+        i += 1
+    }
+    結果: ${total}、${text.len(s)} 文字
+}

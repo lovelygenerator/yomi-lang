@@ -1,0 +1,24 @@
+停止 ui.choose(["「a」", "「b」", "「c」", "「d」"], [Some("a"), Some("b"), Some("c"), None])
+選択 0
+停止 game.give("a", 1)
+停止 ui.say("選択のあと n=1")
+停止 ui.choose(["「a」", "「b」", "「c」", "「d」"], [Some("a"), Some("b"), Some("c"), None])
+選択 1
+停止 ui.say("b を選んだ 11")
+停止 ui.say("選択のあと n=11")
+停止 ui.choose(["「a」", "「b」", "「c」", "「d」"], [Some("a"), Some("b"), Some("c"), None])
+選択 2
+停止 ui.say("選んだのは c")
+停止 ui.say("選択のあと n=11")
+停止 ui.choose(["「a」", "「b」", "「c」", "「d」"], [Some("a"), Some("b"), Some("c"), None])
+選択 3
+停止 ui.say("next に来た n=111")
+停止 ui.choose(["「x」", "「y」"], [None, None])
+選択 1
+停止 ui.say("続き 111")
+停止 ui.choose(["「入れ子 1」", "「入れ子 2」"], [None, None])
+選択 0
+停止 ui.choose(["「内側 a」", "「内側 b」"], [None, None])
+選択 1
+停止 ui.say("内側 b")
+終了

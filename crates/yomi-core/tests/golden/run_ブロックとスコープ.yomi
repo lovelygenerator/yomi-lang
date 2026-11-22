@@ -1,0 +1,20 @@
+save var x: int = 1
+
+label start {
+  let y = 2
+  if x == 1 {
+    let w = 99
+    ${w}
+  }
+  ${y}
+  if true {
+    let z = 5
+    ${z}
+  }
+  if true {
+    let z = 6
+    ${z}
+  }
+  end
+  ここは実行されない
+}

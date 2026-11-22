@@ -1,0 +1,8 @@
+停止 ui.say("今は None")
+  合図 音 Play { channel: "bgm", name: "town", volume: 1.0, fade: 0.0 }
+停止 ui.say("今は Some(town)")
+  合図 音 Play { channel: "bgm", name: "night", volume: 1.0, fade: 0.0 }
+停止 ui.say("今は Some(night)")
+  合図 音 Stop { channel: "bgm", fade: 0.0 }
+停止 ui.say("今は None")
+終了

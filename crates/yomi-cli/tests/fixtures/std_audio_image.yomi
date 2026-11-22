@@ -1,0 +1,19 @@
+import std::audio
+import std::image
+
+label start {
+  はじまり
+  @audio.play("bgm", "town", fade: 1.5)
+  @image.show("bg", "street", 0.0, 0.0, 0.0)
+  @image.show("left", "guide", 0.25, 0.5, 0.5)
+  @audio.se("door")
+  音と絵
+  @image.move("left", 0.4, 0.5, 1.0)
+  @audio.volume("bgm", 0.5, fade: 2.0)
+  @audio.voice("v001")
+  動く
+  @image.hide("left", 0.5)
+  @audio.stop("bgm", fade: 1.0)
+  @image.clear(0.0)
+  おわり
+}

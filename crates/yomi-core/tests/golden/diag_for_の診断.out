@@ -1,0 +1,13 @@
+3:12 type_mismatch expected="list<_>" found="map<str, int>"
+5:12 type_mismatch expected="list<_>" found="int"
+8:7 duplicate_name name="x"
+10:12 arg_count name="range" expected=2 found=1
+12:21 type_mismatch expected="int" found="float"
+14:12 unknown_name name="nope"
+17:7 invalid_operation op="." type="int"
+18:9 duplicate_name name="u"
+20:5 unknown_name name="u" suggestions=["p", "x"]
+21:7 unexpected_token found="3"
+23:9 unexpected_token found="["
+25:3 outside_loop what="break"
+警告 30:7 shadowed_builtin name="range"

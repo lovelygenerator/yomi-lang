@@ -1,0 +1,11 @@
+// @choose: 0
+label start {
+  jump menu
+}
+
+label menu {
+  choice {
+    「一度だけ」 once #only => 選んだ
+  }
+  jump menu
+}

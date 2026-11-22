@@ -1,0 +1,11 @@
+save var score: int = 0
+
+fn bad(x: int) -> int {
+  score += x
+  jump start
+  return x
+}
+
+label start {
+  ${bad(1)}
+}

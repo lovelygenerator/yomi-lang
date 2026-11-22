@@ -1,0 +1,56 @@
+// 弓の練習場。的を倒すと、景品がもらえる。
+import std::audio
+import std::flow
+import chara
+
+// まだ倒れていない的のうち、いちばん先頭のもの
+fn first_left(prizes: list<chara.Prize>) -> Option<chara.Prize> {
+    for p in prizes {
+        if p.hp > 0 {
+            return Some(p)
+        }
+    }
+    return None
+}
+
+// 3 本射って、倒した的の景品の名前を返す
+label archery() -> list<str> {
+    let prizes: list<chara.Prize> = []
+    prizes.push(chara.Prize { name: "木の盾", hp: 10 })
+    prizes.push(chara.Prize { name: "銀の指輪", hp: 16 })
+    let won: list<str> = []
+    let shots = 3
+    // 相棒の助言（信頼度）が多いほど、ねらいが正確になる
+    let aim = chara.trust / 3
+    店主「矢は 3 本。的を倒したら、景品はお客さんのものだ」 #t4oio5
+    相棒「落ち着いて、よく狙って！」 #iq2fwr
+    while shots > 0 && won.len() < 2 {
+        match first_left(prizes) {
+            Some(p) => {
+                ${p.name}の的が、いちばん近い。 #9rapne
+            }
+            None => {
+                的は、もう残っていない。 #vnj9fh
+            }
+        }
+        let target = 0
+        choice {
+            「木の盾の的を狙う」 if prizes[0].hp > 0 #052elt   => target = 0
+            「銀の指輪の的を狙う」 if prizes[1].hp > 0 #2a6y2h => target = 1
+        }
+        shots -= 1
+        let roll = random(1, 6)
+        let dmg = chara.damage(aim, roll)
+        @audio.se("arrow")
+        prizes[target].hp -= dmg
+        ${dmg} ダメージ！（出目 ${roll}、残り ${shots} 本） #13pghs
+        if prizes[target].hp <= 0 {
+            店主「おっ、${prizes[target].name}の的が倒れた！」 #45jqrw
+            won.push(prizes[target].name)
+        } else {
+            店主「惜しい！　${prizes[target].name}の的は、あと ${prizes[target].hp} だ」 #3ry93q
+        }
+        @flow.wait(0.5) #44avl3
+    }
+    return won
+}

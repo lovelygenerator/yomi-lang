@@ -1,0 +1,6 @@
+3:6 arg_count name="insert" expected=2 found=1
+4:13 type_mismatch expected="int" found="str"
+5:16 type_mismatch expected="int" found="str"
+6:11 statement_method_in_expression name="insert"
+8:5 unknown_method name="insert" type="map<int, int>"
+9:5 statement_method_in_expression name="insert"

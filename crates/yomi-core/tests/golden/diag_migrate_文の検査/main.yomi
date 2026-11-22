@@ -1,0 +1,9 @@
+struct Item { id: str }
+save var hp: int = 1
+save var name: str = ""
+save var bag: list<Item> = []
+persistent var best: int = 0
+persistent var title: str = ""
+label start {
+  hp = 2
+}

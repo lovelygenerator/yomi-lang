@@ -1,0 +1,11 @@
+min_save_version 2
+migrate 3 {
+    rename v2::main.gold -> main.hp
+    rename v2::main.score -> main.title
+    rename v2::main.best -> main.name
+    convert v2::main.name: str -> main.name: str = |v| v
+    drop v2::main.old_flag
+    drop v2::main.old_flagg
+    drop v2::main.old_flag
+    rename v2::main.bag -> main.nothing
+}

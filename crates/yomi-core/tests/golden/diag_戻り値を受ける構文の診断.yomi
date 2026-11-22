@@ -1,0 +1,25 @@
+// @packages: counter
+import counter
+
+label start {
+  let a = @game.pause()
+  let b = @ui.say("x")
+  let c = @counter.inc(1)
+  let d = @counter.get()
+  let e = 0
+  e = @counter.get()
+  e += @game.roll(1)
+  let f = 1 + @game.roll(2)
+  if @game.yes("はい？") {
+    ここには来ない
+  }
+  let g: int = @game.ask("x")
+  e = @game.ask("x")
+  let h = @game.nothing(1)
+  let i = @game.roll(@game.roll(1))
+  let j = (@game.roll(1))
+  let k = @game.roll("x")
+  let l = @game.roll(l)
+  @game.ask(@game.ask("x"))
+  let m = @counter.roll(1) #id
+}

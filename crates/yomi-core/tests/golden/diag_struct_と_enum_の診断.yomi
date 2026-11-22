@@ -1,0 +1,21 @@
+enum Dir { North, South }
+struct P { hp: int, name: str }
+struct R { r: R }
+struct A { b: B }
+struct B { a: A }
+struct P { x: int }
+
+label start {
+  let a = P { hp: 1 }
+  let b = P { hp: 1, name: "a", hp: 2 }
+  let c = P { hp: 1, name: "a", mp: 3 }
+  let d = Dir.East
+  let p = P { hp: 1, name: "a" }
+  let e = p.mp
+  let f = p.hp.len()
+  let g = [1, 2].foo()
+  let h = [1, 2].push(3)
+  let i = []
+  let j = None
+  p.mp = 1
+}

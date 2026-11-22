@@ -1,0 +1,7 @@
+// @packages: counter
+import counter
+
+label start {
+  @counter.inc(9223372036854775807)
+  @counter.inc(1)
+}

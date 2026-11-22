@@ -1,0 +1,5 @@
+// @packages: counter
+import counter
+
+label counter {
+}

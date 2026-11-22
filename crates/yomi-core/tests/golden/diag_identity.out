@@ -1,0 +1,10 @@
+2:10 duplicate_name name="案内人"
+4:10 duplicate_name name="変数"
+5:15 not_constant
+6:14 not_constant
+8:10 unexpected_token found="="
+警告 11:3 identity_typo name="案内入" suggestions=["案内人"]
+警告 14:3 identity_typo name="長い名前のひと" suggestions=["長い名前の人"]
+16:3 declaration_not_allowed what="identity"
+19:7 duplicate_name name="案内人"
+警告 19:7 label_falls_through name="案内人"

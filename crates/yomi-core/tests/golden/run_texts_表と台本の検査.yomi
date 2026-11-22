@@ -1,0 +1,13 @@
+// @show: check
+label start {
+  一 ${1 + 1} #a
+  二 #b
+  choice {
+    「あ」 #x => jump 続き
+    「い」 #y => jump 続き
+  }
+}
+
+label 続き {
+  三 #c
+}

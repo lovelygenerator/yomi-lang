@@ -1,0 +1,15 @@
+停止 input.text("名前は？", "ゆみ", 8) #name
+  入力 "たろう"
+停止 input.integer("年齢は？", 10, 0, 120)
+  入力 42
+停止 input.confirm("よろしいですか？")
+  入力 true
+停止 ui.say("たろうさん、42歳、true")
+停止 input.integer("もう一度、年齢は？", 10, 0, 120)
+  入力 43
+停止 input.text("もう一度、名前は？", "ゆみ", 8)
+  入力 "じろう"
+停止 input.confirm("本当に？")
+  入力 false
+停止 ui.say("じろうさん、43歳、false")
+終了

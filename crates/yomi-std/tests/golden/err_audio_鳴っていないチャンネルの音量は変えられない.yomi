@@ -1,0 +1,7 @@
+import std::audio
+
+label start {
+  前
+  @audio.volume("rain", 0.5, fade: 1.0)
+  後
+}

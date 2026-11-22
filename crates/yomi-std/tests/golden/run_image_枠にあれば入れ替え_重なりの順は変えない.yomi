@@ -1,0 +1,8 @@
+import std::image
+
+label start {
+  @image.show("a", "one", 0.0, 0.0, 0.0)
+  @image.show("b", "two", 0.5, 0.5, 0.0)
+  @image.show("a", "three", 0.1, 0.2, 0.3)
+  入れ替えた
+}

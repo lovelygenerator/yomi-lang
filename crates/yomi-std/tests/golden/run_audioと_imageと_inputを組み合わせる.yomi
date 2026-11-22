@@ -1,0 +1,12 @@
+import std::audio
+import std::image
+import std::input
+
+label start {
+  @image.show("bg", "room", 0.0, 0.0, 0.0)
+  @audio.play("bgm", "room", fade: 1.0)
+  @input.confirm("始めますか？") #start
+  @audio.se("chime")
+  @image.show("left", "guide", 0.2, 0.4, 0.5)
+  始まった
+}

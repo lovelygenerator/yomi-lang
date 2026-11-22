@@ -1,0 +1,7 @@
+import std::math
+
+label start {
+  前
+  let _x = math.floor(1000000000000000000000000000000.0)
+  後
+}

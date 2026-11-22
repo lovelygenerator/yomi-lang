@@ -1,0 +1,5 @@
+停止 flow.wait(0.5) #w
+停止 ui.say("名前の文字数は 2")
+停止 flow.wait(15.0)
+停止 flow.wait_input()
+終了

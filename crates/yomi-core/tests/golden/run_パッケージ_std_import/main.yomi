@@ -1,0 +1,8 @@
+// @packages: probe counter
+import {std::probe, counter}
+
+label start {
+  値 ${probe.get()}
+  @counter.inc(2)
+  回数 ${counter.get()}
+}

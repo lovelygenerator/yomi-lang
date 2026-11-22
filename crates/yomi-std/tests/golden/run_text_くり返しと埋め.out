@@ -1,0 +1,6 @@
+停止 ui.say("くり返し ababab true true")
+停止 ui.say("左埋め 007 \u{3000}\u{3000}あ|")
+停止 ui.say("右埋め 700 名前･･･")
+停止 ui.say("足りている abc abcd true")
+停止 ui.say("書記素 **e\u{301}")
+終了

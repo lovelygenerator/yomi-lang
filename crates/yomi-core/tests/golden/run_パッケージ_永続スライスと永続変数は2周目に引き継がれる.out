@@ -1,0 +1,17 @@
+停止 ui.say("周 状態 1 永続 5 変数 3 2") #a
+終了
+変数 step = 2
+変数 best = 3 (永続)
+変数 locked = false
+変数 title = "無題"
+スライス counter CounterState { n: 1, log: ["inc 1"] }
+永続スライス counter CounterPersistent { total: 5 }
+== 2 周目（永続データを引き継ぐ）
+停止 ui.say("周 状態 1 永続 10 変数 6 2") #a
+終了
+変数 step = 2
+変数 best = 6 (永続)
+変数 locked = false
+変数 title = "無題"
+スライス counter CounterState { n: 1, log: ["inc 1"] }
+永続スライス counter CounterPersistent { total: 10 }

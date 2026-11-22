@@ -1,0 +1,9 @@
+import std::text
+
+label start {
+  くり返し ${text.repeat("ab", 3)} ${text.repeat("あ", 0) == ""} ${text.repeat("", 1000000000) == ""}
+  左埋め ${text.pad_left("7", 3, "0")} ${text.pad_left("あ", 3, "　")}|
+  右埋め ${text.pad_right("7", 3, "0")} ${text.pad_right("名前", 5, "･")}
+  足りている ${text.pad_left("abc", 3, "0")} ${text.pad_right("abcd", 2, "0")} ${text.pad_left("", 0, "0") == ""}
+  書記素 ${text.pad_left("é", 3, "*")}
+}

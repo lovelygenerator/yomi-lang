@@ -1,0 +1,23 @@
+save var n: int = 2
+
+label start {
+  if n == 1 {
+    いち
+  } else if n == 2 {
+    に
+  } else if n == 3 {
+    さん
+  } else {
+    その他
+  }
+  if n == 1 {
+    違う
+  } else {
+    else側
+    if n == 2 {
+      入れ子の then
+    } else {
+      入れ子の else
+    }
+  }
+}

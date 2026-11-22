@@ -1,0 +1,18 @@
+// @packages: counter
+import story::ch1
+import story::ch1x
+import other::ch1
+import {story::ch2, ghost::x}
+import counter as c
+import a::util as autil
+import b::util as butil
+import story::ch1
+
+label start {
+  jump ch1.go
+  jump ch2.go
+  jump ch3.go
+  jump autil.go
+  jump butil.go
+  jump util.go
+}

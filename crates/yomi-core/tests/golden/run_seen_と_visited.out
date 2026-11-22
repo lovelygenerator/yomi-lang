@@ -1,0 +1,20 @@
+警告 9:47 unknown_position position="main.start#hidden"
+警告 21:83 unknown_label_literal label="nowhere"
+警告 22:18 unknown_position position="nowhere#x"
+警告 22:39 unknown_position position="other#nothing"
+警告 22:64 unknown_position position="zzz"
+警告 26:7 label_falls_through name="old"
+停止 ui.say("最初") #first
+停止 ui.say("通過 first true second false main.first true")
+停止 ui.say("visited start true other false main.other false")
+停止 ui.say("与えた true 与えた2 true")
+停止 ui.say("second の前") #second
+停止 ui.say("second のあと true")
+停止 ui.choose(["「左」", "「右」"], [Some("left"), Some("right")])
+選択 1
+停止 ui.say("右へ")
+停止 ui.say("選択肢 left false right true")
+停止 ui.say("visited other true start true none false")
+停止 ui.say("seen の外 false false false")
+停止 ui.say("動的 true")
+終了

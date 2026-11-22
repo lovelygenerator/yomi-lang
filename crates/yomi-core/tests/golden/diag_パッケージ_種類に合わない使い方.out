@@ -1,0 +1,5 @@
+5:3 invalid_command_use name="counter.get" kind="query"
+6:11 invalid_command_use name="counter.inc" kind="effect"
+7:11 invalid_command_use name="counter.wait" kind="stop"
+8:11 invalid_command_use name="ui.say" kind="stop"
+9:19 invalid_stable_id id="id"

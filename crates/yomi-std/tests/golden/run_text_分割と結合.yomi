@@ -1,0 +1,11 @@
+import std::text
+
+label start {
+  let parts = text.split("りんご,みかん,,ぶどう", ",")
+  ${parts} 個数 ${parts.len()}
+  空 ${text.split("", ",").len()} 区切りなし ${text.split("abc", "x")}
+  端 ${text.split(",a,", ",")}
+  結合 ${text.join(parts, " / ")} ${text.join([], ",")} ${text.join(["だけ"], ",")}
+  往復 ${text.join(text.split("a,,b,", ","), ",") == "a,,b,"}
+  整形 ${text.join(["12", "30"], ":")}
+}

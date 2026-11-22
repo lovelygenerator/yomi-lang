@@ -1,0 +1,13 @@
+2:3 unknown_label name="nowhere"
+3:3 unknown_label name="hellp" suggestions=["hello"]
+4:3 arg_count name="add" expected=2 found=1
+5:15 type_mismatch expected="int" found="str"
+6:3 arg_count name="add" expected=2 found=3
+7:11 call_without_value name="noop"
+8:15 call_in_expression
+9:6 call_in_expression
+11:12 unexpected_token found="1"
+12:7 unexpected_eol
+13:16 type_mismatch expected="str" found="int"
+15:3 jump_to_callable_label name="add"
+17:7 unexpected_eol

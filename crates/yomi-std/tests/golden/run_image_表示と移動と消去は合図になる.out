@@ -1,0 +1,10 @@
+  合図 画像 Show { slot: "bg", fade: 0.0 }
+  合図 画像 Show { slot: "left", fade: 0.5 }
+停止 ui.say("置いた")
+  合図 画像 Move { slot: "left", seconds: 1.0 }
+停止 ui.say("動かした")
+  合図 画像 Hide { slot: "left", fade: 0.5 }
+停止 ui.say("消した")
+  合図 画像 Clear { fade: 1.0 }
+停止 ui.say("全部消した")
+終了

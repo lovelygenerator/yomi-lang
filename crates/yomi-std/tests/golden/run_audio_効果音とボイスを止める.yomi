@@ -1,0 +1,10 @@
+import std::audio
+
+label start {
+  @audio.se("door")
+  @audio.voice("v1")
+  一
+  @audio.se_stop()
+  @audio.voice_stop()
+  二
+}

@@ -1,0 +1,27 @@
+struct Quest { name: str, reward: int }
+save var items: list<str> = [
+    "薬草", // 回復
+    "毒消し",
+]
+label start {
+  let q = Quest {
+      name: "薬草集め",
+      reward: 50,
+  }
+  let prices = map {
+    "薬草": 10,
+
+    // 毒消しは高い
+    "毒消し": 20,
+  }
+  items.push(
+    "地図",
+  )
+  if (
+      prices.len() == items.len() - 1) {
+    @ui.say(
+      "道具の数が合う",
+    ) #pause
+  }
+  ${q.name}を受けた。報酬は ${q.reward} 。
+}

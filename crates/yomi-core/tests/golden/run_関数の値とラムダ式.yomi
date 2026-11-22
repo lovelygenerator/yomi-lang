@@ -1,0 +1,18 @@
+fn double(x: int) -> int {
+  return x * 2
+}
+
+fn apply(f: fn(int) -> int, x: int) -> int {
+  return f(x)
+}
+
+label start {
+  let k = 10
+  let xs = [3, 1, 4]
+  ${apply(double, 5)} ${apply(|x| x + k, 5)}
+  ${xs.map(|x| x * k)} ${xs.filter(|x| x > 1)} ${xs.fold(0, |a, x| a + x)}
+  ${xs.any(|x| x == 4)} ${xs.all(|x| x > 1)} ${xs.find(|x| x > 3)} ${xs.count(|x| x < 4)}
+  xs.each { x =>
+    要素 ${x}
+  }
+}

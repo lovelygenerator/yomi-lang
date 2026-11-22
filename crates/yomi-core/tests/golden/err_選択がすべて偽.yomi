@@ -1,0 +1,9 @@
+save var ok: bool = false
+
+label start {
+  前の行
+  choice {
+    「あ」 if ok => あ
+    「い」 once if ok #i => い
+  }
+}

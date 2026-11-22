@@ -1,0 +1,9 @@
+fn spin() -> int {
+  while true {
+  }
+  return 0
+}
+
+label start {
+  ${spin()}
+}

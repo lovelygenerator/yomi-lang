@@ -1,0 +1,6 @@
+停止 ui.say("main開始")
+停止 ui.say("ch1 intro 3")
+停止 ui.say("結果 2 3 10 7")
+停止 ui.say("ch2 scene favor=7")
+停止 ui.say("main に戻った score=1")
+終了

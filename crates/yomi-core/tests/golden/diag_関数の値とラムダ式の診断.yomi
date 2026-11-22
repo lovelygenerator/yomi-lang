@@ -1,0 +1,30 @@
+save var keep: fn(int) -> int = 0
+
+struct Box {
+  f: fn() -> int
+}
+
+fn double(x: int) -> int {
+  return x * 2
+}
+
+fn noval(x: int) {
+}
+
+label start {
+  let f = |x| x
+  let g = noval
+  let same = double == double
+  let h: fn(str) -> int = |s| s
+  let n = [1].map(|a, b| a)
+  let d = double
+  一
+  ${d(1)}
+  let e = double
+  call other()
+  ${e(2)}
+}
+
+label other {
+  終
+}

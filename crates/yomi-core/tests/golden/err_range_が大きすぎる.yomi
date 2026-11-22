@@ -1,0 +1,5 @@
+label start {
+  let _n = 0
+  let _xs = range(0, 10000000000)
+  後
+}

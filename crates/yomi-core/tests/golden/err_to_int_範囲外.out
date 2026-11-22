@@ -1,0 +1,2 @@
+停止 ui.say("前")
+実行時エラー float_out_of_range label=start line=3

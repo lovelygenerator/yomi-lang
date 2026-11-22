@@ -1,0 +1,23 @@
+// 読まない let は警告。`_` で始まる名前・読む変数・複合代入・メソッドの使用は警告しない
+fn double(x: int) -> int {
+  let unused_in_fn = x
+  return x * 2
+}
+
+label start {
+  let dead = 1
+  let _ignored = 2
+  let read = 3
+  let written = 0
+  written = 5
+  let counter = 0
+  counter += 1
+  let xs = [1]
+  xs.push(2)
+  let captured = 7
+  let f = |a: int| a + captured
+  let g = double
+  let h = f(read)
+  xs.push(h)
+  end
+}

@@ -1,0 +1,17 @@
+import std::input
+import std::flow
+
+label start {
+  let a = @flow.wait(1.0)
+  let b = @input.text("名前は？", "", 8) #id
+  let c: int = @input.text("名前は？", "", 8)
+  let d = 1
+  d = @input.text("名前は？", "", 8)
+  d += @input.integer("数は？", 0, 0, 9)
+  let e = 1 + @input.integer("数は？", 0, 0, 9)
+  if @input.confirm("はい？") {
+    ここには来ない
+  }
+  let f = @input.nothing("x")
+  let g = @input.text(@input.text("a", "", 1), "", 8)
+}

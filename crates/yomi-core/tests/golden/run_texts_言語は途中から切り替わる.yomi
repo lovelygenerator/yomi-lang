@@ -1,0 +1,13 @@
+// @lang-at: 1
+// @show: render
+save var n: int = 1
+identity 案内人 = "案内人"
+
+label start {
+  一行目 ${n} #a
+  n = n + 10
+  二行目 ${n} #b
+  案内人「三行目 ${n}」 #c
+  @game.give("そのまま${n}", n) #d
+  四行目 ${n} #e
+}

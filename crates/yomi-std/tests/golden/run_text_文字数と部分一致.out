@@ -1,0 +1,5 @@
+停止 ui.say("文字数 0 3 5")
+停止 ui.say("結合 1 1")
+停止 ui.say("含む true false true")
+停止 ui.say("始まる true false true")
+終了

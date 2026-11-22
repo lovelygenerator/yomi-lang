@@ -1,0 +1,10 @@
+label start {
+  let x = 0.0
+  let n = 0
+  while x < 1.0 {
+    x += 0.25
+    n += 1
+  }
+  ${x} after ${n} steps
+  ${to_int(3.9)}
+}

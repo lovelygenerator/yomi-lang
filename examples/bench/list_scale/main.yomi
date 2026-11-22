@@ -1,0 +1,21 @@
+// 負荷用: 要素数 4 万の list に足して、添字で読み、len を呼び、全要素を更新して、合計する。
+// 要素数にほぼ線形の時間で終わること（list は共有 + 書き込み時の複製）。
+save var xs: list<int> = []
+
+label start {
+    for i in range(0, 40000) {
+        xs.push(i)
+    }
+    let read = 0
+    for i in range(0, 40000) {
+        read += xs[i] + xs.len()
+    }
+    for i in range(0, 40000) {
+        xs[i] = xs[i] * 2 + 1
+    }
+    let total = 0
+    for x in xs {
+        total += x
+    }
+    要素数: ${xs.len()}、読み: ${read}、合計: ${total}
+}

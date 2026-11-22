@@ -1,0 +1,8 @@
+// @choose: 2
+label start {
+  choice {
+    「あ」 => あ
+    「い」 => い
+  }
+  到達しない
+}

@@ -1,0 +1,16 @@
+label start {
+  jump a
+  実行されない
+}
+
+label a {
+  if true {
+    jump b
+    これも実行されない
+  }
+  ここも実行されない
+}
+
+label b {
+  届いた #b1
+}

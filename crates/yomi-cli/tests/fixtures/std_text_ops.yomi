@@ -1,0 +1,8 @@
+import std::text
+
+label start {
+  let names = text.split("ゆみ,ひろ,さく", ",")
+  ${text.join(names, "・")} ${text.len(text.replace("あいあ", "あ", "かな"))}
+  ${text.pad_left("7", 3, "0")} ${text.upper("ok")} ${text.slice("あいうえ", 1, 3)}
+  ${text.find("こんにちは", "にち")} ${text.ends_with("abc", "bc")} ${text.repeat("=", 4)}
+}

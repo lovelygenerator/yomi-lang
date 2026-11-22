@@ -1,0 +1,7 @@
+save var n: int = 9223372036854775807
+
+label start {
+  前
+  n += 1
+  後
+}

@@ -1,0 +1,16 @@
+// 負荷用: 要素数 2 万の list に、ラムダ式つきの map・filter・fold・sort_by を 20 回繰り返す。
+label start {
+    let xs: list<int> = []
+    for i in range(0, 20000) {
+        xs.push((i * 7919) % 10007)
+    }
+    let k = 3
+    let total = 0
+    for round in range(0, 20) {
+        let ys = xs.map(|x| x * k + round)
+        let zs = ys.filter(|y| y % 2 == 0)
+        total += zs.fold(0, |a, z| a + z)
+        total += xs.sort_by(|x| x)[round]
+    }
+    結果: ${total}
+}

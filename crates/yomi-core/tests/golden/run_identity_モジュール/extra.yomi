@@ -1,0 +1,9 @@
+import cast
+identity 弟 = "弟"
+identity 案内人 = "extra の案内人"
+
+label talk {
+  案内人「同じモジュールの宣言が優先される」
+  cast.案内人「cast の案内人は修飾して書く」
+  門番「cast の門番は import で使える」
+}

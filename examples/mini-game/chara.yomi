@@ -1,0 +1,35 @@
+// 登場人物と、どのモジュールからも使う型・計算。
+import std::math
+
+identity 相棒 = "リオン"
+identity 店主 = "道具屋の主人"
+identity 長老 = "村の長老"
+identity 受付 = "ギルドの受付"
+
+// 相棒の信頼度（0 から。上がるほど心強い）
+save var trust: int = 0
+
+// 相棒の調子。信頼度から決まる
+enum Mood { Confident, Normal, Uneasy }
+
+// 練習場の的。hp は、倒すまでに必要なダメージ
+struct Prize { name: str, hp: int }
+
+fn mood_of(level: int) -> Mood {
+    if level >= 6 {
+        return Mood.Confident
+    }
+    if level >= 3 {
+        return Mood.Normal
+    }
+    return Mood.Uneasy
+}
+
+// 矢のダメージ。ねらいの精度（0〜3）と、出目（1〜6）から決める
+fn damage(aim: int, roll: int) -> int {
+    let base = roll * 2
+    if aim >= 3 {
+        return base + 3
+    }
+    return math.max(base - 2 + aim, 1)
+}

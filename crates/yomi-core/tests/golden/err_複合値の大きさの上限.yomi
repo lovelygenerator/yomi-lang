@@ -1,0 +1,8 @@
+save var s: str = "aaaaaaaa"
+label start {
+  let _xs: list<str> = []
+  while true {
+    s = "${s}${s}"
+    _xs = [s, s, s]
+  }
+}

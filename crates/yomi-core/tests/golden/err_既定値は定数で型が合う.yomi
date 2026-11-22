@@ -1,0 +1,9 @@
+save var n: int = 0
+
+fn f(a: int = n, b: str = 1) -> int {
+  return a
+}
+
+label start {
+  ${f()}
+}

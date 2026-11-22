@@ -1,0 +1,12 @@
+import std::input
+
+label start {
+  let name = @input.text("名前は？", "ゆみ", 8) #name
+  let age: int = @input.integer("年齢は？", 10, 0, 120)
+  let ok = @input.confirm("よろしいですか？")
+  ${name}さん、${age}歳、${ok}
+  age = @input.integer("もう一度、年齢は？", 10, 0, 120)
+  name = @input.text("もう一度、名前は？", "ゆみ", 8)
+  ok = @input.confirm("本当に？")
+  ${name}さん、${age}歳、${ok}
+}

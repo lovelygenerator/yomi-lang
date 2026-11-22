@@ -1,0 +1,7 @@
+import std::text
+
+label start {
+  前
+  ${text.replace(text.repeat("a", 1000000), "a", text.repeat("b", 1000))}
+  後
+}

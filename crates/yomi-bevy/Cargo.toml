@@ -1,0 +1,40 @@
+[package]
+name = "yomi-bevy"
+version = "0.20.0"
+edition = "2024"
+rust-version = "1.88"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/lovelygenerator/yomi-lang"
+description = "Bevy plugin for running yomi scripts"
+publish = false
+
+[dependencies]
+yomi-core = { path = "../yomi-core" }
+yomi-std = { path = "../yomi-std" }
+bevy_app = "0.20"
+bevy_ecs = "0.20"
+bevy_asset = "0.20"
+bevy_time = "0.20"
+bevy_reflect = "0.20"
+bevy_log = "0.20"
+
+# Only for the windowed example (`--features window`). Optional so that the tests do not build the whole engine.
+bevy = { version = "0.20", optional = true, default-features = false, features = ["2d", "ui", "default_font", "system_font_discovery", "x11", "wayland", "multi_threaded", "std", "file_watcher", "complex_script_segmentation"] }
+
+[features]
+window = ["dep:bevy"]
+
+[[example]]
+name = "dialogue_ui"
+required-features = ["window"]
+
+[[example]]
+name = "mini_game_ui"
+required-features = ["window"]
+
+# 本体のワークスペースに入れない（Bevy の依存が重く、`cargo build --workspace` に入れないため）。
+[workspace]
+
+[lints.rust]
+unsafe_code = "forbid"
+missing_docs = "warn"

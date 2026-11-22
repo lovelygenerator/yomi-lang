@@ -1,0 +1,5 @@
+2:17 invalid_stable_id id="Bad"
+3:17 invalid_stable_id id=""
+4:17 invalid_stable_id id=""
+5:17 invalid_stable_id id="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+6:8 invalid_stable_id id="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"

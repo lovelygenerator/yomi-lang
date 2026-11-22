@@ -1,0 +1,14 @@
+persistent var best: int = 0
+save var n: int = 0
+
+label start {
+  n += 1
+  best += 1
+  一 #a
+  n += 1
+  best += 1
+  二 #b
+  n += 1
+  best += 1
+  三 #c
+}

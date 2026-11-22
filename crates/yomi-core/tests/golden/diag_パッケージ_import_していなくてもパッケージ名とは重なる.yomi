@@ -1,0 +1,7 @@
+// @packages: counter
+
+save var counter: int = 0
+
+label start {
+  let counter = 1
+}

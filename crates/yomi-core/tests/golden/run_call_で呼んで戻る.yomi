@@ -1,0 +1,11 @@
+label start {
+  はじまり
+  call greet()
+  つづき
+  call greet()
+  おわり
+}
+
+label greet() {
+  こんにちは
+}

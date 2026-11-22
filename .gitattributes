@@ -1,0 +1,4 @@
+* text=auto eol=lf
+
+# Test inputs that must keep CRLF.
+crates/yomi-core/tests/golden/*CRLF*.yomi -text

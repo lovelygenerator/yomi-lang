@@ -1,0 +1,8 @@
+fn bad(x: int) -> int {
+  let a = 1
+  return a / x
+}
+
+label start {
+  ${bad(0)}
+}

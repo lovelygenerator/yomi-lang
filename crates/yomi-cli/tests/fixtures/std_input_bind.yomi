@@ -1,0 +1,12 @@
+import std::input
+
+save var total: int = 0
+
+label start {
+  let name = @input.text("名前は？", "ゆみ", 8)
+  let age = @input.integer("年齢は？", 10, 0, 120)
+  let ok: bool = @input.confirm("よろしいですか？")
+  ${name}さん（${age}歳）
+  total = @input.integer("合計は？", 0, 0, 100)
+  ${ok}、${total}
+}

@@ -1,0 +1,13 @@
+// @rollback: 2
+// @show: vars
+save var inv: map<str, int> = map { "薬": 1 }
+save var total: int = 0
+
+label start {
+  for i in range(1, 5) {
+    inv["x${i}"] = i
+    total += i
+    ${i} ${inv.len()}
+  }
+  ${inv}
+}

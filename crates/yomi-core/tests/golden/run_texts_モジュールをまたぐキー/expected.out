@@ -1,0 +1,14 @@
+検査 警告 missing key="main.start#m2"
+検査 警告 unused key="main.intro#s1"
+停止 ui.say("main line") #m1
+停止 ui.say("scene line") #s1
+停止 ui.choose(["「yes」"], [Some("ok")])
+選択 0
+停止 ui.say("chose yes") #s2
+停止 ui.say("戻った") #m2
+終了
+描画 main.start#m1 ui.say("main line") 本文=Some("main line")
+描画 scene.intro#s1 ui.say("scene line") 本文=Some("scene line")
+描画 - ui.choose(["「yes」"], [Some("ok")]) 本文=None
+描画 scene.intro#s2 ui.say("chose yes") 本文=Some("chose yes")
+描画 main.start#m2 ui.say("戻った") 本文=Some("戻った")

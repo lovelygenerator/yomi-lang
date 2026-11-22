@@ -1,0 +1,9 @@
+import std::text
+
+label start {
+  let a = text.trim("  こんにちは  ")
+  let b = text.trim("　全角　")
+  let c = text.trim("   ")
+  let d = text.trim("中 の 空白")
+  [${a}] [${b}] [${c}] [${d}] ${text.len(c)}
+}

@@ -1,0 +1,13 @@
+label start {
+  call early(true)
+  call early(false)
+  おわり
+}
+
+label early(flag: bool) {
+  if flag {
+    早く戻る
+    return
+  }
+  最後まで行く
+}

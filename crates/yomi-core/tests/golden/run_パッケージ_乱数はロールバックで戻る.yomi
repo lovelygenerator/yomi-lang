@@ -1,0 +1,14 @@
+// @packages: counter
+// @seed: 9
+// @rollback: 1
+// @show: slices
+import counter
+
+label start {
+  @counter.roll(1000000)
+  一 ${counter.get()} #a
+  @counter.roll(1000000)
+  二 ${counter.get()} #b
+  @counter.roll(1000000)
+  三 ${counter.get()} #c
+}

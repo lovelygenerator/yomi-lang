@@ -1,0 +1,19 @@
+// 負荷用: 要素数 1 万の map に足して、更新して、一部を消して、合計する。
+save var m: map<int, int> = map {}
+
+label start {
+    for i in range(0, 10000) {
+        m[i] = i * 3
+    }
+    for i in range(0, 10000) {
+        m[i] += 1
+    }
+    for i in range(0, 1000) {
+        m.remove(i * 10)
+    }
+    let total = 0
+    for k in m.keys() {
+        total += m[k]
+    }
+    要素数: ${m.len()}、合計: ${total}
+}

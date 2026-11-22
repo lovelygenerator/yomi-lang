@@ -1,0 +1,14 @@
+import other
+
+save var x: int = 1
+
+label start {
+  main x=${x} other.x=${other.x}
+  other.x = 50
+  call other.start2()
+  jump start2
+}
+
+label start2 {
+  main.start2
+}

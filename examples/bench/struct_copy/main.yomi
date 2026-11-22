@@ -1,0 +1,19 @@
+// 負荷用: 10 万文字の str を持つ struct を、fn の引数に 2 万回渡す。struct の複製で、中身を写さないことを見る。
+import std::text
+
+struct Doc { body: str, tags: list<str>, n: int }
+
+fn weight(d: Doc) -> int {
+    return d.n + d.tags.len()
+}
+
+label start {
+    let d = Doc { body: text.repeat("い", 100000), tags: ["a", "b"], n: 2 }
+    let i = 0
+    let total = 0
+    while i < 20000 {
+        total += weight(d)
+        i += 1
+    }
+    結果: ${total}
+}

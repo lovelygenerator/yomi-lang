@@ -1,0 +1,9 @@
+label start {
+  let n = 0
+  while n < 3 {
+    n += 1
+    @game.give("薬草", n) #g
+    ${n}個渡した
+  }
+  @game.pause()
+}

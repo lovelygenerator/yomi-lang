@@ -1,0 +1,14 @@
+import std::math
+
+label start {
+  let a = math.abs(-5)
+  let b = math.min(3, -2)
+  let c = math.max(3, -2)
+  let d = math.clamp(15, 0, 10)
+  let e = math.clamp(-4, 0, 10)
+  let f = math.clamp(7, 0, 10)
+  let g = math.pow(2, 10)
+  let h = math.pow(-3, 3)
+  let i = math.pow(5, 0)
+  整数 ${a} ${b} ${c} ${d} ${e} ${f} ${g} ${h} ${i}
+}

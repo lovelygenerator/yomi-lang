@@ -1,0 +1,14 @@
+import std::audio
+
+label start {
+  はじまり
+  @audio.play("bgm", "town", fade: 1.5)
+  @audio.se("door")
+  @audio.voice("v001")
+  一つめ
+  @audio.volume("bgm", 0.5, fade: 2.0)
+  二つめ
+  @audio.play("bgm", "night")
+  三つめ
+  おわり
+}

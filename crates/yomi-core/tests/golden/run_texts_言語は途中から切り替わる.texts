@@ -1,0 +1,6 @@
+@lang en
+main.start#a	line one ${1}
+main.start#b	line two ${1}
+main.start#c	「line three ${1}」
+main.start#d	not used for commands
+main.start#e	line four ${1}

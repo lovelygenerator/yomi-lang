@@ -1,0 +1,8 @@
+停止 ui.say("サイコロ 5") #roll
+停止 ui.say("サイコロ 2") #roll
+停止 ui.say("サイコロ 6") #roll
+停止 ui.say("サイコロ 5") #roll
+停止 ui.say("サイコロ 5") #roll
+停止 ui.say("合計23 単独7 負-5") #sum
+終了
+変数 total = 23

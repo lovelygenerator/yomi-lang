@@ -1,0 +1,12 @@
+停止 ui.say("はじまり")
+  合図 音 Play { channel: "bgm", name: "town", volume: 1.0, fade: 1.5 }
+  合図 音 Se { name: "door" }
+  合図 音 Voice { name: "v001" }
+停止 ui.say("一つめ")
+  合図 音 Volume { channel: "bgm", volume: 0.5, fade: 2.0 }
+停止 ui.say("二つめ")
+  合図 音 Play { channel: "bgm", name: "night", volume: 1.0, fade: 0.0 }
+停止 ui.say("三つめ")
+停止 ui.say("おわり")
+  状態 チャンネル [Channel { channel: "bgm", name: "night", volume: 1.0 }]
+終了

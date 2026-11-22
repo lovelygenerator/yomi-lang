@@ -1,0 +1,6 @@
+label start {
+  let x = 1000000.0
+  while true {
+    x = x * x
+  }
+}

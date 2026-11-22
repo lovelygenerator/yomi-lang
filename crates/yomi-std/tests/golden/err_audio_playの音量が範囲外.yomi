@@ -1,0 +1,5 @@
+import std::audio
+
+label start {
+  @audio.play("rain", "rain_soft", volume: 1.5)
+}

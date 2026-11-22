@@ -1,0 +1,11 @@
+停止 ui.choose(["「続ける」", "「やめる」"], [None, None])
+選択 0
+停止 ui.choose(["「続ける」", "「やめる」"], [None, None])
+選択 0
+停止 ui.choose(["「続ける」", "「やめる」"], [None, None])
+選択 1
+停止 ui.say("ループのあと i=3")
+停止 ui.choose(["「一」", "「二」"], [None, None])
+選択 1
+停止 ui.say("pick の結果 2")
+終了

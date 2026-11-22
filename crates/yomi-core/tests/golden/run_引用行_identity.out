@@ -1,0 +1,11 @@
+停止 ui.say("地の文です")
+停止 ui.say_as(Some(Identity(案内人, "案内人")), "「おはよう」")
+停止 ui.say_as(Some(Identity(ミナ, "ミナ（先輩）")), "「今日は3回目だね」") #m1
+停止 ui.say_as(None, "「名前のない引用」")
+停止 ui.say_as(None, "「安定IDつき」") #q1
+停止 ui.say_as(Some(Identity(案内人, "案内人")), "「 前後の空白もそのまま 」")
+停止 ui.say_as(Some(Identity(案内人, "案内人")), "「$100 と 「括弧」」")
+停止 ui.say_as(None, "「入れ子「の」括弧」")
+停止 ui.say_as(Some(Identity(案内人, "案内人")), "「行末の #x」")
+停止 ui.say("最後の素の行")
+終了

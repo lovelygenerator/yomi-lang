@@ -1,0 +1,8 @@
+# 英語の差し替え表（語順を入れ替える・同じ番号を 2 度使う・使わない番号がある）
+@lang en
+main.start#p1	Day ${2} for ${1} (${1}!)
+main.start#p2	Imouto: 「${2} items, ${1}」
+main.start#yes	「Yes ${1}」
+main.start#no	「No」
+main.start#e1	You said yes.
+main.start#gone	使われない訳（台本にない）

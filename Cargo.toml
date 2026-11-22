@@ -1,0 +1,26 @@
+[workspace]
+resolver = "3"
+members = ["crates/yomi-derive", "crates/yomi-core", "crates/yomi-std", "crates/yomi-cli"]
+# Bevy の依存が重いので、別のワークスペースにする（`cargo build --workspace` に入れない）。
+exclude = ["crates/yomi-bevy"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/lovelygenerator/yomi-lang"
+publish = true
+
+# ワークスペースの中のクレートどうしの依存。版は、ワークスペースの版と同じにそろえる（一緒に公開する）。
+[workspace.dependencies]
+yomi-core = { path = "crates/yomi-core", version = "=0.1.0" }
+yomi-derive = { path = "crates/yomi-derive", version = "=0.1.0" }
+yomi-std = { path = "crates/yomi-std", version = "=0.1.0" }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+missing_docs = "warn"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }

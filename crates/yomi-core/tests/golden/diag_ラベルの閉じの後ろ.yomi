@@ -1,0 +1,14 @@
+label a {
+} junk
+label b {
+}  // コメントはよい
+label c {
+} else {
+  ここは読み飛ばす
+}
+label d { 余計な字句
+  あ
+}
+label e {
+  jump a
+}

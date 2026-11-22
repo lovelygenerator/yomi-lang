@@ -1,0 +1,8 @@
+停止 ui.choose(["「歩く」", "「戻る」"], [None, None])
+選択 0
+停止 ui.say("もう一度")
+停止 ui.choose(["「探す」", "「戻る」"], [None, None])
+選択 1
+停止 ui.say("戻る")
+停止 ui.say("終わり gold=2")
+終了

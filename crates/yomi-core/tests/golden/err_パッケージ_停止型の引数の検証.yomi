@@ -1,0 +1,8 @@
+// @packages: counter
+import counter
+
+label start {
+  始まり
+  @counter.wait(-1) #bad
+  終わり
+}

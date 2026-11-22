@@ -1,0 +1,9 @@
+import std::audio
+
+label start {
+  @audio.stop("bgm", fade: 1.0)
+  止めても何もない
+  @audio.play("bgm", "town")
+  @audio.stop("bgm", fade: 2.0)
+  止めた
+}

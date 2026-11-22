@@ -1,0 +1,24 @@
+// @show: vars
+enum Dir { North, South, Item(int, str) }
+struct Chara { name: str, hp: int, tags: list<str> }
+
+save var c: Chara = Chara { hp: 10, name: "案内人", tags: [] }
+save var d: Dir = Dir.North
+
+label start {
+  c.hp -= 3
+  c.tags.push("勇者")
+  let c2 = c
+  c2.hp = 0
+  ${c} ${c2}
+  d = Dir.Item(2, "薬")
+  if c == c2 {
+    同じ
+  } else {
+    違う
+  }
+  if (Chara { name: "a", hp: 1, tags: [] }) != c {
+    違う2
+  }
+  ${d}
+}

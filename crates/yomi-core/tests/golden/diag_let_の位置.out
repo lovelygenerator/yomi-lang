@@ -1,0 +1,3 @@
+4:7 duplicate_name name="x"
+5:7 duplicate_name name="a"
+7:11 duplicate_name name="x"

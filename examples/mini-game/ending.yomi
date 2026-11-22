@@ -1,0 +1,91 @@
+// エンディングと、クリアの記録（persistent var）。
+import std::audio
+import std::image
+import std::flow
+import std::text
+import chara
+import shop
+
+enum Ending { Sealed, Quiet, Lost, Promise }
+
+// 見たエンディングの名前（次の起動にも残る）
+persistent var cleared: list<str> = []
+persistent var best_money: int = 0
+
+fn title(e: Ending) -> str {
+    match e {
+        Sealed => return "封印の夜"
+        Quiet => return "帰り道"
+        Lost => return "霧の森で"
+        Promise => return "次の依頼も"
+    }
+}
+
+fn has_cleared(e: Ending) -> bool {
+    return cleared.contains(title(e))
+}
+
+fn cleared_count() -> int {
+    return cleared.len()
+}
+
+// 結末を見せて、記録して、台本を終わらせる
+label finish(e: Ending) {
+    @audio.stop("bgm", fade: 2.0)
+    @image.hide("partner", 1.0)
+    @flow.wait(1.0) #lmrvjp
+    match e {
+        Sealed => call sealed()
+        Quiet => call quiet()
+        Lost => call lost()
+        Promise => call promise()
+    }
+    if !cleared.contains(title(e)) {
+        cleared.push(title(e))
+    }
+    if shop.money > best_money {
+        best_money = shop.money
+    }
+    ―― エンディング ${text.pad_left("${cleared.len()}", 2, "0")}／04 ―― #nt2857
+    所持金 ${text.pad_left("${shop.money}", 5, " ")} ゴールド（最高 ${best_money} ゴールド） #9pnseb
+    for line in shop.bag_lines() {
+        ${line} #5o06kx
+    }
+    見たエンディング: ${text.join(cleared, "、")} #d98jle
+    end
+}
+
+label sealed {
+    @audio.play("bgm", "seal", fade: 0.5)
+    @image.show("bg", "forest_shrine", 0.0, 0.0, 2.0)
+    護符をかざすと、祠から青い光があふれた。 #3albcf
+    相棒「封印、できた……！　準備してきて、よかったね」 #z5ltr4
+    森を覆っていた霧が、すっと晴れていった。 #2slav2
+    相棒「次の依頼も、また一緒に行こうね」 #seal_last
+    【封印の夜】 #9pnseb
+}
+
+label quiet {
+    @audio.play("bgm", "road_home", fade: 1.0)
+    祠には手が届かず、二人で村へ引き返した。 #6wi6kw
+    相棒「ちょっと疲れちゃった。でも、無事でよかったよ」 #bgoyki
+    それだけで、今日は十分だった。 #nrrku1
+    【帰り道】 #d98jle
+}
+
+label lost {
+    @audio.se("fog")
+    濃い霧に包まれて、相棒の背中が、見えなくなった。 #x03a3u
+    名前を呼んでも、木々のざわめきにかき消される。 #45d81r
+    しばらくして、猟師の小屋で相棒を見つけた。ひどく、疲れた顔だった。 #8ntkih
+    【霧の森で】 #3albcf
+}
+
+label promise {
+    @audio.play("bgm", "seal_reprise", fade: 0.5)
+    @image.show("bg", "forest_shrine", 0.0, 0.0, 2.0)
+    二度目の封印は、前よりもずっと、うまくいった。 #0yh6f0
+    相棒「約束、覚えててくれたんだ」 #37hnvx
+    相棒「それじゃあ……次の依頼も、その次の依頼も、ね」 #ph815y
+    【次の依頼も】 #z5ltr4
+}

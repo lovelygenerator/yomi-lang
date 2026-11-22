@@ -1,0 +1,15 @@
+label start {
+  call scene()
+  呼び出し元へ戻った
+}
+
+label scene() {
+  let _a = 1
+  場面1
+  jump scene2
+}
+
+label scene2 {
+  場面2
+  return
+}

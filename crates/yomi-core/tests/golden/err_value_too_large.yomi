@@ -1,0 +1,5 @@
+save var s: str = "aaaaaaaa"
+label start {
+  s = "${s}${s}"
+  jump start
+}

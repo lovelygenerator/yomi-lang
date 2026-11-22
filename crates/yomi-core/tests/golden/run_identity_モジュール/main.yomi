@@ -1,0 +1,10 @@
+import cast
+import extra
+
+label start {
+  門番「import した identity は名前だけで書ける」
+  cast.案内人「モジュールつきでも書ける」
+  弟「extra の弟」
+  extra.弟「extra.弟 とも書ける」
+  call extra.talk()
+}

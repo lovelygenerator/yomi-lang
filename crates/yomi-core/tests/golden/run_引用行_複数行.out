@@ -1,0 +1,5 @@
+停止 ui.say_as(Some(Identity(案内人, "案内人")), "「こんにちは。今日はいい天気ですね。また明日」") #long
+停止 ui.say_as(None, "「ただの引用」")
+停止 ui.say_as(None, "「一行目[br]二行目 2」")
+停止 ui.say("終わり")
+終了

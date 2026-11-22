@@ -1,0 +1,6 @@
+import ep1
+
+label start {
+  main
+  call ep1.a(2)
+}

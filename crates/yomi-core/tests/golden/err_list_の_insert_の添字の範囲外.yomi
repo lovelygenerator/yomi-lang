@@ -1,0 +1,7 @@
+label start {
+  let xs = [1, 2]
+  xs.insert(2, 3)
+  ${xs}
+  xs.insert(4, 9)
+  ここには来ない
+}

@@ -1,0 +1,7 @@
+import std::text
+
+label start {
+  前
+  ${text.pad_left("a", -1, "0")}
+  後
+}

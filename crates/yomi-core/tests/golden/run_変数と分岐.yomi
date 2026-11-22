@@ -1,0 +1,24 @@
+save var gold: int = 10
+save var name: str = "ミナ"
+save var met: bool = false
+
+label start {
+  let bonus = 5
+  if gold >= 10 && !met {
+    ${name}は金貨を${gold + bonus}枚持っている
+    met = true
+  } else if gold > 100 {
+    大金持ち
+  } else {
+    貧しい
+  }
+  if met || gold < 0 {
+    出会った
+  }
+  if name == "ミナ" {
+    名前は一致
+  }
+  if name != "ミナ" {
+    ここには来ない
+  }
+}

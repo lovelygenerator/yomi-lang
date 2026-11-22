@@ -1,0 +1,8 @@
+// @packages: counter
+import counter
+
+label start {
+  @counter.inc(1)
+  @counter.wait(1) #w
+  ${counter.get()} #t
+}

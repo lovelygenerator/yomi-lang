@@ -1,0 +1,7 @@
+fn h(a: int = 1, b: int) -> int {
+  return a + b
+}
+
+label start {
+  ${h(1, 2)}
+}

@@ -1,0 +1,6 @@
+migrations:1:1 invalid_min_save_version version=9
+migrations:1:1 missing_frozen_schema version=1
+migrations:1:1 missing_frozen_schema version=2
+migrations:1:1 missing_migrate version=2
+migrations:2:1 invalid_migrate_version version=1
+migrations:6:1 duplicate_migrate version=3

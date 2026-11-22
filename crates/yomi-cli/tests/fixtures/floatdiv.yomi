@@ -1,0 +1,4 @@
+label start {
+  let z = 0.0
+  let _x = 1.0 / z
+}

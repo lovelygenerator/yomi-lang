@@ -1,0 +1,6 @@
+// @packages: counter
+import counter
+
+label start {
+  @counter.inc(1)
+}

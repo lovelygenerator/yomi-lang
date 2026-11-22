@@ -1,0 +1,20 @@
+// @rollback: 2
+// @show: vars
+save var xs: list<str> = ["b"]
+save var n: int = 0
+
+label start {
+  xs.insert(0, "a")
+  xs.insert(xs.len(), "d")
+  xs.insert(2, "c")
+  n += xs.len()
+  ${xs}
+  let ys = xs
+  ys.insert(1, "X")
+  ${xs} ${ys}
+  let g = [[1], [2]]
+  g[1].insert(0, 9)
+  ${g}
+  xs.insert(1, "Y")
+  ${xs} ${n}
+}

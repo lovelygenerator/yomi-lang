@@ -1,0 +1,44 @@
+save var score: int = 0
+
+fn double(x: int) -> int {
+  return x * 2
+}
+
+fn noval(x: int) {
+}
+
+fn f(x: int) -> int {
+  if x > 0 {
+    return 1
+  }
+}
+
+fn g() -> int {
+  return "s"
+}
+
+fn h() -> int {
+  return
+}
+
+fn k() {
+  return 1
+}
+
+fn double(y: int) -> int {
+  return y
+}
+
+label score {
+}
+
+label start {
+  let a = doubel(1)
+  let b = double(1, 2)
+  let c = double("a")
+  let d: str = double(1)
+  let e = noval(1)
+  let f2 = nothing(1)
+  @doubl(2)
+  @double(3) #a
+}

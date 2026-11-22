@@ -1,0 +1,21 @@
+停止 ui.say("一 1 合計 5") #a
+停止 ui.say("二 11 合計 12") #b
+停止 ui.say("三 111 合計 12") #c
+終了
+変数 step = 1
+変数 best = 0 (永続)
+変数 locked = false
+変数 title = "無題"
+スライス counter CounterState { n: 111, log: ["inc 1", "inc 10", "inc 100"] }
+永続スライス counter CounterPersistent { total: 12 }
+== ロールバック（停止点 0 へ戻る）
+停止 ui.say("一 1 合計 5") #a
+停止 ui.say("二 11 合計 19") #b
+停止 ui.say("三 111 合計 19") #c
+終了
+変数 step = 1
+変数 best = 0 (永続)
+変数 locked = false
+変数 title = "無題"
+スライス counter CounterState { n: 111, log: ["inc 1", "inc 10", "inc 100"] }
+永続スライス counter CounterPersistent { total: 19 }

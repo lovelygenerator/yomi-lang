@@ -1,0 +1,11 @@
+警告 8:3 identity_typo name="案内入" suggestions=["案内人"]
+停止 ui.say("「a」と「b」")
+停止 ui.say("「a」 と")
+停止 ui.say_as(None, "「」は数えない」")
+停止 ui.say("「閉じない")
+停止 ui.say("案内入「おはよう」")
+停止 ui.say("案内人と話した")
+停止 ui.say("案内人 「空白があれば素の行」")
+停止 ui.say("「a」 #no-id")
+停止 ui.say("終わり")
+終了

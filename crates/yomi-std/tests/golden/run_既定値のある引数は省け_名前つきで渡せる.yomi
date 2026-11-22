@@ -1,0 +1,18 @@
+import std::audio
+import std::image
+import std::screen
+import std::text
+
+label start {
+  @audio.play("bgm", "town")
+  @audio.play("rain", "rain_soft", fade: 2.0)
+  @image.show("bg", "street")
+  @image.show("left", "guide", x: 0.2, fade: 0.5)
+  @screen.fade_out("black")
+  @screen.fade_in(seconds: 1.0)
+  ${text.join(["a", "b", "c"])} ${text.pad_left("7", 3, fill: "0")} [${text.pad_right("x", 3)}]
+  @audio.volume("rain", 0.5)
+  @audio.stop("rain")
+  @image.hide("left")
+  終わり
+}

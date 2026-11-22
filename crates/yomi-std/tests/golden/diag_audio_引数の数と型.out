@@ -1,0 +1,6 @@
+4:3 missing_argument name="audio.play" arg="name"
+5:36 type_mismatch expected="float" found="int"
+6:13 type_mismatch expected="str" found="int"
+7:3 arg_count name="audio.voice" expected=1 found=0
+8:3 invalid_command_use name="audio.playing" kind="query"
+9:11 invalid_command_use name="audio.se" kind="effect"

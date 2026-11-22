@@ -1,0 +1,20 @@
+// @choose: 0 1 1
+save var has_key: bool = false
+save var gold: int = 5
+
+label start {
+  choice {
+    「探す」 if has_key => 鍵あり
+    「買う」 if gold >= 10 => 買った
+    「歩く」 if gold >= 5 && !has_key => { has_key = true; gold -= 3 }
+    「戻る」 => 戻る
+  }
+  もう一度
+  choice {
+    「探す」 if has_key => 鍵あり
+    「買う」 if gold >= 10 => 買った
+    「歩く」 if gold >= 5 && !has_key => 歩いた
+    「戻る」 => 戻る
+  }
+  終わり gold=${gold}
+}

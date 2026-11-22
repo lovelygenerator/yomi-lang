@@ -1,0 +1,12 @@
+label start {
+  最初の行 #first
+  IDなし
+  二番目 #second_2
+  @ui.say("コマンドにも付く") #cmd
+  @game.pause() #wait
+  # のような行 #x9
+}
+
+label other {
+  同じIDを別のラベルでは使える #first
+}

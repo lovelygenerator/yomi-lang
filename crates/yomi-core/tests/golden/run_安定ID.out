@@ -1,0 +1,8 @@
+警告 10:7 label_falls_through name="other"
+停止 ui.say("最初の行") #first
+停止 ui.say("IDなし")
+停止 ui.say("二番目") #second_2
+停止 ui.say("コマンドにも付く") #cmd
+停止 game.pause() #wait
+停止 ui.say("# のような行") #x9
+終了

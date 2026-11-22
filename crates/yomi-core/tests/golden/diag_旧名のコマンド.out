@@ -1,0 +1,4 @@
+警告 2:3 deprecated_command_name name="game.old_give" new="game.give"
+停止 game.give("剣", 1)
+停止 game.give("盾", 1)
+終了

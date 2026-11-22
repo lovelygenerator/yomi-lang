@@ -1,0 +1,13 @@
+// 負荷用: 文字列を 1 万個作って、join・split・replace・pad_left をする。
+import std::text
+
+label start {
+    let parts: list<str> = []
+    for i in range(0, 10000) {
+        parts.push(text.pad_left("${i}", 6, "0"))
+    }
+    let joined = text.join(parts, ",")
+    let back = text.split(joined, ",")
+    let replaced = text.replace(joined, "0", "o")
+    結果: ${back.len()} 個、全体 ${text.len(joined)} 文字、置換後 ${text.len(replaced)} 文字
+}

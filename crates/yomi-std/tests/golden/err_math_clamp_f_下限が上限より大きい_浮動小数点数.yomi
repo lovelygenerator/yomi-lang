@@ -1,0 +1,7 @@
+import std::math
+
+label start {
+  前
+  let _x = math.clamp_f(1.0, 5.0, 2.0)
+  後
+}

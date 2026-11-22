@@ -1,0 +1,28 @@
+label start {
+  call say_twice("やあ", 2)
+  let sum = call add(3, 4)
+  合計は ${sum}
+  let mut: int = 10
+  mut = call add(mut, 5)
+  結果は ${mut}
+  call add(1, 1)
+  捨てた
+  let msg = call decorate("星")
+  ${msg}
+}
+
+label say_twice(word: str, times: int) {
+  let i = 0
+  while i < times {
+    ${word}${i}
+    i += 1
+  }
+}
+
+label add(a: int, b: int) -> int {
+  return a + b
+}
+
+label decorate(s: str) -> str {
+  return "☆${s}☆"
+}

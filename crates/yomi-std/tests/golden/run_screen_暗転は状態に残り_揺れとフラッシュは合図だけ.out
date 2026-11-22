@@ -1,0 +1,10 @@
+  合図 画面 FadeOut { color: "black", seconds: 1.0 }
+停止 ui.say("一 Some(black)")
+  合図 画面 Shake { strength: 0.5, seconds: 0.3 }
+  合図 画面 Flash { color: "white", seconds: 0.2 }
+停止 ui.say("二")
+  合図 画面 FadeIn { seconds: 1.0 }
+停止 ui.say("三 None")
+  合図 画面 FadeOut { color: "white", seconds: 0.5 }
+  状態 画面 Some(Cover { color: "white" })
+終了

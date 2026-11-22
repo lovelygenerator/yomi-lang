@@ -1,0 +1,13 @@
+label start {
+  let a🐱 = 1
+  let 🐱 = 1
+  let a-b = 2
+  let 1a = 3
+  let a　b = 4
+  let okがme = 1
+  ${okがmx}
+  ${ａ}
+  jump 先がx
+}
+label 先がy {
+}

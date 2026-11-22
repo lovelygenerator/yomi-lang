@@ -1,0 +1,16 @@
+import std::text
+
+label start {
+  ${text.to_int("42")} ${text.to_int("-7")} ${text.to_int("+3")} ${text.to_int("1.5")} ${text.to_int(" 1")} ${text.to_int("１２")}
+  ${text.to_int("9223372036854775807")} ${text.to_int("9223372036854775808")}
+  ${text.to_float("1.5")} ${text.to_float("2.5E-2")} ${text.to_float(".5")} ${text.to_float("-0.0")} ${text.to_float("inf")} ${text.to_float("1e400")}
+  let parts = text.split("10,20,x", ",")
+  let total = 0
+  for p in parts {
+    match text.to_int(p) {
+      Some(n) => { total += n }
+      None => { 読めない ${p} }
+    }
+  }
+  合計 ${total}
+}

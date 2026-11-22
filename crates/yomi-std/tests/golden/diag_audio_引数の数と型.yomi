@@ -1,0 +1,10 @@
+import std::audio
+
+label start {
+  @audio.play("bgm")
+  @audio.play("bgm", "town", fade: 1)
+  @audio.se(1)
+  @audio.voice()
+  @audio.playing("bgm")
+  let x = audio.se("a")
+}

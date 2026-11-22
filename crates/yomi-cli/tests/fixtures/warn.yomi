@@ -1,0 +1,5 @@
+save var to_int: int = 9
+
+label start {
+  ${to_int}
+}

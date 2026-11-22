@@ -1,0 +1,8 @@
+// @packages: counter
+import counter
+
+label start {
+  前
+  @counter.fail("だめでした")
+  後
+}

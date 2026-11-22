@@ -1,0 +1,6 @@
+停止 ui.say("開始") #s
+停止 ui.say("a入口 1") #a1
+停止 ui.say("b 2") #b1
+停止 ui.say("a出口 1") #a2
+停止 ui.say("戻った") #back
+終了

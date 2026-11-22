@@ -1,0 +1,7 @@
+import a
+identity 案内人 = "案内人 B"
+identity 弟 = "弟 B"
+label y {
+  案内人「自分の宣言が優先」
+  a.案内人「a の案内人」
+}

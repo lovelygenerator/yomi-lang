@@ -1,0 +1,12 @@
+// @packages: counter other mirror
+// @show: slices
+import counter
+import mirror
+
+label start {
+  @counter.inc(21)
+  倍 ${mirror.double()}
+  @mirror.copy()
+  @counter.inc(1)
+  写し ${mirror.copied()} 本体 ${counter.get()} #a
+}

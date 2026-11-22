@@ -1,0 +1,14 @@
+// @seed: 42
+// @show: vars
+save var total: int = 0
+
+label start {
+  let i = 0
+  while i < 5 {
+    let d = random(1, 6)
+    total += d
+    サイコロ ${d} #roll
+    i += 1
+  }
+  合計${total} 単独${random(7, 7)} 負${random(-5, -1)} #sum
+}

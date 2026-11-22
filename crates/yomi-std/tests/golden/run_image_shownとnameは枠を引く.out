@@ -1,0 +1,7 @@
+停止 ui.say("左は false None")
+  合図 画像 Show { slot: "left", fade: 0.0 }
+停止 ui.say("左は true Some(guide)")
+停止 ui.say("右は false None")
+  合図 画像 Hide { slot: "left", fade: 0.0 }
+停止 ui.say("左は false None")
+終了

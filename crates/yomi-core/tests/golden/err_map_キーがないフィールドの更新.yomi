@@ -1,0 +1,8 @@
+struct P { hp: int }
+label start {
+  let m: map<str, P> = map { "a": P { hp: 1 } }
+  m["a"].hp = 5
+  ${m}
+  m["z"].hp = 5
+  後
+}

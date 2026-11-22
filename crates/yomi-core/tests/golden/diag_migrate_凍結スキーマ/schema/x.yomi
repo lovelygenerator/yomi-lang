@@ -1,0 +1,5 @@
+schema 1 hash "831c3defce57a429"
+
+module main {
+    save var hp: int
+}

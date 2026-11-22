@@ -1,0 +1,12 @@
+label start {
+  call outer(0)
+}
+
+label outer(n: int) {
+  call inner(n)
+}
+
+label inner(d: int) {
+  あ
+  let _x = 10 / d
+}

@@ -1,0 +1,13 @@
+save var 所持金: int = 100
+save var 名前: str = "ゆみ"
+
+label start {
+  let 追加 = 50
+  所持金 += 追加
+  ${名前}の所持金は${所持金}
+  jump 次の場面
+}
+
+label 次の場面 {
+  つづき
+}

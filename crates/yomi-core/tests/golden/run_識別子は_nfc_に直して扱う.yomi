@@ -1,0 +1,30 @@
+// @show: vars
+// が は か+濁点の分解形で書く（本文と文字列は、原文のまま）
+identity がx = "が"
+struct 点が {
+  xが: int
+}
+enum 気分が { 良が, 悪が(int) }
+fn 加が(aが: int) -> int {
+  return aが + 1
+}
+save var 数が: int = 1
+
+label start {
+  let p = 点が { xが: 加が(数が) }
+  let k = 気分が.悪が(p.xが)
+  match k {
+    良が => {
+      ここには来ない
+    }
+    悪が(n) => {
+      ${n} 本文はがのまま
+    }
+  }
+  がx「引用が」
+  jump 次が
+}
+
+label 次が {
+  ${数が} ${"が"}
+}

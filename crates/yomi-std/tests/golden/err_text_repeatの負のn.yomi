@@ -1,0 +1,7 @@
+import std::text
+
+label start {
+  前
+  ${text.repeat("a", -1)}
+  後
+}

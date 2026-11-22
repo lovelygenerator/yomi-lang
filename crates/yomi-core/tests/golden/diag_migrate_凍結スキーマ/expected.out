@@ -1,0 +1,3 @@
+schema/v1:1:1 schema_hash_mismatch version=1
+schema/x:1:1 invalid_schema_file path="schema/x.yomi"
+migrations:1:1 missing_migrate version=3

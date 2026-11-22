@@ -1,0 +1,28 @@
+[package]
+name = "yomi-core"
+description = "yomi 言語のコア（解析・型検査・VM）"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+repository.workspace = true
+readme = "README.md"
+keywords = ["scripting", "language", "interpreter", "embedded", "save"]
+categories = ["compilers", "game-development"]
+
+[lints]
+workspace = true
+
+[dependencies]
+serde_json = { version = "1", features = ["float_roundtrip", "unbounded_depth"] }
+serde = { version = "1", features = ["derive", "rc"] }
+postcard = { version = "1", features = ["use-std"] }
+yomi-derive.workspace = true
+unicode-normalization = { version = "0.1", default-features = false }
+unicode-ident = { version = "1", default-features = false }
+unicode-width = { version = "0.2", default-features = false }
+hashbrown = { version = "0.17", default-features = false, features = ["inline-more"] }
+rustc-hash = "2"
+rand_core = { version = "0.10", default-features = false }
+rand_xoshiro = "0.8"

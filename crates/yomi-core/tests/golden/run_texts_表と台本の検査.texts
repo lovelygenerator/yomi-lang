@@ -1,0 +1,5 @@
+@lang en
+main.start#a	one ${1}
+main.start#x	「A」
+main.start#zz	余り
+main.続き#c	three ${1} ${2}

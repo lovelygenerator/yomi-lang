@@ -1,0 +1,2 @@
+停止 ui.say("[1, 2, 3]")
+実行時エラー index_out_of_range label=start line=5

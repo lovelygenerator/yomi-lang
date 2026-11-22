@@ -1,0 +1,4 @@
+停止 ui.say("HELLO, WORLD! あいう ａｂｃ ß é")
+停止 ui.say("hello, world! ＡＢＣ É İ")
+停止 ui.say("|")
+終了

@@ -1,0 +1,6 @@
+停止 ui.say("階乗 3628800、偶数 true false")
+停止 ui.say("元 P { name: 案内人, hp: 3 } 後 P { name: 案内人, hp: 7 }")
+停止 ui.say("[2, 4, 6]")
+停止 ui.say("0 5")
+停止 ui.say("Some(20) None")
+終了

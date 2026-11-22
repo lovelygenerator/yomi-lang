@@ -1,0 +1,15 @@
+save var z: int = 0
+save var t: bool = true
+
+label start {
+  // 右辺は評価されない（0 割りにならない）
+  ${false && 1 / z == 0}
+  ${t || 1 / z == 0}
+  ${true && t}
+  ${false || false}
+  if z != 0 && 10 / z > 1 {
+    ここには来ない
+  } else {
+    0 割りを避けた
+  }
+}

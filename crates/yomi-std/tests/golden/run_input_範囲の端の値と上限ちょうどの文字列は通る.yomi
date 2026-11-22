@@ -1,0 +1,9 @@
+import std::input
+
+label start {
+  @input.text("名前は？", "", 3)
+  @input.integer("数は？", 0, -5, 5)
+  @input.integer("数は？", 0, -5, 5)
+  @input.integer("数は？", 3, 3, 3)
+  おわり
+}

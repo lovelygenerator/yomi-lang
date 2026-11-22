@@ -1,0 +1,10 @@
+@lang en
+# 英語
+identity:texts.案内人	Imouto
+texts.start#a	Day ${1}
+texts.start#b	「Hi, number ${1}」
+texts.start#yes	「Yes」
+texts.start#no	「No」
+texts.start#r1	Yes reply
+texts.start#r2	No reply
+texts.start#z	The end

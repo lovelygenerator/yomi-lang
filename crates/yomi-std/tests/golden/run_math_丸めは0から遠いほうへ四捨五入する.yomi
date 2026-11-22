@@ -1,0 +1,7 @@
+import std::math
+
+label start {
+  切り下げ ${math.floor(2.7)} ${math.floor(-2.1)} ${math.floor(3.0)}
+  切り上げ ${math.ceil(2.1)} ${math.ceil(-2.7)} ${math.ceil(3.0)}
+  四捨五入 ${math.round(2.5)} ${math.round(-2.5)} ${math.round(2.4)} ${math.round(-2.4)} ${math.round(0.5)} ${math.round(-0.5)}
+}

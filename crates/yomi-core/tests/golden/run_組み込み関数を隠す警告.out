@@ -1,0 +1,5 @@
+警告 1:10 shadowed_builtin name="to_int"
+警告 2:10 shadowed_builtin name="random"
+警告 5:7 shadowed_builtin name="seen"
+停止 ui.say("変数は使える 9")
+終了

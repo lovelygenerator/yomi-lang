@@ -1,0 +1,7 @@
+import std::text
+
+label start {
+  前
+  ${text.slice("abc", -1, 2)}
+  後
+}

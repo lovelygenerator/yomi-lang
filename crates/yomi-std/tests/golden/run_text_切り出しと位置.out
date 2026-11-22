@@ -1,0 +1,8 @@
+停止 ui.say("長さ 4")
+停止 ui.say("先頭 あ 結合 true 旗 true")
+停止 ui.say("末尾 い 全体 true 空 true")
+停止 ui.say("連結 true")
+停止 ui.say("位置 Some(2) Some(0) None")
+停止 ui.say("途中 Some(1) Some(3)")
+停止 ui.say("Some(2)")
+終了

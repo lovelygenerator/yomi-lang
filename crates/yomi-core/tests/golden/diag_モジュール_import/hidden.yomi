@@ -1,0 +1,3 @@
+save var v: int = 0
+label x {
+}

@@ -1,0 +1,3 @@
+停止 ui.choose(["「あ」", "「い」"], [None, None])
+選択 2
+再開できない choice_out_of_range

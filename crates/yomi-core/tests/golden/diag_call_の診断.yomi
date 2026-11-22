@@ -1,0 +1,28 @@
+label start {
+  call nowhere()
+  call hellp()
+  call add(1)
+  call add(1, "b")
+  call add(1, 2, 3)
+  let x = call noop()
+  let y = 1 + call add(1, 2)
+  if call add(1, 2) > 0 {
+  }
+  call add 1
+  call
+  let s: str = call add(1, 2)
+  x = call add(1, 2)
+  jump add
+  jump hello
+  jump
+}
+
+label hello() {
+}
+
+label noop() {
+}
+
+label add(a: int, b: int) -> int {
+  return a + b
+}

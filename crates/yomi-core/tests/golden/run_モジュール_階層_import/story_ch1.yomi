@@ -1,0 +1,7 @@
+// @module: story::ch1
+save var mark: int = 7
+
+label intro(n: int) {
+  ch1 intro ${n}
+  ch1.mark += n
+}

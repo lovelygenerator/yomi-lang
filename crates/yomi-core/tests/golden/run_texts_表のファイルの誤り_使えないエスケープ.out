@@ -1,0 +1,3 @@
+表の誤り invalid_escape (key main.start#a) (line 1)
+停止 ui.say("一") #a
+終了

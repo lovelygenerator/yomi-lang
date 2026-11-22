@@ -1,0 +1,11 @@
+save var n: int = 0
+
+label start {
+  main.n = main.n + 1
+  n 自分の名前で読む ${main.n}
+  jump main.next
+}
+
+label next {
+  次 ${n}
+}

@@ -1,0 +1,19 @@
+警告 hidden:2:7 label_falls_through name="x"
+main:2:8 unknown_module name="chaptr2" suggestions=["chapter2"]
+main:3:8 duplicate_import name="chapter2"
+警告 main:4:7 label_falls_through name="early"
+main:6:1 import_not_first
+main:9:3 unknown_label name="chapter2.nowhere"
+main:10:3 unknown_label name="chapter2.stat" suggestions=["chapter2.start"]
+main:11:3 arg_count name="chapter2.add" expected=2 found=1
+main:13:8 module_not_imported name="hidden"
+main:14:8 unknown_module name="ghost"
+main:16:3 unknown_name name="chapter2.favr" suggestions=["chapter2.favor"]
+main:17:3 module_not_imported name="hidden"
+main:18:3 unknown_module name="ghost"
+main:19:11 module_not_imported name="hidden"
+main:20:11 unknown_module name="ghost"
+main:21:11 unknown_name name="chapter2.nothing"
+main:22:7 duplicate_name name="late"
+main:25:10 duplicate_name name="chapter2"
+警告 main:26:7 label_falls_through name="util"

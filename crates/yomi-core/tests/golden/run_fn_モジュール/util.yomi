@@ -1,0 +1,13 @@
+save var base: int = 100
+
+fn double(x: int) -> int {
+  return x * 2
+}
+
+fn quad(x: int) -> int {
+  return double(double(x))
+}
+
+fn plus_base(x: int) -> int {
+  return x + base
+}

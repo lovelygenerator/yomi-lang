@@ -1,0 +1,5 @@
+label start {
+  let xs = [1]
+  xs.push(x: 2)
+  ${random(min: 1, max: 2)}
+}

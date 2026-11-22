@@ -1,0 +1,14 @@
+import main
+
+save var favor: int = 5
+save var score: int = 100
+
+label intro(n: int) {
+  chapter2 intro ${n} favor=${favor} score=${score}
+  main.score += n
+}
+
+label scene {
+  chapter2 scene
+  jump main.back
+}

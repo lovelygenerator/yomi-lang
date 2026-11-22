@@ -1,0 +1,7 @@
+停止 ui.say("倍 42")
+停止 ui.say("写し 21 本体 22") #a
+終了
+スライス counter CounterState { n: 22, log: ["inc 21", "inc 1"] }
+永続スライス counter CounterPersistent { total: 0 }
+スライス mirror MirrorState { copied: 21 }
+スライス other OtherState { value: 0 }

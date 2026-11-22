@@ -1,0 +1,11 @@
+  合図 画像 Show { slot: "bg", fade: 0.0 }
+  合図 画像 Show { slot: "left", fade: 0.0 }
+  合図 画像 Layer { slot: "bg" }
+  合図 画像 Scale { slot: "left", seconds: 0.5 }
+  合図 画像 Flip { slot: "left" }
+  合図 画像 Alpha { slot: "left", seconds: 1.0 }
+停止 ui.say("一")
+  合図 画像 Show { slot: "left", fade: 0.2 }
+停止 ui.say("二")
+  状態 画像 [Item { slot: "bg", name: "room", x: 0.0, y: 0.0, layer: 10, scale: 1.0, flip: false, alpha: 1.0 }, Item { slot: "left", name: "guide_smile", x: 0.3, y: 0.4, layer: 0, scale: 1.5, flip: true, alpha: 0.5 }]
+終了

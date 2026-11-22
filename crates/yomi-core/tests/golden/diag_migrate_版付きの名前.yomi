@@ -1,0 +1,5 @@
+save var hp: int = 1
+label start {
+  let a = v2::main.hp
+  let b: v2::main.Item = hp
+}

@@ -1,0 +1,9 @@
+import std::flow
+
+label start {
+  あいさつ
+  @flow.wait(1.5) #pause
+  @flow.wait(0.0)
+  @flow.wait_input() #click
+  おわり
+}

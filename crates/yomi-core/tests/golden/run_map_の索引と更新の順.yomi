@@ -1,0 +1,27 @@
+save var m: map<str, int> = map {}
+save var ids: map<int, str> = map {}
+
+label start {
+  for i in range(0, 6) {
+    m["k${i}"] = i
+  }
+  m.remove("k2")
+  m["k2"] = 20
+  m["k0"] += 100
+  m.remove("k5")
+  m.remove("無い")
+  ${m}
+  ${m.keys()} ${m.values()}
+  ${m.has("k2")} ${m.has("k5")} ${m.get("k1")} ${m.get("k5")}
+  let c = m
+  c["新"] = 1
+  c.remove("k1")
+  ${m.len()} ${c.len()}
+  ids[3] = "三"
+  ids[1] = "一"
+  ids[3] = "さん"
+  ${ids}
+  m.clear()
+  m["最後"] = 1
+  ${m}
+}

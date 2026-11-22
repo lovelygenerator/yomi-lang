@@ -1,0 +1,15 @@
+// A small dialogue: shows lines, asks the game for a choice, and waits for a second.
+import std::flow
+
+label start {
+    門番が立ちはだかっている。
+    let n = @game.choose("通してもらう", "引き返す")
+    if n == 0 {
+        門が開いた。
+        @flow.wait(1.0)
+        先へ進んだ。
+    } else {
+        踵を返した。
+    }
+    end
+}

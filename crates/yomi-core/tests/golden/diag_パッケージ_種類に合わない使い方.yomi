@@ -1,0 +1,10 @@
+// @packages: counter
+import counter
+
+label start {
+  @counter.get()
+  let a = counter.inc(1)
+  let b = counter.wait(1)
+  let c = ui.say("a")
+  @counter.inc(1) #id
+}

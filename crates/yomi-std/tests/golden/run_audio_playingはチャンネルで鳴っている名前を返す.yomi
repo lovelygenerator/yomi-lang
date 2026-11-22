@@ -1,0 +1,11 @@
+import std::audio
+
+label start {
+  今は ${audio.playing("bgm")}
+  @audio.play("bgm", "town")
+  今は ${audio.playing("bgm")}
+  @audio.play("bgm", "night")
+  今は ${audio.playing("bgm")}
+  @audio.stop("bgm")
+  今は ${audio.playing("bgm")}
+}

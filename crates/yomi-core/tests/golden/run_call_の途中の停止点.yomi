@@ -1,0 +1,15 @@
+label start {
+  開始 #s
+  call a(1)
+  戻った #back
+}
+
+label a(n: int) {
+  a入口 ${n} #a1
+  call b(n + 1)
+  a出口 ${n} #a2
+}
+
+label b(n: int) {
+  b ${n} #b1
+}

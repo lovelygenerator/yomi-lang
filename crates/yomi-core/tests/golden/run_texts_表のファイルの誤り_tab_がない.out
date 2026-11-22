@@ -1,0 +1,3 @@
+表の誤り missing_tab (line 2)
+停止 ui.say("一") #a
+終了

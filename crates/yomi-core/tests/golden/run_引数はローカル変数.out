@@ -1,0 +1,5 @@
+停止 ui.say("6と10")
+停止 ui.say("xは 100 totalは 16")
+停止 ui.say("8と14")
+停止 ui.say("xは 100 totalは 38")
+終了

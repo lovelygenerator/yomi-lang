@@ -1,0 +1,8 @@
+import std::text
+
+label start {
+  文字数 ${text.len("")} ${text.len("あいう")} ${text.len("abc漢字")}
+  結合 ${text.len("が")} ${text.len("é")}
+  含む ${text.contains("こんにちは世界", "世界")} ${text.contains("こんにちは", "さようなら")} ${text.contains("abc", "")}
+  始まる ${text.starts_with("こんにちは", "こん")} ${text.starts_with("こんにちは", "にちは")} ${text.starts_with("abc", "")}
+}

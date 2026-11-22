@@ -1,0 +1,15 @@
+停止 game.ask("名前は？") #name
+停止 ui.say("こんにちは 答:名前は？") #hello
+停止 game.roll(3)
+停止 game.roll(6)
+停止 game.yes("よろしいですか")
+停止 ui.say("合計 12、6、false")
+終了
+変数 total = 12
+変数 asked = false
+履歴 main.start#name game.ask("名前は？") 値=[[]] 戻り="答:名前は？"
+履歴 main.start#hello ui.say("こんにちは 答:名前は？") 値=[["答:名前は？"]]
+履歴 - game.roll(3) 値=[] 戻り=6
+履歴 - game.roll(6) 値=[] 戻り=12
+履歴 - game.yes("よろしいですか") 値=[[]] 戻り=false
+履歴 - ui.say("合計 12、6、false") 値=[["12", "6", "false"]]

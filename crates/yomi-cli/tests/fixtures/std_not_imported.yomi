@@ -1,0 +1,4 @@
+label start {
+  let x = math.abs(-1)
+  ${x}
+}

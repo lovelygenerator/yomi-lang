@@ -1,0 +1,7 @@
+save var m: int = -9223372036854775807
+
+label start {
+  m -= 1
+  ${m}
+  ${-m}
+}

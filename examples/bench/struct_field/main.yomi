@@ -1,0 +1,15 @@
+// 負荷用: 長い文字列を持つ struct の、整数のフィールドを 5 万回読む。フィールドの読み出しで、値全体を写さないことを見る。
+import std::text
+
+struct Doc { body: str, n: int }
+
+label start {
+    let d = Doc { body: text.repeat("あ", 100000), n: 3 }
+    let i = 0
+    let acc = 0
+    while i < 50000 {
+        acc = (acc + d.n) % 1000003
+        i += 1
+    }
+    結果: ${acc}、本文 ${text.len(d.body)} 文字
+}

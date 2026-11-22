@@ -1,0 +1,9 @@
+警告 migrations:2:1 unhandled_type_change name="main.hp" version=3
+migrations:4:5 migrate_type_mismatch name="main.title" expected="int" found="str"
+migrations:5:5 migrate_kind_mismatch name="v2::main.best"
+migrations:5:5 migrate_type_mismatch name="main.name" expected="int" found="str"
+migrations:6:5 migrate_type_mismatch name="v2::main.name" expected="int" found="str"
+migrations:6:35 duplicate_migrate_target name="main.name"
+migrations:8:10 unknown_schema_name name="v2::main.old_flagg" version=2 suggestions=["main.old_flag"]
+migrations:9:10 duplicate_migrate_target name="v2::main.old_flag"
+migrations:10:28 unknown_schema_name name="main.nothing" version=3

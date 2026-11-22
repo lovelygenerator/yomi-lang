@@ -1,0 +1,77 @@
+// REPL のテスト用。標準パッケージの import は、REPL の入力で試す
+import std::input
+identity 案内人 = "リオン"
+
+save var favor: int = 3
+save var items: list<str> = ["お面"]
+persistent var best: int = 0
+
+enum Mood { Happy, Normal, Sulky }
+struct Prize { name: str, hp: int }
+
+fn mood_of(level: int) -> Mood {
+  if level >= 6 {
+    return Mood.Happy
+  }
+  if level >= 3 {
+    return Mood.Normal
+  }
+  return Mood.Sulky
+}
+
+label start {
+  let gold = 100
+  gold += 0
+  if favor < 0 {
+    call ask()
+    call boom()
+    call pick()
+    call talk()
+    call bye()
+    call calc()
+  }
+  案内人「旅の人、遅い！」
+  jump shop
+}
+
+label shop {
+  choice {
+    「買う」 => favor += 1
+    「帰る」 => end
+  }
+}
+
+label talk {
+  let gold = 100
+  gold += 0
+  案内人「信頼度は${favor}」
+  jump shop
+}
+
+label bye {
+  さよなら
+  end
+}
+
+label ask {
+  let n = @input.integer("数", 5, 0, 10)
+  案内人「${n}」
+}
+
+label boom {
+  let xs = [1]
+  案内人「${xs[3]}」
+}
+
+label pick {
+  choice {
+    「はい」 #yes => favor += 10
+    「いいえ」 #no => favor += 20
+  }
+}
+
+label calc {
+  let d = 5
+  案内人「割ると${100 / d}」
+  end
+}

@@ -1,0 +1,9 @@
+label start {
+  let m: map<str, int> = map { "a": 1 }
+  m["a"] += 1
+  前
+  m["b"] = 5
+  ${m}
+  m["c"] += 1
+  後
+}

@@ -1,0 +1,5 @@
+警告 3:7 unused_variable name="unused_in_fn"
+警告 8:7 unused_variable name="dead"
+警告 11:7 unused_variable name="written"
+警告 19:7 unused_variable name="g"
+終了

@@ -1,0 +1,4 @@
+import {util, other as o, used}
+label start {
+  jump used.start
+}

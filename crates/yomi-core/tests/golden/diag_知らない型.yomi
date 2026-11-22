@@ -1,0 +1,6 @@
+save var a: foo = 1
+save var b: Int = 1
+
+label start {
+  let c: bar = 1
+}

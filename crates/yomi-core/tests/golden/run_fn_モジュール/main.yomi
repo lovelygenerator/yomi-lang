@@ -1,0 +1,13 @@
+import util
+
+label start {
+  ${util.double(4)} ${util.quad(2)} ${util.plus_base(1)}
+  ${main.local(1)}
+  @util.double(1)
+  let z = @util.quad(1)
+  ${z}
+}
+
+fn local(x: int) -> int {
+  return util.double(x) + 1
+}

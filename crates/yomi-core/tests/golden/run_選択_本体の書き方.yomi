@@ -1,0 +1,37 @@
+// @choose: 0 1 2 3 1 0 1
+save var n: int = 0
+
+label start {
+  // 1 行のブロック、複数行のブロック、文だけ
+  choice {
+    「a」 #a => { n += 1; @game.give("a", n) }
+    「b」 #b => {
+      n += 10
+      b を選んだ ${n}
+    }
+    「c」 #c => 選んだのは c
+    「d」 => { n += 100; jump next } // 行末のコメント
+  }
+  選択のあと n=${n}
+  jump start
+}
+
+label next {
+  next に来た n=${n}
+  jump start2
+}
+
+label start2 {
+  choice {
+    「x」 => n += 1000
+    「y」 if n > 5 => { 続き ${n} }
+  }
+  choice {
+    「入れ子 1」 => choice {
+      「内側 a」 => 内側 a
+      「内側 b」 => 内側 b
+    }
+    「入れ子 2」 => 入れ子 2
+  }
+  end
+}

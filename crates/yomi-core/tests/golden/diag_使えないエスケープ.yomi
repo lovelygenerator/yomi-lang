@@ -1,0 +1,5 @@
+label start {
+  let s = "a\qb"
+  本文の\qもだめ
+  行末の\
+}

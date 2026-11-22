@@ -1,0 +1,6 @@
+label start {
+  let xs = [1, 2, 3]
+  前
+  let _n = xs[3]
+  後
+}

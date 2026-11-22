@@ -1,0 +1,6 @@
+import std::input
+
+label start {
+  @input.text("名前は？", "", 2)
+  ここには来ない
+}

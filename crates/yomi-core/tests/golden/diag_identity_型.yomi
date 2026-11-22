@@ -1,0 +1,18 @@
+identity 案内人 = "あんないにん"
+identity 門番 = "もんばん"
+
+save var a: Identity = 案内人
+save var b: Identity = 1
+save var c: Identity = Identity
+
+label start {
+  let x: Identity = 案内人
+  let y = 案内人.nope
+  let z: Identity = "案内人"
+  ${案内人.id.len()}
+  ${x.name} ${門番.id}
+  let w: Identity<int> = 案内人
+  let k: map<Identity, int> = map { 案内人: 1 }
+  let q: map<str, Identity> = map { "a": 案内人 }
+  ${q["a"].name}
+}

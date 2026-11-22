@@ -1,0 +1,8 @@
+import ep2
+
+label a(n: int) {
+  ep1.a ${n}
+  if n > 0 {
+    call ep2.b(n - 1)
+  }
+}

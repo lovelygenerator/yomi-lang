@@ -1,0 +1,47 @@
+{
+  "name": "yomi",
+  "displayName": "yomi",
+  "description": "yomi スクリプト言語のシンタックスハイライトと Language Server（診断・補完・定義・参照・ホバー・名前の変更）",
+  "version": "0.0.0",
+  "publisher": "yomi-lang",
+  "license": "MIT OR Apache-2.0",
+  "engines": { "vscode": "^1.80.0" },
+  "categories": ["Programming Languages"],
+  "activationEvents": ["onLanguage:yomi"],
+  "main": "./extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "yomi",
+        "aliases": ["yomi"],
+        "extensions": [".yomi"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "yomi",
+        "scopeName": "source.yomi",
+        "path": "./syntaxes/yomi.tmLanguage.json"
+      }
+    ],
+    "configuration": {
+      "title": "yomi",
+      "properties": {
+        "yomi.server.path": {
+          "type": "string",
+          "default": "yomi",
+          "description": "`yomi` コマンドのパス（`yomi lsp` を起動する）。"
+        },
+        "yomi.server.decls": {
+          "type": "string",
+          "default": "",
+          "description": "ホストの登録表の宣言ファイル（`yomi decls` が書く JSON）。空なら、組み込みの登録表。"
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1"
+  }
+}

@@ -1,0 +1,13 @@
+// @second-run: yes
+// @show: vars
+persistent var counts: map<str, int> = map {}
+
+label start {
+  if counts.has("start") {
+    counts["start"] += 1
+  } else {
+    counts["start"] = 1
+  }
+  counts["last"] = counts["start"] * 10
+  ${counts}
+}

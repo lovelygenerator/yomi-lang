@@ -1,0 +1,82 @@
+// 購入申請の承認フロー。
+// 申請（JSON）が届くと、金額で承認者を決めて、承認を待ち、結果を知らせる。
+// 実行: yomi run examples/approval/approval.yomi
+import std::event
+import std::json
+
+// この金額（円）以下の申請は、承認を待たずに通す
+save var auto_limit: int = 10000
+// 承認を待つ時間（秒）
+save var deadline: float = 86400.0
+// 処理中の申請（JSON のまま持つ）
+save var request: str = ""
+// 処理中の申請の金額（円）
+save var amount: int = 0
+
+// 金額から、承認者を決める
+fn approver_for(price: int) -> str {
+    if price > 500000 {
+        return "部長"
+    }
+    return "課長"
+}
+
+label start {
+    申請を待っています。 #idle
+    let r = @event.wait(["submitted"]) #wait_submit
+    match r {
+        Arrived(name, data) => {
+            request = data
+            jump review
+        }
+        TimedOut => {
+            end
+        }
+    }
+}
+
+label review {
+    match json.get_int(request, "amount") {
+        Some(a) => {
+            amount = a
+        }
+        None => {
+            申請の形式が正しくありません。 #invalid
+            end
+        }
+    }
+    if amount <= auto_limit {
+        jump approved
+    }
+    jump wait_approval
+}
+
+label wait_approval {
+    ${approver_for(amount)}の承認を待っています（${amount} 円）。 #waiting
+    let r = @event.wait(["approved", "rejected"], Some(deadline)) #wait_decision
+    match r {
+        Arrived(name, data) => {
+            if name == "approved" {
+                jump approved
+            }
+            match json.get_str(data, "reason") {
+                Some(reason) => {
+                    却下されました。理由：${reason} #rejected
+                }
+                None => {
+                    却下されました。 #rejected_plain
+                }
+            }
+            end
+        }
+        TimedOut => {
+            期限が切れました。申請者に知らせます。 #expired
+            end
+        }
+    }
+}
+
+label approved {
+    承認されました。購買部へ回します。 #approved
+    end
+}

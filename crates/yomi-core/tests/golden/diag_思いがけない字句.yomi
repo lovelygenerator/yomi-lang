@@ -1,0 +1,5 @@
+label start {
+  let a = )
+  let b = 1 2
+  jump
+}

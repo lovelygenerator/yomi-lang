@@ -1,0 +1,6 @@
+2:10 duplicate_name name="a"
+6:7 duplicate_name name="x"
+7:7 duplicate_name name="a"
+10:7 duplicate_name name="start"
+13:7 duplicate_name name="a"
+警告 13:7 label_falls_through name="a"

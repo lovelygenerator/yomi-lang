@@ -1,0 +1,34 @@
+// @show: vars
+save var total: int = 0
+
+label start {
+  let xs = [10, 20, 30]
+  for x in xs {
+    // 反復の対象は、はじめに複製される。本体での変更は、反復に影響しない
+    xs.push(x)
+    total += x
+  }
+  ${xs} ${total}
+  for i in range(0, 5) {
+    if i == 1 {
+      continue
+    }
+    if i == 4 {
+      break
+    }
+    ${i}
+  }
+  let none: list<int> = []
+  for x in none {
+    ありえない
+  }
+  for x in range(3, 3) {
+    ありえない2
+  }
+  for x in range(5, 2) {
+    ありえない3
+  }
+  // 変数は、本体のローカル変数（終わったあとは、同じ名前を使える）
+  let x = 7
+  ${x}
+}

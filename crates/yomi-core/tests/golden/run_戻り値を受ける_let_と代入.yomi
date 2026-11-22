@@ -1,0 +1,12 @@
+// @show: vars history
+save var total: int = 0
+save var asked: bool = false
+
+label start {
+  let name = @game.ask("名前は？") #name
+  こんにちは ${name} #hello
+  let n: int = @game.roll(3)
+  total = @game.roll(n)
+  asked = @game.yes("よろしいですか")
+  合計 ${total}、${n}、${asked}
+}

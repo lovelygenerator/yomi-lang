@@ -1,0 +1,19 @@
+save var s: str = "a"
+save var b: bool = true
+save var n: int = 1
+save var f: float = 1.0
+
+label start {
+  s += "a"
+  b += 1
+  s -= "a"
+  s *= 2
+  b /= 1
+  s %= 1
+  n %= 2
+  f %= 2.0
+  n += 1.5
+  f += 1
+  n += "a"
+  q += 1
+}

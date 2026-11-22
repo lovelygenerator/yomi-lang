@@ -1,0 +1,7 @@
+import std::math
+
+label start {
+  前
+  let _x = math.abs(-9223372036854775807 - 1)
+  後
+}

@@ -1,0 +1,17 @@
+// 負荷用: 要素数 4 万の map に挿入して、更新して、読んで、合計する。
+// 要素数にほぼ線形の時間で終わること（値の大きさの検査を、増分で管理する）。
+save var m: map<int, int> = map {}
+
+label start {
+    for i in range(0, 40000) {
+        m[i] = i
+    }
+    for i in range(0, 40000) {
+        m[i] += 1
+    }
+    let total = 0
+    for i in range(0, 40000) {
+        total += m[i]
+    }
+    要素数: ${m.len()}、合計: ${total}
+}

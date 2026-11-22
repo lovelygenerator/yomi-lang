@@ -1,0 +1,22 @@
+// @choose: 1
+// @show: render
+identity 案内人 = "あんないにん"
+save var n: int = 7
+save var who: str = "ミナ"
+
+label start {
+  今日は ${who} の ${n} 日目 #p1
+  案内人「やあ ${who}、${n * 2} 個あるよ」 #p2
+  訳のない行 #p3
+  ID のない行
+  @game.give("薬${n}", n)
+  choice {
+    「はい ${n}」 #yes => {
+      はいと答えた #e1
+    }
+    「いいえ」 #no => {
+      いいえと答えた #e2
+    }
+    「保留」 => ここで保留
+  }
+}

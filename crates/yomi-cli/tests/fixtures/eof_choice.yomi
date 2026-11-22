@@ -1,0 +1,7 @@
+label start {
+  choice {
+    「はい」 => 返事した
+    「いいえ」 => end
+  }
+  最後
+}

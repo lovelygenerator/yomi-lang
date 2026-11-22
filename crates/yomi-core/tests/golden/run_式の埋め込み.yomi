@@ -1,0 +1,16 @@
+save var a: int = 7
+save var b: int = -3
+save var ok: bool = true
+save var s: str = "あい"
+
+label start {
+  ${a} ${b} ${ok} ${s}
+  ${a + b * 2} ${a - b} ${a / 2} ${b / 2} ${a % 4} ${b % 4}
+  ${-a} ${- -a} ${(a + b) * (a - b)}
+  ${a < b} ${a >= 7} ${a == 7} ${a != 7} ${!ok} ${ok && a > 0} ${ok || false}
+  ${"ネスト" == "ネスト"} ${s}${s}
+  ${"文字列${a}の中"}
+  前${a}後
+  ${a}
+  ${a}${b}
+}

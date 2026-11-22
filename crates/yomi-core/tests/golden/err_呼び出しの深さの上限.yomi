@@ -1,0 +1,7 @@
+label start {
+  call loop(0)
+}
+
+label loop(n: int) {
+  call loop(n + 1)
+}

@@ -1,0 +1,9 @@
+// @choose: 1
+label start {
+  前の行 #before
+  choice {
+    「は」 #yes => はい
+    「いいえ」 #no => いいえ
+  }
+  あとの行 #after
+}

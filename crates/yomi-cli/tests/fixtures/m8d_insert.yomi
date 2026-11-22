@@ -1,0 +1,9 @@
+save var xs: list<str> = ["b"]
+
+label start {
+  xs.insert(0, "a")
+  xs.insert(2, "c")
+  ${xs}
+  xs.insert(9, "z")
+  ここには来ない
+}

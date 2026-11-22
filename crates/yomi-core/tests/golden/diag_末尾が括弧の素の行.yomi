@@ -1,0 +1,12 @@
+label start {
+  彼は言った {
+  壊れたエスケープ \q {
+  ${ {
+  ここは素の行のまま
+  if true {
+    中
+  }
+}
+label next {
+  jump start
+}

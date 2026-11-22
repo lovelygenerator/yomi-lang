@@ -1,0 +1,12 @@
+4:3 empty_choice
+7:9 once_without_id
+9:9 duplicate_stable_id id="x"
+10:12 condition_not_bool found="int"
+11:8 unknown_name name="nope"
+12:9 unexpected_token found="jump"
+17:14 unexpected_token found="if"
+18:8 unexpected_eol
+19:5 unexpected_token found="普通の行"
+23:12 unknown_label name="nowhere"
+24:19 type_mismatch expected="int" found="str"
+30:5 unterminated_quote

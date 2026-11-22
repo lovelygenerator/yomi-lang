@@ -1,0 +1,7 @@
+  合図 音 Se { name: "a" }
+  合図 音 Se { name: "b" }
+停止 ui.say("一")
+停止 ui.say("二")
+  合図 音 Se { name: "c" }
+停止 ui.say("三")
+終了

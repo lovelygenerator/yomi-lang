@@ -1,0 +1,40 @@
+save var score: int = 0
+persistent var best: int = 0
+save var items: list<int> = []
+identity 案内人 = "案内人"
+
+label back() -> int {
+  return 1
+}
+
+fn a() {
+  素の行
+  案内人「やあ」
+  jump start
+  call back()
+  end
+  choice {
+    「x」 => {
+    }
+  }
+}
+
+fn b() {
+  score = 1
+  score += 1
+  best = 2
+  items.push(1)
+  items[0] = 1
+  main.score = 3
+  let ok = 1
+  ok += 1
+  ${ok}
+}
+
+fn c() -> int {
+  let r = call back()
+  return score + best
+}
+
+label start {
+}

@@ -1,0 +1,8 @@
+停止 game.give("薬草", 1) #g
+停止 ui.say("1個渡した")
+停止 game.give("薬草", 2) #g
+停止 ui.say("2個渡した")
+停止 game.give("薬草", 3) #g
+停止 ui.say("3個渡した")
+停止 game.pause()
+終了

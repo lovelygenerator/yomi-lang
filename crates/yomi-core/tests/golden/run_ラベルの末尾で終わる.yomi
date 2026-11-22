@@ -1,0 +1,7 @@
+label start {
+  ひとつだけ
+}
+
+label unused {
+  使われない
+}

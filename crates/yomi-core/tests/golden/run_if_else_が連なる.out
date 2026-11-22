@@ -1,0 +1,4 @@
+停止 ui.say("に")
+停止 ui.say("else側")
+停止 ui.say("入れ子の then")
+終了

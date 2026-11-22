@@ -1,0 +1,12 @@
+// @packages: counter
+// @second-run: yes
+// @show: slices vars
+import counter
+
+label start {
+  @counter.inc(1)
+  @counter.add_total(5)
+  counter.best += 3
+  counter.step += 1
+  周 状態 ${counter.get()} 永続 ${counter.total()} 変数 ${counter.best} ${counter.step} #a
+}

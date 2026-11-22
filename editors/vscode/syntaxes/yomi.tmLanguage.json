@@ -1,0 +1,61 @@
+{
+  "scopeName": "source.yomi",
+  "name": "yomi",
+  "patterns": [
+    { "include": "#comment" },
+    { "include": "#command" },
+    { "include": "#quote" },
+    { "include": "#string" },
+    { "include": "#stable-id" },
+    { "include": "#number" },
+    { "include": "#keyword" },
+    { "include": "#type" }
+  ],
+  "repository": {
+    "comment": {
+      "name": "comment.line.double-slash.yomi",
+      "match": "//.*$"
+    },
+    "command": {
+      "name": "support.function.command.yomi",
+      "match": "@[\\p{L}_][\\p{L}\\p{N}_]*(\\.[\\p{L}_][\\p{L}\\p{N}_]*)*"
+    },
+    "quote": {
+      "name": "string.quoted.other.quote-line.yomi",
+      "begin": "「",
+      "end": "」",
+      "patterns": [{ "include": "#interpolation" }]
+    },
+    "string": {
+      "name": "string.quoted.double.yomi",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        { "name": "constant.character.escape.yomi", "match": "\\\\." },
+        { "include": "#interpolation" }
+      ]
+    },
+    "interpolation": {
+      "name": "meta.interpolation.yomi",
+      "begin": "\\$\\{",
+      "end": "\\}",
+      "patterns": [{ "include": "$self" }]
+    },
+    "stable-id": {
+      "name": "entity.name.tag.stable-id.yomi",
+      "match": "#[a-z0-9_]+"
+    },
+    "number": {
+      "name": "constant.numeric.yomi",
+      "match": "\\b[0-9]+(\\.[0-9]+)?\\b"
+    },
+    "keyword": {
+      "name": "keyword.control.yomi",
+      "match": "\\b(identity|label|jump|call|choice|import|end|save|persistent|var|let|fn|if|else|while|for|in|match|break|continue|true|false|enum|struct|return|Some|None)\\b"
+    },
+    "type": {
+      "name": "storage.type.yomi",
+      "match": "\\b(int|float|bool|str|list|map|Option|Identity)\\b"
+    }
+  }
+}

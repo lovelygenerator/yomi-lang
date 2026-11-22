@@ -1,0 +1,4 @@
+// @module: b::util
+label go {
+  end
+}

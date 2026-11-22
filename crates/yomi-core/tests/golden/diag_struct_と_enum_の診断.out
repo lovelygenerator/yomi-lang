@@ -1,0 +1,15 @@
+3:8 recursive_type name="R"
+4:8 recursive_type name="A"
+5:8 recursive_type name="B"
+6:8 duplicate_name name="P"
+9:11 missing_field name="name" type="main.P"
+10:33 duplicate_field name="hp"
+11:33 unknown_field name="mp" type="main.P" suggestions=["hp"]
+12:11 unknown_variant name="East" type="main.Dir"
+14:11 unknown_field name="mp" type="main.P" suggestions=["hp"]
+15:16 unknown_method name="len" type="int"
+16:18 unknown_method name="foo" type="list<int>"
+17:18 statement_method_in_expression name="push"
+18:11 cannot_infer_type
+19:11 cannot_infer_type
+20:3 unknown_field name="mp" type="main.P" suggestions=["hp"]

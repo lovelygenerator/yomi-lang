@@ -1,0 +1,28 @@
+enum Dir { North, South, Item(int, str) }
+
+label start {
+  let ds = [Dir.North, Dir.South, Dir.Item(3, "薬")]
+  let i = 0
+  while i < ds.len() {
+    match ds[i] {
+      North => 北
+      South => 南
+      Item(n, s) => ${s}が${n}個
+    }
+    i += 1
+  }
+  let o: Option<int> = Some(5)
+  match o {
+    Some(n) => ${n}
+    None => なし
+  }
+  match "b" {
+    "a" => あ
+    "b" => い
+    _ => う
+  }
+  match true {
+    true => はい
+    false => いいえ
+  }
+}

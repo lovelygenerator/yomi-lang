@@ -1,0 +1,4 @@
+min_save_version 1
+migrate 2 {
+    convert v1::main.hp: int -> main.hp: int = 5
+}

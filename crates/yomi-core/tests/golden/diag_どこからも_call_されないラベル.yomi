@@ -1,0 +1,55 @@
+label start {
+  call used()
+  call used_value()
+  call a_done(1)
+  jump scene
+}
+
+label scene {
+  場面
+}
+
+label used() {
+  あ
+}
+
+label used_value() -> int {
+  return 1
+}
+
+label never_called(x: int) {
+  あ
+}
+
+label never_called_ends(x: int) {
+  あ
+  return
+}
+
+label never_called_jumps(x: int) {
+  あ
+  jump scene
+}
+
+label a_done(x: int) {
+  if x > 0 {
+    return
+  } else {
+    end
+  }
+}
+
+label never_called_if(x: int) {
+  if x > 0 {
+    return
+  }
+}
+
+label orphan {
+  あ
+}
+
+label orphan_ends {
+  あ
+  end
+}

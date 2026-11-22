@@ -1,0 +1,23 @@
+// @choose: 1
+save var favor: int = 0
+
+label start {
+  朝になった
+  choice {
+    「起きる」 #wake => {
+      favor += 1
+      jump morning
+    }
+    「寝る」   #sleep => jump bad_end
+    「もう少し考える」 => 考え中
+  }
+  選択のあとの行
+}
+
+label morning {
+  favor は ${favor}
+}
+
+label bad_end {
+  おやすみ
+}

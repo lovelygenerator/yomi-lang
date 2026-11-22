@@ -1,0 +1,18 @@
+label start {
+  let hp: map<str, int> = map { "案内人": 10, "門番": 20 }
+  for name in hp.keys() {
+    ${name} は ${hp[name]}
+    hp[name] += 1
+  }
+  ${hp}
+  let sum = 0
+  for v in hp.values() {
+    sum += v
+  }
+  ${sum}
+  // 回している間に map へ足しても、反復は変わらない
+  for k in hp.keys() {
+    hp["新" ] = 0
+  }
+  ${hp.len()}
+}

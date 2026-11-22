@@ -1,0 +1,10 @@
+import std::input
+
+label start {
+  @input.text("名前は？", "")
+  @input.integer("数は？", 1.0, 0, 10)
+  @input.confirm()
+  @input.confirm("a", "b")
+  @input.number("a")
+  let x = input.confirm("a")
+}

@@ -1,0 +1,8 @@
+5:11 invalid_command_use name="flow.wait" kind="stop"
+7:16 type_mismatch expected="int" found="str"
+9:7 type_mismatch expected="int" found="str"
+10:8 invalid_command_use name="input.integer" kind="stop"
+11:15 invalid_command_use name="input.integer" kind="stop"
+12:6 invalid_command_use name="input.confirm" kind="stop"
+15:11 unknown_command name="input.nothing"
+16:23 invalid_command_use name="input.text" kind="stop"

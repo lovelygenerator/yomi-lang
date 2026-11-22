@@ -1,0 +1,17 @@
+// @packages: counter
+// @show: slices
+import counter
+
+label start {
+  @counter.inc(2)
+  @counter.inc(3)
+  @counter.note("メモ")
+  現在 ${counter.get()}
+  let x = counter.get() * 10
+  十倍 ${x}
+  ${counter.describe("n=")}
+  ${counter.six("a", 1, true, 2.5, "e", 6)}
+  ${counter.divide(7.0, 2.0)}
+  @counter.roll(1)
+  ロール後 ${counter.get()}
+}

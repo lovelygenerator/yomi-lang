@@ -1,0 +1,6 @@
+4:9 text_after_quote
+6:10 text_after_quote
+8:7 duplicate_stable_id id="dup"
+9:9 unknown_name name="nope"
+10:11 type_mismatch expected="int" found="str"
+12:6 unterminated_quote

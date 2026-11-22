@@ -1,0 +1,10 @@
+import std::image
+
+label start {
+  @image.show("a", "b", 0, 0, 0)
+  @image.show("a")
+  @image.move("a", 1.0)
+  @image.hide(1, 0.0)
+  @image.shown("a")
+  let x = image.clear(0.0)
+}

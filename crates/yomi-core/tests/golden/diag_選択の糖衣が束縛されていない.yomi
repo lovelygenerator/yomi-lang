@@ -1,0 +1,9 @@
+// @registry: no-choice
+identity 案内人 = "案内人"
+
+label start {
+  案内人「あ」
+  choice {
+    「a」 => a
+  }
+}

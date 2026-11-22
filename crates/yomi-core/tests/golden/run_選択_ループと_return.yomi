@@ -1,0 +1,23 @@
+// @choose: 0 0 1 1
+save var i: int = 0
+
+label start {
+  while true {
+    i += 1
+    choice {
+      「続ける」 => continue
+      「やめる」 => break
+    }
+    ここには来ない
+  }
+  ループのあと i=${i}
+  let r = call pick()
+  pick の結果 ${r}
+}
+
+label pick() -> int {
+  choice {
+    「一」 => return 1
+    「二」 => return 2
+  }
+}

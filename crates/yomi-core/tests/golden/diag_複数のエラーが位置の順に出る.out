@@ -1,0 +1,8 @@
+1:13 unknown_type name="foo"
+3:3 unknown_label name="nowhere"
+4:11 unknown_name name="c"
+5:6 condition_not_bool found="int"
+6:5 unknown_command name="no.such"
+8:11 unterminated_string
+9:5 invalid_escape found="\\q"
+11:7 duplicate_name name="start"

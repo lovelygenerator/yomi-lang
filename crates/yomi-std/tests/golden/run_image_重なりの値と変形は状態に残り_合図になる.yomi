@@ -1,0 +1,13 @@
+import std::image
+
+label start {
+  @image.show("bg", "room", 0.0, 0.0, 0.0)
+  @image.show("left", "guide", 0.2, 0.4, 0.0)
+  @image.layer("bg", 10)
+  @image.scale("left", 1.5, 0.5)
+  @image.flip("left", true)
+  @image.alpha("left", 0.5, 1.0)
+  一
+  @image.show("left", "guide_smile", 0.3, 0.4, 0.2)
+  二
+}

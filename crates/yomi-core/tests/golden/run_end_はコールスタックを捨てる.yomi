@@ -1,0 +1,15 @@
+label start {
+  call outer()
+  ここには来ない
+}
+
+label outer() {
+  外
+  call inner()
+  これも来ない
+}
+
+label inner() {
+  内
+  end
+}

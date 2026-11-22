@@ -1,0 +1,14 @@
+停止 game.ask("言葉0")
+停止 ui.say("0:答:言葉0")
+停止 game.ask("言葉1")
+停止 ui.say("1:答:言葉1")
+停止 game.roll(2)
+停止 ui.choose(["「はい」", "「いいえ」"], [None, None])
+選択 0
+停止 game.ask("誰？")
+停止 ui.say("答:誰？と4")
+停止 game.roll(2)
+停止 ui.say("甲:4")
+停止 game.roll(4)
+停止 ui.say("結果 12")
+終了

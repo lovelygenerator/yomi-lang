@@ -1,0 +1,4 @@
+label start {
+  @game.old_give("剣", 1)
+  @game.give("盾", 1)
+}

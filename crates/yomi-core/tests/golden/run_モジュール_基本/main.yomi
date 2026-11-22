@@ -1,0 +1,19 @@
+import chapter2
+import util
+
+save var score: int = 1
+
+label start {
+  main開始
+  call chapter2.intro(3)
+  let d = call util.double(score)
+  score = d
+  chapter2.favor += 10
+  chapter2.favor = chapter2.favor * 2
+  信頼度 ${chapter2.favor}
+  jump chapter2.scene
+}
+
+label back {
+  main に戻った score=${score} favor=${chapter2.favor}
+}

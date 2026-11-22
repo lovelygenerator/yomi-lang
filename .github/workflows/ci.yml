@@ -1,0 +1,67 @@
+# 無料枠を節約するため、手動実行のみ（push・PR のトリガーを足さない）。
+name: ci
+on:
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - run: cargo fmt --check
+      - run: cargo clippy --all-targets -- -D warnings
+      - run: cargo test
+      # 既定の feature（CLI の `lsp`・`mcp`）を外した構成
+      - run: cargo clippy --all-targets --no-default-features -- -D warnings
+      - run: cargo test --no-default-features
+      - run: cargo doc --workspace --no-deps
+        env:
+          RUSTDOCFLAGS: -D warnings
+  # 移植性の確認（コアと std だけ。CLI は `std::fs` などを使うので対象外）。
+  wasm32:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+      # ライブラリだけ確認する（テストは `Instant`・スレッドを使うので、wasm32-unknown-unknown では動かせない）。
+      - run: cargo check --lib --target wasm32-unknown-unknown -p yomi-core -p yomi-std
+  # wasm32-wasip1 を wasmtime で動かし、yomi-core と yomi-std のテストを通す（スレッドは使わない設定）。
+  wasm32-wasip1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-wasip1
+      - uses: bytecodealliance/actions/wasmtime/setup@v1
+      - run: cargo test --target wasm32-wasip1 -p yomi-core --lib
+        env:
+          CARGO_TARGET_WASM32_WASIP1_RUNNER: wasmtime
+      # ファイルとスレッドを使うテスト（golden・robustness・例）は、実行環境から読めないので外す。
+      - run: cargo test --target wasm32-wasip1 -p yomi-std --lib --test packages --test event --test test_answers
+        env:
+          CARGO_TARGET_WASM32_WASIP1_RUNNER: wasmtime
+  # Bevy のプラグイン（別のワークスペース。依存が重いので、ほかのジョブとは分ける）。
+  bevy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - run: cargo test
+        working-directory: crates/yomi-bevy
+      - run: cargo clippy --all-targets -- -D warnings
+        working-directory: crates/yomi-bevy
+  i686:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: i686-unknown-linux-gnu
+      - run: sudo apt-get update && sudo apt-get install -y gcc-multilib
+      # 32bit（`usize` が 32bit）でテストを動かし、セーブの形式などが 64bit と同じ結果になることを確かめる。
+      - run: cargo test --target i686-unknown-linux-gnu -p yomi-core -p yomi-std

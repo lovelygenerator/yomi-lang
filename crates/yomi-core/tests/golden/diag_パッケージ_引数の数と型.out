@@ -1,0 +1,8 @@
+5:3 arg_count name="counter.inc" expected=1 found=0
+6:3 arg_count name="counter.inc" expected=1 found=2
+7:16 type_mismatch expected="int" found="str"
+8:17 type_mismatch expected="int" found="float"
+9:28 type_mismatch expected="str" found="int"
+10:11 arg_count name="counter.divide" expected=2 found=1
+11:11 arg_count name="counter.get" expected=0 found=1
+12:16 type_mismatch expected="str" found="int"

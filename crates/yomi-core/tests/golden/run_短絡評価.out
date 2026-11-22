@@ -1,0 +1,6 @@
+停止 ui.say("false")
+停止 ui.say("true")
+停止 ui.say("true")
+停止 ui.say("false")
+停止 ui.say("0 割りを避けた")
+終了

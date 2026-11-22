@@ -1,0 +1,24 @@
+label start {
+  true
+  in
+  int x
+  str
+  Some(1)
+  var
+  \true は素の行
+  \int も素の行
+  integer は素の行
+  save var x: int = 1
+  persistent var y: int = 1
+  identity i = "i"
+  import foo
+  label inner {
+  }
+  fn f() {
+  }
+  enum E {
+  }
+  struct S {
+  }
+  jump start
+}

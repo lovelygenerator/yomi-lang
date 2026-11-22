@@ -1,0 +1,4 @@
+1bad:1:1 invalid_module_name name="1bad"
+dup:1:1 duplicate_module name="dup"
+dup:3:3 unknown_label name="nowhere"
+label:1:1 invalid_module_name name="label"

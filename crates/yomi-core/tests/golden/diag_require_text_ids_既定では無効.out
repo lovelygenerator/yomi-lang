@@ -1,0 +1,5 @@
+停止 ui.say("ID のない素の行")
+停止 ui.say_as(Some(Identity(案内人, "案内人")), "「ID のない引用行」")
+停止 ui.choose(["「ID のない選択肢」"], [None])
+選択 0
+終了

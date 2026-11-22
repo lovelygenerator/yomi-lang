@@ -1,0 +1,12 @@
+停止 ui.say("一 599032") #a
+停止 ui.say("二 429737") #b
+停止 ui.say("三 198650") #c
+終了
+スライス counter CounterState { n: 198650, log: [] }
+永続スライス counter CounterPersistent { total: 0 }
+== ロールバック（停止点 1 へ戻る）
+停止 ui.say("二 429737") #b
+停止 ui.say("三 198650") #c
+終了
+スライス counter CounterState { n: 198650, log: [] }
+永続スライス counter CounterPersistent { total: 0 }

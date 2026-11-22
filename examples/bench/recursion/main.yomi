@@ -1,0 +1,22 @@
+// 負荷用: 再帰の fn（フィボナッチ、深さ 200 の足し算を 500 回）。
+fn fib(n: int) -> int {
+    if n < 2 {
+        return n
+    }
+    return fib(n - 1) + fib(n - 2)
+}
+
+fn sum_to(n: int) -> int {
+    if n == 0 {
+        return 0
+    }
+    return n + sum_to(n - 1)
+}
+
+label start {
+    let total = 0
+    for i in range(0, 500) {
+        total += sum_to(200)
+    }
+    fib(24) = ${fib(24)}、深さ 200 の足し算 500 回の合計 = ${total}
+}

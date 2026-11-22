@@ -1,0 +1,7 @@
+停止 ui.say("map { start: 1, last: 10 }")
+終了
+変数 counts = Map([(Str("start"), Int(1)), (Str("last"), Int(10))]) (永続)
+== 2 周目（永続データを引き継ぐ）
+停止 ui.say("map { start: 2, last: 20 }")
+終了
+変数 counts = Map([(Str("start"), Int(2)), (Str("last"), Int(20))]) (永続)

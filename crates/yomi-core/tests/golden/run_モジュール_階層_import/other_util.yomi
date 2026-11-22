@@ -1,0 +1,4 @@
+// @module: other::util
+label triple(x: int) -> int {
+  return x * 3
+}

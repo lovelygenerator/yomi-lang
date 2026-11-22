@@ -1,0 +1,18 @@
+import story::{ch1, ch2 as second}
+import {lib::util as libutil, other::util as otherutil,}
+
+save var score: int = 1
+
+label start {
+  main開始
+  call ch1.intro(3)
+  second.favor += 2
+  let a = call libutil.double(score)
+  let b = call otherutil.triple(score)
+  結果 ${a} ${b} ${ch1.mark} ${second.favor}
+  jump second.scene
+}
+
+label back {
+  main に戻った score=${score}
+}

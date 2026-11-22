@@ -1,0 +1,12 @@
+schema 2 hash "1149b288153180ae"
+
+module main {
+    struct Item { id: str }
+    save var bag: list<main.Item>
+    save var gold: int
+    save var hp: str
+    save var name: int
+    save var old_flag: bool
+    persistent var best: int
+    persistent var score: int
+}

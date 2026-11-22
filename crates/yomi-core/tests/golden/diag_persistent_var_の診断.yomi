@@ -1,0 +1,13 @@
+save var a: int = 1
+persistent var a: int = 2
+persistent var b: int = a + 1
+persistent var c = 1
+persistent var d: int
+persistent var e: Option = 1
+persistent var random: int = 1
+persistent d: int = 1
+
+label start {
+  persistent var f: int = 1
+  let b = 1
+}

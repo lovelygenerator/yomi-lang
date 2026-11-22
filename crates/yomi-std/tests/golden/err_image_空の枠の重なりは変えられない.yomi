@@ -1,0 +1,5 @@
+import std::image
+
+label start {
+  @image.layer("left", 1)
+}

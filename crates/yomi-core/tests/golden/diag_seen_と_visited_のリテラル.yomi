@@ -1,0 +1,9 @@
+label start {
+  もう一つ #ok
+  choice {
+    「a」 #opt => a
+  }
+  あ ${seen("start#ok")} ${seen("start#opt")} ${seen("start#nothing")}
+  い ${seen("start")} ${seen("nolabel#ok")} ${seen("nomodule.start#ok")}
+  う ${visited("start")} ${visited("nolabel")} ${visited("start#ok")} ${visited("a.b.c")}
+}

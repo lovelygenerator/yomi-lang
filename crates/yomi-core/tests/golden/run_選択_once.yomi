@@ -1,0 +1,21 @@
+// @choose: 0 0 0 1
+save var turns: int = 0
+
+label start {
+  jump menu
+}
+
+label menu {
+  turns += 1
+  choice {
+    「手紙を読む」 once #letter => { 手紙を読んだ }
+    「鍵を探す」 once if turns >= 2 #key => { 鍵を見つけた }
+    「待つ」 #wait => { 待った }
+    「去る」 if turns >= 4 => { jump leave }
+  }
+  jump menu
+}
+
+label leave {
+  once の状態 ${turns}
+}

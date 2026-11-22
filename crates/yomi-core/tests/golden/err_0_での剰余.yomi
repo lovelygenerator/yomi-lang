@@ -1,0 +1,5 @@
+save var z: int = 0
+
+label start {
+  z %= 0
+}

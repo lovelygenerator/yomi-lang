@@ -1,0 +1,3 @@
+@lang en
+# コメント
+main.start#a	one ${name}

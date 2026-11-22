@@ -1,0 +1,10 @@
+停止 input.text("名前は？", "", 3)
+  入力 "abc"
+停止 input.integer("数は？", 0, -5, 5)
+  入力 -5
+停止 input.integer("数は？", 0, -5, 5)
+  入力 5
+停止 input.integer("数は？", 3, 3, 3)
+  入力 3
+停止 ui.say("おわり")
+終了

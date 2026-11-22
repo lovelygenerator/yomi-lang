@@ -1,0 +1,9 @@
+// @packages: counter
+import counter
+import counter
+
+save var counter: int = 0
+
+label start {
+  let counter = 1
+}

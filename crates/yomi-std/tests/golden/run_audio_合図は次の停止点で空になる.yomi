@@ -1,0 +1,10 @@
+import std::audio
+
+label start {
+  @audio.se("a")
+  @audio.se("b")
+  一
+  二
+  @audio.se("c")
+  三
+}

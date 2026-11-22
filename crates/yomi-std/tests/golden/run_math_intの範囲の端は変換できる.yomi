@@ -1,0 +1,5 @@
+import std::math
+
+label start {
+  端 ${math.floor(-9223372036854775808.0)} ${math.round(9223372036854774784.0)}
+}

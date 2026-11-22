@@ -1,0 +1,10 @@
+save var gold: int = 3
+
+label start {
+  @game.give("りんご", gold)
+  @game.roll(gold + 1)
+  @game.pause()
+  let r = 10
+  @ui.say("直接 ${r}")
+  @game.give("みかん", r * 2) #g2
+}

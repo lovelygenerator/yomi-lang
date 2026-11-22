@@ -1,0 +1,13 @@
+import std::text
+
+label start {
+  let names = ["ゆみ", "ひろ", "さく"]
+  let i = 0
+  for n in names {
+    i += 1
+    ${text.pad_left("${i}", 3, "0")}. ${n}
+  }
+  let csv = text.join(names, ",")
+  ${csv} → ${text.replace(csv, ",", "、")}
+  ${text.upper("ok")} ${text.lower("OK")}
+}

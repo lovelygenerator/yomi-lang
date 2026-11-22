@@ -1,0 +1,23 @@
+// 負荷用: list_hof と同じ計算を、for で書いたもの（比べる基準。sort_by は同じ呼び出しを使う）。
+label start {
+    let xs: list<int> = []
+    for i in range(0, 20000) {
+        xs.push((i * 7919) % 10007)
+    }
+    let k = 3
+    let total = 0
+    for round in range(0, 20) {
+        let zs: list<int> = []
+        for x in xs {
+            let y = x * k + round
+            if y % 2 == 0 {
+                zs.push(y)
+            }
+        }
+        for z in zs {
+            total += z
+        }
+        total += xs.sort_by(|x| x)[round]
+    }
+    結果: ${total}
+}

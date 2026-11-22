@@ -1,0 +1,11 @@
+label start {
+  break
+  continue
+  if true {
+    break
+  }
+  while true {
+    break
+    continue
+  }
+}

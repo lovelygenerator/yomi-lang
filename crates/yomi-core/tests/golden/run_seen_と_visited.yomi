@@ -1,0 +1,28 @@
+// @choose: 1 0
+// @seen: main.old#before_start main.start#hidden
+save var key: str = "start#first"
+
+label start {
+  最初 #first
+  通過 first ${seen("start#first")} second ${seen("start#second")} main.first ${seen("main.start#first")}
+  visited start ${visited("start")} other ${visited("other")} main.other ${visited("main.other")}
+  与えた ${seen("old#before_start")} 与えた2 ${seen("main.start#hidden")}
+  second の前 #second
+  second のあと ${seen("start#second")}
+  choice {
+    「左」 #left => 左へ
+    「右」 #right => 右へ
+  }
+  選択肢 left ${seen("start#left")} right ${seen("start#right")}
+  jump other
+}
+
+label other {
+  visited other ${visited("other")} start ${visited("main.start")} none ${visited("nowhere")}
+  seen の外 ${seen("nowhere#x")} ${seen("other#nothing")} ${seen("zzz")}
+  動的 ${seen(key)}
+}
+
+label old {
+  古い #before_start
+}

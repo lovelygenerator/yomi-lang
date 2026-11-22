@@ -1,0 +1,17 @@
+// @registry: ignore
+// @choose: 1
+identity 案内人 = "案内人"
+
+label start {
+  始まり
+  案内人「無視される」
+  choice {
+    「a」 => a を選んだ
+    「b」 => { jump skip }
+  }
+  終わり
+}
+
+label skip {
+  ここには来ない
+}

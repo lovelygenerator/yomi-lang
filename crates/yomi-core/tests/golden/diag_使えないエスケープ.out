@@ -1,0 +1,3 @@
+2:13 invalid_escape found="\\q"
+3:6 invalid_escape found="\\q"
+4:6 invalid_escape found="\\"

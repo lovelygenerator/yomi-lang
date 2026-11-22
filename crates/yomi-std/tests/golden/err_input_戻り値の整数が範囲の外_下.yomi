@@ -1,0 +1,6 @@
+import std::input
+
+label start {
+  @input.integer("数は？", 0, 0, 10)
+  ここには来ない
+}

@@ -1,0 +1,7 @@
+import std::image
+
+label start {
+  @image.hide("left", 1.0)
+  @image.clear(1.0)
+  何もない
+}

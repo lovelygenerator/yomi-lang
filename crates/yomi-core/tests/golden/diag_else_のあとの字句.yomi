@@ -1,0 +1,41 @@
+label start {
+  if true {
+    a
+  } else { junk
+    b
+    jump nowhere
+  }
+  if true {
+    a
+  } else x {
+    b
+    jump nowhere2
+  }
+  if true {
+    a
+  } else
+  if true {
+    a
+  } else if ) {
+    b
+    jump nowhere3
+  }
+  if true {
+    a
+  } junk {
+    b
+    jump nowhere4
+  }
+  if true { 余計
+    jump nowhere5
+  }
+  while true { 余計
+    jump nowhere6
+  } junk
+  while true {
+    break
+  } else {
+    c
+  }
+  終わり
+}

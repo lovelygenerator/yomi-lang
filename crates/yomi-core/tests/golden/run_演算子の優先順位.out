@@ -1,0 +1,6 @@
+停止 ui.say("7 9 3 2 2")
+停止 ui.say("-6 -6 4 4")
+停止 ui.say("true true true")
+停止 ui.say("false true true")
+停止 ui.say("true")
+終了

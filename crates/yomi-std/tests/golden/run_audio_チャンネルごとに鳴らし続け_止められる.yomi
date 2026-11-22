@@ -1,0 +1,13 @@
+import std::audio
+
+label start {
+  @audio.play("rain", "rain_soft", volume: 0.5, fade: 1.0)
+  @audio.play("wind", "wind")
+  一 ${audio.playing("rain")} ${audio.playing("fire")}
+  @audio.play("rain", "rain_hard", volume: 0.8, fade: 2.0)
+  @audio.volume("wind", 0.2, fade: 0.5)
+  二
+  @audio.stop("wind", fade: 1.0)
+  @audio.stop("fire", fade: 1.0)
+  三
+}

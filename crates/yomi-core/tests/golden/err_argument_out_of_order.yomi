@@ -1,0 +1,7 @@
+fn g(a: int = 0, b: int = 0) -> int {
+  return a + b
+}
+
+label start {
+  ${g(b: 1, a: 2)}
+}

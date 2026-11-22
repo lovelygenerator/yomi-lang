@@ -1,0 +1,7 @@
+import std::image
+
+label start {
+  @image.show("left", "guide", 0.2, 0.3, 0.0)
+  @image.hide("left", -1.0)
+  後
+}

@@ -1,0 +1,7 @@
+import std::text
+
+label start {
+  前
+  ${text.repeat("ab", 1000000000000)}
+  後
+}

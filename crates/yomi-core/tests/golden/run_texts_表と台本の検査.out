@@ -1,0 +1,11 @@
+検査 警告 missing key="main.start#b"
+検査 警告 missing key="main.start#y"
+検査 エラー bad_number key="main.続き#c" number=2 count=0
+検査 警告 unused key="main.start#zz"
+表の誤り エラー bad_number key="main.続き#c" number=2 count=0
+停止 ui.say("一 2") #a
+停止 ui.say("二") #b
+停止 ui.choose(["「あ」", "「い」"], [Some("x"), Some("y")])
+選択 0
+停止 ui.say("三") #c
+終了

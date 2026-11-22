@@ -1,0 +1,6 @@
+label start {
+  @ui.say()
+  @ui.say("a", "b")
+  @game.give("x")
+  @game.pause(1)
+}

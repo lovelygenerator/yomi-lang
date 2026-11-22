@@ -1,0 +1,2 @@
+警告 1:7 label_falls_through name="main"
+実行時エラー start_label_not_found (VM を作れない)

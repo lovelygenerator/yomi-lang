@@ -1,0 +1,8 @@
+停止 game.roll(5)
+停止 ui.say("2 4 5 5 10")
+終了
+変数 last = 4
+変数 step = 5
+変数 best = 0 (永続)
+変数 locked = false
+変数 title = "無題"

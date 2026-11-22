@@ -1,0 +1,4 @@
+停止 counter.wait(0) #zero
+停止 counter.wait(3) #three
+停止 ui.say("通った")
+終了

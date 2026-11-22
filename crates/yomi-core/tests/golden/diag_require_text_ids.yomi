@@ -1,0 +1,19 @@
+// @require-text-ids: yes
+identity 案内人 = "案内人"
+
+label start {
+  ID のない素の行
+  ID のある素の行 #a
+  案内人「ID のない引用行」
+  案内人「ID のある引用行」 #b
+  「identity なしの引用行」
+  @game.give("コマンドは対象外", 1)
+  choice {
+    「ID なし」 => jump 続き
+    「ID あり」 #c => jump 続き
+  }
+}
+
+label 続き {
+  終わり #d
+}

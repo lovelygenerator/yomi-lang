@@ -1,0 +1,10 @@
+  合図 音 Play { channel: "bgm", name: "room", volume: 1.0, fade: 1.0 }
+  合図 画像 Show { slot: "bg", fade: 0.0 }
+停止 input.confirm("始めますか？") #start
+  入力 true
+  合図 音 Se { name: "chime" }
+  合図 画像 Show { slot: "left", fade: 0.5 }
+停止 ui.say("始まった")
+  状態 チャンネル [Channel { channel: "bgm", name: "room", volume: 1.0 }]
+  状態 画像 [Item { slot: "bg", name: "room", x: 0.0, y: 0.0, layer: 0, scale: 1.0, flip: false, alpha: 1.0 }, Item { slot: "left", name: "guide", x: 0.2, y: 0.4, layer: 0, scale: 1.0, flip: false, alpha: 1.0 }]
+終了

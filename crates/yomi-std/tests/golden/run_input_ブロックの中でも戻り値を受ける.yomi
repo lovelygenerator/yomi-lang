@@ -1,0 +1,17 @@
+import std::input
+
+label start {
+  let n = 0
+  while n < 2 {
+    let word = @input.text("言葉は？", "", 8)
+    ${n}回目: ${word}
+    n += 1
+  }
+  if n == 2 {
+    let yes = @input.confirm("続ける？")
+    if yes {
+      let k = @input.integer("数は？", 1, 0, 9)
+      合計 ${k}
+    }
+  }
+}

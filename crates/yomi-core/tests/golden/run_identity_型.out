@@ -1,0 +1,6 @@
+停止 ui.say("門番 もんばん あんないにん")
+停止 ui.say("違う")
+停止 ui.say("同じ")
+停止 ui.say("2 1 true")
+停止 ui.say_as(Some(Identity(案内人, "あんないにん")), "「おはよう」")
+終了

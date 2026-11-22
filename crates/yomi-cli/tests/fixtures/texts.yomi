@@ -1,0 +1,16 @@
+identity 案内人 = "案内人"
+save var n: int = 3
+
+label start {
+  朝 ${n} 日目 #a
+  案内人「やあ、${n} 回目」 #b
+  choice {
+    「はい」 #yes => {
+      はい返事 #r1
+    }
+    「いいえ」 #no => {
+      いいえ返事 #r2
+    }
+  }
+  おわり #z
+}

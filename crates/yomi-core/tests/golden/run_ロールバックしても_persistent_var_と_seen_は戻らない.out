@@ -1,0 +1,20 @@
+停止 ui.say("一 1 1") #a
+停止 ui.say("二 2 2") #b
+停止 ui.say("三 3 3") #c
+終了
+変数 best = 3 (永続)
+変数 n = 3
+通過済み ["main.start#a", "main.start#b", "main.start#c"]
+履歴 main.start#a ui.say("一 1 1") 値=[["1", "1"]]
+履歴 main.start#b ui.say("二 2 2") 値=[["2", "2"]]
+履歴 main.start#c ui.say("三 3 3") 値=[["3", "3"]]
+== ロールバック（停止点 1 へ戻る）
+停止 ui.say("二 2 2") #b
+停止 ui.say("三 3 4") #c
+終了
+変数 best = 4 (永続)
+変数 n = 3
+通過済み ["main.start#a", "main.start#b", "main.start#c"]
+履歴 main.start#a ui.say("一 1 1") 値=[["1", "1"]]
+履歴 main.start#b ui.say("二 2 2") 値=[["2", "2"]]
+履歴 main.start#c ui.say("三 3 4") 値=[["3", "4"]]

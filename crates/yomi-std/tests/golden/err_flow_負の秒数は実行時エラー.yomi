@@ -1,0 +1,7 @@
+import std::flow
+
+label start {
+  前
+  @flow.wait(-0.5)
+  後
+}

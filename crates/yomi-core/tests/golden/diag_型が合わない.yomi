@@ -1,0 +1,16 @@
+save var a: int = "あ"
+save var b: bool = 1
+
+label start {
+  let c: str = 1
+  let d = 1 + true
+  let e = !1
+  let f = -"x"
+  let g = 1 == "x"
+  let h = "a" < "b"
+  let i = 1 && 2
+  d += "s"
+  @ui.say(1)
+  a = "x"
+  let j = "a" + "b"
+}

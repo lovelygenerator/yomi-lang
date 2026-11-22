@@ -1,0 +1,4 @@
+5:3 unknown_command name="counter.incc" suggestions=["counter.inc"]
+6:11 unknown_command name="counter.gett" suggestions=["counter.get"]
+7:3 unknown_command name="counter.nothing_like_it"
+8:11 unknown_command name="counter.tota" suggestions=["counter.total", "counter.note"]

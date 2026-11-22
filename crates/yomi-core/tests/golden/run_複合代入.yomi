@@ -1,0 +1,15 @@
+save var n: int = 10
+
+label start {
+  n += 5
+  n -= 3
+  n *= 4
+  n /= 5
+  n %= 7
+  ${n}
+  n = n + 100
+  ${n}
+  let s = "あ"
+  s = "い"
+  ${s}
+}

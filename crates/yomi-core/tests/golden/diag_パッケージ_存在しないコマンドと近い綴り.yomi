@@ -1,0 +1,9 @@
+// @packages: counter
+import counter
+
+label start {
+  @counter.incc(1)
+  let a = counter.gett()
+  @counter.nothing_like_it(1)
+  let b = counter.tota()
+}

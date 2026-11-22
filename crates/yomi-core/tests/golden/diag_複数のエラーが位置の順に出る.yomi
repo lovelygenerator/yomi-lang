@@ -1,0 +1,12 @@
+save var a: foo = 1
+label start {
+  jump nowhere
+  let b = c
+  if 1 {
+    @no.such()
+  }
+  let s = "閉じない
+  本文\q
+}
+label start {
+}

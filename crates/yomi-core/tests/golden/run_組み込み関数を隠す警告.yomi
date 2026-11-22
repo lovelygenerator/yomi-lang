@@ -1,0 +1,7 @@
+save var to_int: int = 3
+save var random: int = 1
+
+label start {
+  let seen = 5
+  変数は使える ${to_int + random + seen}
+}

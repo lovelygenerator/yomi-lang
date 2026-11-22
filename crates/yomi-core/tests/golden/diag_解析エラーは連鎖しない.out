@@ -1,0 +1,5 @@
+1:19 unexpected_token found=")"
+2:21 unexpected_token found="3"
+3:13 unexpected_eol
+4:7 unterminated_block
+5:11 unclosed_bracket open="("

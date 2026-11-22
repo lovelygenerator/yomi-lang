@@ -1,0 +1,9 @@
+停止 ui.say("現在 5")
+停止 ui.say("十倍 50")
+停止 ui.say("n=5")
+停止 ui.say("a1true2.5e6")
+停止 ui.say("3.5")
+停止 ui.say("ロール後 1")
+終了
+スライス counter CounterState { n: 1, log: ["inc 2", "inc 3", "メモ"] }
+永続スライス counter CounterPersistent { total: 0 }

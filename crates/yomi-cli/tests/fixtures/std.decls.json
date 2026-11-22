@@ -1,0 +1,1455 @@
+{
+  "commands": [
+    {
+      "aliases": [],
+      "doc": "チャンネルで音を鳴らし続ける（鳴っていれば入れ替える。fade 秒でフェードする）",
+      "kind": "effect",
+      "name": "audio.play",
+      "package": "audio",
+      "params": [
+        {
+          "name": "channel",
+          "type": "str"
+        },
+        {
+          "name": "name",
+          "type": "str"
+        },
+        {
+          "default": 1.0,
+          "name": "volume",
+          "type": "float"
+        },
+        {
+          "default": 0.0,
+          "name": "fade",
+          "type": "float"
+        }
+      ],
+      "returns": null
+    },
+    {
+      "aliases": [],
+      "doc": "チャンネルで鳴らしている音の名前（鳴っていなければ None）",
+      "kind": "query",
+      "name": "audio.playing",
+      "package": "audio",
+      "params": [
+        {
+          "name": "channel",
+          "type": "str"
+        }
+      ],
+      "returns": "Option<str>"
+    },
+    {
+      "aliases": [],
+      "doc": "効果音を 1 回鳴らす",
+      "kind": "effect",
+      "name": "audio.se",
+      "package": "audio",
+      "params": [
+        {
+          "name": "name",
+          "type": "str"
+        }
+      ],
+      "returns": null
+    },
+    {
+      "aliases": [],
+      "doc": "鳴っている効果音を、すべて止める（合図だけ）",
+      "kind": "effect",
+      "name": "audio.se_stop",
+      "package": "audio",
+      "params": [],
+      "returns": null
+    },
+    {
+      "aliases": [],
+      "doc": "チャンネルの音を止める（鳴っていなければ何もしない）",
+      "kind": "effect",
+      "name": "audio.stop",
+      "package": "audio",
+      "params": [
+        {
+          "name": "channel",
+          "type": "str"
+        },
+        {
+          "default": 0.0,
+          "name": "fade",
+          "type": "float"
+        }
+      ],
+      "returns": null
+    },
+    {
+      "aliases": [],
+      "doc": "ボイスを 1 回鳴らす",
+      "kind": "effect",
+      "name": "audio.voice",
+      "package": "audio",
+      "params": [
+        {
+          "name": "name",
+          "type": "str"
+        }
+      ],
+      "returns": null
+    },
+    {
+      "aliases": [],
+      "doc": "鳴っているボイスを止める（合図だけ）",
+      "kind": "effect",
+      "name": "audio.voice_stop",
+      "package": "audio",
+      "params": [],
+      "returns": null
+    },
+    {
+      "aliases": [],
+      "doc": "チャンネルの音量（0.0〜1.0）を fade 秒かけて変える（鳴っていなければ実行時エラー）",
+      "kind": "effect",
+      "name": "audio.volume",
+      "package": "audio",
+      "params": [
+        {
+          "name": "channel",
+          "type": "str"
+        },
+        {
+          "name": "volume",
+          "type": "float"
+        },
+        {
+          "default": 0.0,
+          "name": "fade",
+          "type": "float"
+        }
+      ],
+      "returns": null
+    },
+    {
+      "aliases": [],
+      "doc": "名前のどれかのイベントが届くまで待つ（timeout 秒で期限切れ）",
+      "kind": "stop",
+      "name": "event.wait",
+      "package": "event",
+      "params": [
+        {
+          "name": "names",
+          "type": "list<str>"
+        },
+        {
+          "default": null,
+          "name": "timeout",
+          "type": "Option<float>"
+        }
+      ],
+      "returns": "event.Outcome"
+    },
+    {
+      "aliases": [],
+      "doc": "seconds 秒、止まる（負の秒数は実行時エラー）",
+      "kind": "stop",
+      "name": "flow.wait",
+      "package": "flow",
+      "params": [
+        {
+          "name": "seconds",
+          "type": "float"
+        }
+      ],
+      "returns": null
+    },
+    {
+      "aliases": [],
+      "doc": "何かの入力があるまで止まる",
+      "kind": "stop",
+      "name": "flow.wait_input",
+      "package": "flow",
+      "params": [],
+      "returns": null
+    },
+    {
+      "aliases": [],
+      "doc": "枠の画像の不透明度（0.0〜1.0）を、seconds 秒かけて変える（枠が空なら実行時エラー）",
+      "kind": "effect",
+      "name": "image.alpha",
+      "package": "image",
+      "params": [
+        {
+          "name": "slot",
+          "type": "str"
+        },
+        {
+          "name": "alpha",
+          "type": "float"
+        },
+        {
+          "default": 0.0,
+          "name": "seconds",
+          "type": "float"
+        }
+      ],
+      "returns": null
+    },
+    {
+      "aliases": [],
+      "doc": "すべての枠を空にする（すでに空なら何もしない）",
+      "kind": "effect",
+      "name": "image.clear",
+      "package": "image",
+      "params": [
+        {
+          "default": 0.0,
+          "name": "fade",
+          "type": "float"
+        }
+      ],
+      "returns": null
+    },
+    {
+      "aliases": [],
+      "doc": "枠の画像を、左右に反転するかを変える（枠が空なら実行時エラー）",
+      "kind": "effect",
+      "name": "image.flip",
+      "package": "image",
+      "params": [
+        {
+          "name": "slot",
+          "type": "str"
+        },
+        {
+          "name": "flip",
+          "type": "bool"
+        }
+      ],
+      "returns": null
+    },
+    {
+      "aliases": [],
+      "doc": "枠の画像を消す（枠が空なら何もしない）",
+      "kind": "effect",
+      "name": "image.hide",
+      "package": "image",
+      "params": [
+        {
+          "name": "slot",
+          "type": "str"
+        },
+        {
+          "default": 0.0,
+          "name": "fade",
+          "type": "float"
+        }
+      ],
+      "returns": null
+    },
+    {
+      "aliases": [],
+      "doc": "枠の重なりの値を変える（小さいほど奥。同じ値なら足した順。枠が空なら実行時エラー）",
+      "kind": "effect",
+      "name": "image.layer",
+      "package": "image",
+      "params": [
+        {
+          "name": "slot",
+          "type": "str"
+        },
+        {
+          "name": "layer",
+          "type": "int"
+        }
+      ],
+      "returns": null
+    },
+    {
+      "aliases": [],
+      "doc": "枠の画像を、seconds 秒かけて (x, y) へ動かす（枠が空なら実行時エラー）",
+      "kind": "effect",
+      "name": "image.move",
+      "package": "image",
+      "params": [
+        {
+          "name": "slot",
+          "type": "str"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "default": 0.0,
+          "name": "seconds",
+          "type": "float"
+        }
+      ],
+      "returns": null
+    },
+    {
+      "aliases": [],
+      "doc": "枠の画像の名前（枠が空なら None）",
+      "kind": "query",
+      "name": "image.name",
+      "package": "image",
+      "params": [
+        {
+          "name": "slot",
+          "type": "str"
+        }
+      ],
+      "returns": "Option<str>"
+    },
+    {
+      "aliases": [],
+      "doc": "枠の画像の拡大率を、seconds 秒かけて変える（1.0 が元の大きさ。枠が空なら実行時エラー）",
+      "kind": "effect",
+      "name": "image.scale",
+      "package": "image",
+      "params": [
+        {
+          "name": "slot",
+          "type": "str"
+        },
+        {
+          "name": "scale",
+          "type": "float"
+        },
+        {
+          "default": 0.0,
+          "name": "seconds",
+          "type": "float"
+        }
+      ],
+      "returns": null
+    },
+    {
+      "aliases": [],
+      "doc": "枠に画像を置く（枠にすでにあれば入れ替える）。fade 秒でフェードする",
+      "kind": "effect",
+      "name": "image.show",
+      "package": "image",
+      "params": [
+        {
+          "name": "slot",
+          "type": "str"
+        },
+        {
+          "name": "name",
+          "type": "str"
+        },
+        {
+          "default": 0.0,
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "default": 0.0,
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "default": 0.0,
+          "name": "fade",
+          "type": "float"
+        }
+      ],
+      "returns": null
+    },
+    {
+      "aliases": [],
+      "doc": "枠に画像があるか",
+      "kind": "query",
+      "name": "image.shown",
+      "package": "image",
+      "params": [
+        {
+          "name": "slot",
+          "type": "str"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "aliases": [],
+      "doc": "はい・いいえを尋ねる",
+      "kind": "stop",
+      "name": "input.confirm",
+      "package": "input",
+      "params": [
+        {
+          "name": "prompt",
+          "type": "str"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "aliases": [],
+      "doc": "整数を入力させる（min 以上 max 以下。default は範囲の中）",
+      "kind": "stop",
+      "name": "input.integer",
+      "package": "input",
+      "params": [
+        {
+          "name": "prompt",
+          "type": "str"
+        },
+        {
+          "name": "default",
+          "type": "int"
+        },
+        {
+          "name": "min",
+          "type": "int"
+        },
+        {
+          "name": "max",
+          "type": "int"
+        }
+      ],
+      "returns": "int"
+    },
+    {
+      "aliases": [],
+      "doc": "文字列を入力させる（max_len は書記素の上限）",
+      "kind": "stop",
+      "name": "input.text",
+      "package": "input",
+      "params": [
+        {
+          "name": "prompt",
+          "type": "str"
+        },
+        {
+          "name": "default",
+          "type": "str"
+        },
+        {
+          "name": "max_len",
+          "type": "int"
+        }
+      ],
+      "returns": "str"
+    },
+    {
+      "aliases": [],
+      "doc": "真偽の値を取り出す",
+      "kind": "query",
+      "name": "json.get_bool",
+      "package": "json",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        },
+        {
+          "name": "path",
+          "type": "str"
+        }
+      ],
+      "returns": "Option<bool>"
+    },
+    {
+      "aliases": [],
+      "doc": "数の値を取り出す（整数も含む）",
+      "kind": "query",
+      "name": "json.get_float",
+      "package": "json",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        },
+        {
+          "name": "path",
+          "type": "str"
+        }
+      ],
+      "returns": "Option<float>"
+    },
+    {
+      "aliases": [],
+      "doc": "整数の値を取り出す（小数点・指数のある書き方と範囲の外は None）",
+      "kind": "query",
+      "name": "json.get_int",
+      "package": "json",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        },
+        {
+          "name": "path",
+          "type": "str"
+        }
+      ],
+      "returns": "Option<int>"
+    },
+    {
+      "aliases": [],
+      "doc": "値を、コンパクトな JSON の文字列として取り出す",
+      "kind": "query",
+      "name": "json.get_raw",
+      "package": "json",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        },
+        {
+          "name": "path",
+          "type": "str"
+        }
+      ],
+      "returns": "Option<str>"
+    },
+    {
+      "aliases": [],
+      "doc": "文字列の値を取り出す",
+      "kind": "query",
+      "name": "json.get_str",
+      "package": "json",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        },
+        {
+          "name": "path",
+          "type": "str"
+        }
+      ],
+      "returns": "Option<str>"
+    },
+    {
+      "aliases": [],
+      "doc": "パスに値があるか（null も値）",
+      "kind": "query",
+      "name": "json.has",
+      "package": "json",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        },
+        {
+          "name": "path",
+          "type": "str"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "aliases": [],
+      "doc": "オブジェクトのキー（コードポイント順）",
+      "kind": "query",
+      "name": "json.keys",
+      "package": "json",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        },
+        {
+          "name": "path",
+          "type": "str"
+        }
+      ],
+      "returns": "Option<list<str>>"
+    },
+    {
+      "aliases": [],
+      "doc": "値の種類（null・bool・number・string・array・object）",
+      "kind": "query",
+      "name": "json.kind",
+      "package": "json",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        },
+        {
+          "name": "path",
+          "type": "str"
+        }
+      ],
+      "returns": "Option<str>"
+    },
+    {
+      "aliases": [],
+      "doc": "配列の要素数、またはオブジェクトのキーの数",
+      "kind": "query",
+      "name": "json.len",
+      "package": "json",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        },
+        {
+          "name": "path",
+          "type": "str"
+        }
+      ],
+      "returns": "Option<int>"
+    },
+    {
+      "aliases": [],
+      "doc": "文字列を JSON の文字列のリテラルにする",
+      "kind": "query",
+      "name": "json.quote",
+      "package": "json",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        }
+      ],
+      "returns": "str"
+    },
+    {
+      "aliases": [],
+      "doc": "パスの値を消した文書を返す",
+      "kind": "query",
+      "name": "json.remove",
+      "package": "json",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        },
+        {
+          "name": "path",
+          "type": "str"
+        }
+      ],
+      "returns": "Option<str>"
+    },
+    {
+      "aliases": [],
+      "doc": "パスの値を、JSON の文字列 value で置き換えた文書を返す",
+      "kind": "query",
+      "name": "json.set",
+      "package": "json",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        },
+        {
+          "name": "path",
+          "type": "str"
+        },
+        {
+          "name": "value",
+          "type": "str"
+        }
+      ],
+      "returns": "Option<str>"
+    },
+    {
+      "aliases": [],
+      "doc": "文字列が、ちょうど 1 つの正しい JSON の値か",
+      "kind": "query",
+      "name": "json.valid",
+      "package": "json",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "aliases": [],
+      "doc": "整数の絶対値",
+      "kind": "query",
+      "name": "math.abs",
+      "package": "math",
+      "params": [
+        {
+          "name": "x",
+          "type": "int"
+        }
+      ],
+      "returns": "int"
+    },
+    {
+      "aliases": [],
+      "doc": "小数の絶対値",
+      "kind": "query",
+      "name": "math.abs_f",
+      "package": "math",
+      "params": [
+        {
+          "name": "x",
+          "type": "float"
+        }
+      ],
+      "returns": "float"
+    },
+    {
+      "aliases": [],
+      "doc": "小数を切り上げて整数にする",
+      "kind": "query",
+      "name": "math.ceil",
+      "package": "math",
+      "params": [
+        {
+          "name": "x",
+          "type": "float"
+        }
+      ],
+      "returns": "int"
+    },
+    {
+      "aliases": [],
+      "doc": "整数を lo 以上 hi 以下に収める（lo が hi より大きいと実行時エラー）",
+      "kind": "query",
+      "name": "math.clamp",
+      "package": "math",
+      "params": [
+        {
+          "name": "x",
+          "type": "int"
+        },
+        {
+          "name": "lo",
+          "type": "int"
+        },
+        {
+          "name": "hi",
+          "type": "int"
+        }
+      ],
+      "returns": "int"
+    },
+    {
+      "aliases": [],
+      "doc": "小数を lo 以上 hi 以下に収める（lo が hi より大きいと実行時エラー）",
+      "kind": "query",
+      "name": "math.clamp_f",
+      "package": "math",
+      "params": [
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "lo",
+          "type": "float"
+        },
+        {
+          "name": "hi",
+          "type": "float"
+        }
+      ],
+      "returns": "float"
+    },
+    {
+      "aliases": [],
+      "doc": "小数を切り下げて整数にする",
+      "kind": "query",
+      "name": "math.floor",
+      "package": "math",
+      "params": [
+        {
+          "name": "x",
+          "type": "float"
+        }
+      ],
+      "returns": "int"
+    },
+    {
+      "aliases": [],
+      "doc": "整数の大きい方",
+      "kind": "query",
+      "name": "math.max",
+      "package": "math",
+      "params": [
+        {
+          "name": "a",
+          "type": "int"
+        },
+        {
+          "name": "b",
+          "type": "int"
+        }
+      ],
+      "returns": "int"
+    },
+    {
+      "aliases": [],
+      "doc": "小数の大きい方",
+      "kind": "query",
+      "name": "math.max_f",
+      "package": "math",
+      "params": [
+        {
+          "name": "a",
+          "type": "float"
+        },
+        {
+          "name": "b",
+          "type": "float"
+        }
+      ],
+      "returns": "float"
+    },
+    {
+      "aliases": [],
+      "doc": "整数の小さい方",
+      "kind": "query",
+      "name": "math.min",
+      "package": "math",
+      "params": [
+        {
+          "name": "a",
+          "type": "int"
+        },
+        {
+          "name": "b",
+          "type": "int"
+        }
+      ],
+      "returns": "int"
+    },
+    {
+      "aliases": [],
+      "doc": "小数の小さい方",
+      "kind": "query",
+      "name": "math.min_f",
+      "package": "math",
+      "params": [
+        {
+          "name": "a",
+          "type": "float"
+        },
+        {
+          "name": "b",
+          "type": "float"
+        }
+      ],
+      "returns": "float"
+    },
+    {
+      "aliases": [],
+      "doc": "整数のべき乗（exp は 0 以上。あふれたら実行時エラー）",
+      "kind": "query",
+      "name": "math.pow",
+      "package": "math",
+      "params": [
+        {
+          "name": "base",
+          "type": "int"
+        },
+        {
+          "name": "exp",
+          "type": "int"
+        }
+      ],
+      "returns": "int"
+    },
+    {
+      "aliases": [],
+      "doc": "小数のべき乗（結果が有限でなければ実行時エラー）",
+      "kind": "query",
+      "name": "math.pow_f",
+      "package": "math",
+      "params": [
+        {
+          "name": "base",
+          "type": "float"
+        },
+        {
+          "name": "exp",
+          "type": "float"
+        }
+      ],
+      "returns": "float"
+    },
+    {
+      "aliases": [],
+      "doc": "小数を四捨五入して整数にする（半分は 0 から遠い方へ）",
+      "kind": "query",
+      "name": "math.round",
+      "package": "math",
+      "params": [
+        {
+          "name": "x",
+          "type": "float"
+        }
+      ],
+      "returns": "int"
+    },
+    {
+      "aliases": [],
+      "doc": "整数の足し算（範囲を超えたら、64 ビットの 2 の補数で折り返す）",
+      "kind": "query",
+      "name": "math.wrapping_add",
+      "package": "math",
+      "params": [
+        {
+          "name": "a",
+          "type": "int"
+        },
+        {
+          "name": "b",
+          "type": "int"
+        }
+      ],
+      "returns": "int"
+    },
+    {
+      "aliases": [],
+      "doc": "整数の掛け算（範囲を超えたら、64 ビットの 2 の補数で折り返す）",
+      "kind": "query",
+      "name": "math.wrapping_mul",
+      "package": "math",
+      "params": [
+        {
+          "name": "a",
+          "type": "int"
+        },
+        {
+          "name": "b",
+          "type": "int"
+        }
+      ],
+      "returns": "int"
+    },
+    {
+      "aliases": [],
+      "doc": "整数の引き算（範囲を超えたら、64 ビットの 2 の補数で折り返す）",
+      "kind": "query",
+      "name": "math.wrapping_sub",
+      "package": "math",
+      "params": [
+        {
+          "name": "a",
+          "type": "int"
+        },
+        {
+          "name": "b",
+          "type": "int"
+        }
+      ],
+      "returns": "int"
+    },
+    {
+      "aliases": [],
+      "doc": "画面を覆っている色（覆っていなければ None）",
+      "kind": "query",
+      "name": "screen.cover_color",
+      "package": "screen",
+      "params": [],
+      "returns": "Option<str>"
+    },
+    {
+      "aliases": [],
+      "doc": "画面の覆いを、seconds 秒かけて外す（覆っていなければ何もしない）",
+      "kind": "effect",
+      "name": "screen.fade_in",
+      "package": "screen",
+      "params": [
+        {
+          "default": 0.0,
+          "name": "seconds",
+          "type": "float"
+        }
+      ],
+      "returns": null
+    },
+    {
+      "aliases": [],
+      "doc": "画面を、seconds 秒かけて色で覆う（暗転など。覆っていれば色を入れ替える）",
+      "kind": "effect",
+      "name": "screen.fade_out",
+      "package": "screen",
+      "params": [
+        {
+          "name": "color",
+          "type": "str"
+        },
+        {
+          "default": 0.0,
+          "name": "seconds",
+          "type": "float"
+        }
+      ],
+      "returns": null
+    },
+    {
+      "aliases": [],
+      "doc": "画面を、色で一瞬光らせる（合図だけ。seconds 秒で消える）",
+      "kind": "effect",
+      "name": "screen.flash",
+      "package": "screen",
+      "params": [
+        {
+          "name": "color",
+          "type": "str"
+        },
+        {
+          "name": "seconds",
+          "type": "float"
+        }
+      ],
+      "returns": null
+    },
+    {
+      "aliases": [],
+      "doc": "画面を、seconds 秒、揺らす（合図だけ。strength はホストが解釈する）",
+      "kind": "effect",
+      "name": "screen.shake",
+      "package": "screen",
+      "params": [
+        {
+          "name": "strength",
+          "type": "float"
+        },
+        {
+          "name": "seconds",
+          "type": "float"
+        }
+      ],
+      "returns": null
+    },
+    {
+      "aliases": [],
+      "doc": "文字列に part が含まれるか",
+      "kind": "query",
+      "name": "text.contains",
+      "package": "text",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        },
+        {
+          "name": "part",
+          "type": "str"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "aliases": [],
+      "doc": "文字列が suffix で終わるか",
+      "kind": "query",
+      "name": "text.ends_with",
+      "package": "text",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        },
+        {
+          "name": "suffix",
+          "type": "str"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "aliases": [],
+      "doc": "part が最初に現れる書記素の位置（なければ None）",
+      "kind": "query",
+      "name": "text.find",
+      "package": "text",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        },
+        {
+          "name": "part",
+          "type": "str"
+        }
+      ],
+      "returns": "Option<int>"
+    },
+    {
+      "aliases": [],
+      "doc": "parts を sep でつなぐ",
+      "kind": "query",
+      "name": "text.join",
+      "package": "text",
+      "params": [
+        {
+          "name": "parts",
+          "type": "list<str>"
+        },
+        {
+          "default": "",
+          "name": "sep",
+          "type": "str"
+        }
+      ],
+      "returns": "str"
+    },
+    {
+      "aliases": [],
+      "doc": "文字列の長さ（書記素クラスタの数）",
+      "kind": "query",
+      "name": "text.len",
+      "package": "text",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        }
+      ],
+      "returns": "int"
+    },
+    {
+      "aliases": [],
+      "doc": "ASCII の英字だけを小文字にする",
+      "kind": "query",
+      "name": "text.lower",
+      "package": "text",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        }
+      ],
+      "returns": "str"
+    },
+    {
+      "aliases": [],
+      "doc": "書記素 width 個になるまで、左に fill をくり返して埋める",
+      "kind": "query",
+      "name": "text.pad_left",
+      "package": "text",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        },
+        {
+          "name": "width",
+          "type": "int"
+        },
+        {
+          "default": " ",
+          "name": "fill",
+          "type": "str"
+        }
+      ],
+      "returns": "str"
+    },
+    {
+      "aliases": [],
+      "doc": "書記素 width 個になるまで、右に fill をくり返して埋める",
+      "kind": "query",
+      "name": "text.pad_right",
+      "package": "text",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        },
+        {
+          "name": "width",
+          "type": "int"
+        },
+        {
+          "default": " ",
+          "name": "fill",
+          "type": "str"
+        }
+      ],
+      "returns": "str"
+    },
+    {
+      "aliases": [],
+      "doc": "s を n 回くり返す（n が負、または結果が大きすぎるなら実行時エラー）",
+      "kind": "query",
+      "name": "text.repeat",
+      "package": "text",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        },
+        {
+          "name": "n",
+          "type": "int"
+        }
+      ],
+      "returns": "str"
+    },
+    {
+      "aliases": [],
+      "doc": "from の一致をすべて to に置き換える（from が空なら実行時エラー）",
+      "kind": "query",
+      "name": "text.replace",
+      "package": "text",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        },
+        {
+          "name": "from",
+          "type": "str"
+        },
+        {
+          "name": "to",
+          "type": "str"
+        }
+      ],
+      "returns": "str"
+    },
+    {
+      "aliases": [],
+      "doc": "書記素の位置 start から end の手前までを取り出す（範囲外は実行時エラー）",
+      "kind": "query",
+      "name": "text.slice",
+      "package": "text",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        },
+        {
+          "name": "start",
+          "type": "int"
+        },
+        {
+          "name": "to",
+          "type": "int"
+        }
+      ],
+      "returns": "str"
+    },
+    {
+      "aliases": [],
+      "doc": "sep で区切って list にする（sep が空なら実行時エラー）",
+      "kind": "query",
+      "name": "text.split",
+      "package": "text",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        },
+        {
+          "name": "sep",
+          "type": "str"
+        }
+      ],
+      "returns": "list<str>"
+    },
+    {
+      "aliases": [],
+      "doc": "文字列が prefix で始まるか",
+      "kind": "query",
+      "name": "text.starts_with",
+      "package": "text",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        },
+        {
+          "name": "prefix",
+          "type": "str"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "aliases": [],
+      "doc": "文字列を小数として読む（10 進の小数・指数の形。有限でなければ None）",
+      "kind": "query",
+      "name": "text.to_float",
+      "package": "text",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        }
+      ],
+      "returns": "Option<float>"
+    },
+    {
+      "aliases": [],
+      "doc": "文字列を整数として読む（符号と ASCII の数字だけ。読めなければ None）",
+      "kind": "query",
+      "name": "text.to_int",
+      "package": "text",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        }
+      ],
+      "returns": "Option<int>"
+    },
+    {
+      "aliases": [],
+      "doc": "文字列の前後の空白を取り除く",
+      "kind": "query",
+      "name": "text.trim",
+      "package": "text",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        }
+      ],
+      "returns": "str"
+    },
+    {
+      "aliases": [],
+      "doc": "ASCII の英字だけを大文字にする",
+      "kind": "query",
+      "name": "text.upper",
+      "package": "text",
+      "params": [
+        {
+          "name": "s",
+          "type": "str"
+        }
+      ],
+      "returns": "str"
+    },
+    {
+      "aliases": [],
+      "kind": "stop",
+      "name": "ui.choose",
+      "params": [
+        {
+          "type": "list<str>"
+        },
+        {
+          "type": "list<Option<str>>"
+        }
+      ],
+      "returns": "int"
+    },
+    {
+      "aliases": [],
+      "kind": "stop",
+      "name": "ui.say",
+      "params": [
+        {
+          "type": "str"
+        }
+      ],
+      "returns": null
+    },
+    {
+      "aliases": [],
+      "kind": "stop",
+      "name": "ui.say_as",
+      "params": [
+        {
+          "type": "Option<Identity>"
+        },
+        {
+          "type": "str"
+        }
+      ],
+      "returns": null
+    }
+  ],
+  "format": "yomi-decls",
+  "packages": [
+    {
+      "depends": [],
+      "name": "audio",
+      "std": true,
+      "version": 3
+    },
+    {
+      "depends": [],
+      "name": "event",
+      "std": true,
+      "version": 1
+    },
+    {
+      "depends": [],
+      "name": "flow",
+      "std": true,
+      "version": 1
+    },
+    {
+      "depends": [],
+      "name": "image",
+      "std": true,
+      "version": 2
+    },
+    {
+      "depends": [],
+      "name": "input",
+      "std": true,
+      "version": 1
+    },
+    {
+      "depends": [],
+      "name": "json",
+      "std": true,
+      "version": 1
+    },
+    {
+      "depends": [],
+      "name": "math",
+      "std": true,
+      "version": 1
+    },
+    {
+      "depends": [],
+      "name": "screen",
+      "std": true,
+      "version": 1
+    },
+    {
+      "depends": [],
+      "name": "text",
+      "std": true,
+      "version": 1
+    }
+  ],
+  "sugar": {
+    "choice": "ui.choose",
+    "plain": "ui.say",
+    "quote": "ui.say_as"
+  },
+  "types": [
+    {
+      "doc": "event.wait の結果（届いたイベントの名前とデータ、または期限切れ）",
+      "kind": "enum",
+      "name": "event.Outcome",
+      "variants": [
+        {
+          "fields": [
+            {
+              "type": "str"
+            },
+            {
+              "type": "str"
+            }
+          ],
+          "name": "Arrived"
+        },
+        {
+          "fields": [],
+          "name": "TimedOut"
+        }
+      ]
+    }
+  ],
+  "variables": [],
+  "version": 2
+}

@@ -1,0 +1,6 @@
+import ep1
+
+label b(n: int) {
+  ep2.b ${n}
+  call ep1.a(n)
+}

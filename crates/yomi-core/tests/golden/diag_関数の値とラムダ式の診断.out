@@ -1,0 +1,10 @@
+1:16 fn_not_saveable type="fn(int) -> int" what="var"
+4:6 fn_not_saveable type="fn() -> int" what="field"
+15:12 cannot_infer_type
+16:11 call_without_value name="noval"
+17:21 invalid_operation op="==" type="fn(int) -> int"
+18:31 type_mismatch expected="int" found="str"
+19:19 arg_count name="|…|" expected=1 found=2
+19:23 cannot_infer_type
+21:3 fn_not_saveable type="fn(int) -> int" what="stop"
+24:3 fn_not_saveable type="fn(int) -> int" what="call"

@@ -1,0 +1,3 @@
+停止 ui.say("前")
+停止 ui.say("map { a: 2, b: 5 }")
+実行時エラー key_not_found label=start line=7

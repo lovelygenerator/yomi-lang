@@ -1,0 +1,5 @@
+2:11 unexpected_token found=")"
+3:6 unexpected_token found=")"
+6:3 unknown_name name="b"
+7:6 condition_not_bool found="int"
+9:3 unknown_label name="x"

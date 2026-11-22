@@ -1,0 +1,22 @@
+import std::audio
+import std::image
+import std::screen
+
+label start {
+  @screen.fade_out("black", 1.0)
+  @audio.play("rain", "rain_soft", volume: 0.5, fade: 2.0)
+  @image.show("left", "guide", 0.2, 0.5, 0.0)
+  @image.layer("left", 2)
+  @image.scale("left", 1.5, 0.5)
+  @image.flip("left", true)
+  @image.alpha("left", 0.5, 1.0)
+  暗いまま
+  @screen.fade_in(1.0)
+  @screen.shake(0.5, 0.3)
+  @screen.flash("white", 0.2)
+  @audio.volume("rain", 0.2, fade: 1.0)
+  @audio.se_stop()
+  @audio.voice_stop()
+  明るくなった
+  @audio.stop("rain", fade: 1.0)
+}

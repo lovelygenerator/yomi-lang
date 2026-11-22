@@ -1,0 +1,6 @@
+import std::audio
+
+label start {
+  @audio.stop("bgm", fade: -0.5)
+  後
+}

@@ -1,0 +1,9 @@
+// @module: story::ch2
+import main
+
+save var favor: int = 5
+
+label scene {
+  ch2 scene favor=${favor}
+  jump main.back
+}

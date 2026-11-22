@@ -1,0 +1,6 @@
+@lang en
+main.start#m1	main line
+scene.intro#s1	scene line
+scene.intro#ok	「yes」
+scene.intro#s2	chose yes
+main.intro#s1	別のモジュールの同名ラベルではない

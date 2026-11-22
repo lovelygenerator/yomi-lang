@@ -1,0 +1,15 @@
+// @packages: counter
+// @rollback: 0
+// @show: slices vars
+import counter
+
+label start {
+  @counter.inc(1)
+  @counter.add_total(5)
+  一 ${counter.get()} 合計 ${counter.total()} #a
+  @counter.inc(10)
+  @counter.add_total(7)
+  二 ${counter.get()} 合計 ${counter.total()} #b
+  @counter.inc(100)
+  三 ${counter.get()} 合計 ${counter.total()} #c
+}

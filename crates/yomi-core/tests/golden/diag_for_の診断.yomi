@@ -1,0 +1,31 @@
+label start {
+  let p: map<str, int> = map { "a": 1 }
+  for x in p {
+  }
+  for y in 5 {
+  }
+  let x = 1
+  for x in range(0, 1) {
+  }
+  for z in range(0) {
+  }
+  for w in range(0, 1.5) {
+  }
+  for v in nope {
+  }
+  for u in [1, 2] {
+    ${u.nope}
+    let u = 2
+  }
+  ${u}
+  for 3 in [1] {
+  }
+  for t [1] {
+  }
+  break
+  for r in [1] {
+    break
+    continue
+  }
+  let range = 5
+}

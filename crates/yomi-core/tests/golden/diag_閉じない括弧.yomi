@@ -1,0 +1,4 @@
+label start {
+  let xs = [
+    1,
+    2,

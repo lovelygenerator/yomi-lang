@@ -1,0 +1,7 @@
+停止 ui.say("Chara { name: 案内人, hp: 7, tags: [勇者] } Chara { name: 案内人, hp: 0, tags: [勇者] }")
+停止 ui.say("違う")
+停止 ui.say("違う2")
+停止 ui.say("Dir.Item(2, 薬)")
+終了
+変数 c = Struct { ty: "main.Chara", fields: [("name", Str("案内人")), ("hp", Int(7)), ("tags", List([Str("勇者")]))] }
+変数 d = Enum { ty: "main.Dir", variant: "Item", args: [Int(2), Str("薬")] }

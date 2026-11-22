@@ -1,0 +1,7 @@
+import std::math
+
+label start {
+  前
+  let _x = math.pow_f(10.0, 400.0)
+  後
+}

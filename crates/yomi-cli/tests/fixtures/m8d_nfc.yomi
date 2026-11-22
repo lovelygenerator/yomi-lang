@@ -1,0 +1,6 @@
+save var 数が: int = 1
+
+label start {
+  数が += 2
+  本文が ${数が}
+}

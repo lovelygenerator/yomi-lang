@@ -1,0 +1,13 @@
+停止 ui.choose(["「手紙を読む」", "「待つ」"], [Some("letter"), Some("wait")])
+選択 0
+停止 ui.say("手紙を読んだ")
+停止 ui.choose(["「鍵を探す」", "「待つ」"], [Some("key"), Some("wait")])
+選択 0
+停止 ui.say("鍵を見つけた")
+停止 ui.choose(["「待つ」"], [Some("wait")])
+選択 0
+停止 ui.say("待った")
+停止 ui.choose(["「待つ」", "「去る」"], [Some("wait"), None])
+選択 1
+停止 ui.say("once の状態 4")
+終了

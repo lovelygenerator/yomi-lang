@@ -1,0 +1,8 @@
+停止 ui.say_as(Some(Identity(門番, "門番")), "「import した identity は名前だけで書ける」")
+停止 ui.say_as(Some(Identity(案内人, "案内人")), "「モジュールつきでも書ける」")
+停止 ui.say_as(Some(Identity(弟, "弟")), "「extra の弟」")
+停止 ui.say_as(Some(Identity(弟, "弟")), "「extra.弟 とも書ける」")
+停止 ui.say_as(Some(Identity(案内人, "extra の案内人")), "「同じモジュールの宣言が優先される」")
+停止 ui.say_as(Some(Identity(案内人, "案内人")), "「cast の案内人は修飾して書く」")
+停止 ui.say_as(Some(Identity(門番, "門番")), "「cast の門番は import で使える」")
+終了

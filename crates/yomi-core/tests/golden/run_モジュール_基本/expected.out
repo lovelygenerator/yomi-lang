@@ -1,0 +1,6 @@
+停止 ui.say("main開始")
+停止 ui.say("chapter2 intro 3 favor=5 score=100")
+停止 ui.say("信頼度 30")
+停止 ui.say("chapter2 scene")
+停止 ui.say("main に戻った score=8 favor=30")
+終了

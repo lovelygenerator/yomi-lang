@@ -1,0 +1,13 @@
+// @packages: counter
+// @show: vars
+import counter
+
+save var last: int = 0
+
+label start {
+  let v = @counter.roll(6)
+  last = @counter.roll(6)
+  counter.step = @counter.roll(6)
+  let w = @game.roll(counter.step)
+  ${v} ${last} ${counter.step} ${counter.get()} ${w}
+}

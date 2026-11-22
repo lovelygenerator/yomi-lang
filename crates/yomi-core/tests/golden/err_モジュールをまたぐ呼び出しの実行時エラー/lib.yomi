@@ -1,0 +1,4 @@
+label work(d: int) {
+  あ
+  let _x = 1 / d
+}

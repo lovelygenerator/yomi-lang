@@ -1,0 +1,4 @@
+停止 ui.say("main x=1 other.x=2")
+停止 ui.say("other.start2 x=50")
+停止 ui.say("main.start2")
+終了

@@ -1,0 +1,12 @@
+停止 input.text("言葉は？", "", 8)
+  入力 "あ"
+停止 ui.say("0回目: あ")
+停止 input.text("言葉は？", "", 8)
+  入力 "い"
+停止 ui.say("1回目: い")
+停止 input.confirm("続ける？")
+  入力 true
+停止 input.integer("数は？", 1, 0, 9)
+  入力 7
+停止 ui.say("合計 7")
+終了

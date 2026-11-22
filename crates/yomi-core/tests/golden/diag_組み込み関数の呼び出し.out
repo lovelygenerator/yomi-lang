@@ -1,0 +1,15 @@
+3:7 unterminated_block
+4:18 type_mismatch expected="float" found="int"
+5:20 type_mismatch expected="int" found="float"
+6:11 arg_count name="to_int" expected=1 found=0
+7:11 arg_count name="to_int" expected=1 found=2
+8:20 type_mismatch expected="int" found="bool"
+10:16 type_mismatch expected="str" found="int"
+11:11 unknown_function name="foo"
+12:11 not_yet_supported what="call"
+13:11 not_yet_supported what="call"
+14:11 unexpected_token found="int"
+15:23 not_yet_supported what="postfix expression"
+16:18 not_yet_supported what="postfix expression"
+17:11 unknown_name name="to_int"
+18:17 unclosed_bracket open="("

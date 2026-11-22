@@ -1,0 +1,4 @@
+// @module: std::x
+label go {
+  end
+}

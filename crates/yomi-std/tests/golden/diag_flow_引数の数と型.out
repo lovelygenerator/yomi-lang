@@ -1,0 +1,5 @@
+4:3 arg_count name="flow.wait" expected=1 found=0
+5:14 type_mismatch expected="float" found="int"
+6:3 arg_count name="flow.wait_input" expected=0 found=1
+7:3 unknown_command name="flow.sleep"
+8:11 invalid_command_use name="flow.wait" kind="stop"

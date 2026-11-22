@@ -1,0 +1,13 @@
+import std::flow
+import std::math
+import std::text
+
+label start {
+  let name = "  ゆみ  "
+  let n = text.len(text.trim(name))
+  @flow.wait(math.max_f(0.5, 0.25)) #w
+  名前の文字数は ${n}
+  let secs = math.clamp(n * 10, 0, 15)
+  @flow.wait(to_float(secs))
+  @flow.wait_input()
+}

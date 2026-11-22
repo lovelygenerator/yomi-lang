@@ -1,0 +1,7 @@
+  合図 音 Se { name: "door" }
+  合図 音 Voice { name: "v1" }
+停止 ui.say("一")
+  合図 音 SeStop
+  合図 音 VoiceStop
+停止 ui.say("二")
+終了

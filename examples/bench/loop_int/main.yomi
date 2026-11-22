@@ -1,0 +1,16 @@
+// 負荷用: 10 万回のループで、整数の計算を繰り返す。
+save var result: int = 0
+
+label start {
+    let i = 0
+    let acc = 0
+    while i < 100000 {
+        acc = (acc * 31 + i) % 1000003
+        if i % 7 == 0 {
+            acc += 5
+        }
+        i += 1
+    }
+    result = acc
+    結果: ${result}
+}

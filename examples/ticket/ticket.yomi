@@ -1,0 +1,81 @@
+// 問い合わせ対応の流れ。
+// 問い合わせ（JSON）が届くと、緊急度を決めて受け付け、お客様の返信を待つ。
+// 返信がなければ、決まった回数まで催促し、それでもなければ自動で閉じる。
+// 実行: yomi run examples/ticket/ticket.yomi
+import std::event
+import std::json
+import std::text
+
+// 返信を待つ時間（秒）。72 時間
+save var wait_seconds: float = 259200.0
+// 催促する回数の上限
+save var max_reminders: int = 2
+// 処理中の問い合わせの件名
+save var subject: str = ""
+// ここまでに催促した回数
+save var reminders: int = 0
+
+// 緊急と見なす語。件名に含まれていれば、緊急にする
+fn is_urgent(title: str) -> bool {
+    let words = ["障害", "停止", "繰り返し", "請求"]
+    return words.any(|w| text.contains(title, w))
+}
+
+label start {
+    問い合わせを待っています。 #idle
+    let r = @event.wait(["opened"]) #wait_opened
+    match r {
+        Arrived(name, data) => {
+            match json.get_str(data, "subject") {
+                Some(s) => {
+                    subject = s
+                    reminders = 0
+                    jump triage
+                }
+                None => {
+                    件名のない問い合わせは受け付けられません。 #no_subject
+                    end
+                }
+            }
+        }
+        TimedOut => {
+            end
+        }
+    }
+}
+
+label triage {
+    if is_urgent(subject) {
+        「${subject}」を緊急として受け付けました。担当者に知らせます。 #urgent
+    } else {
+        「${subject}」を受け付けました。 #accepted
+    }
+    jump wait_reply
+}
+
+label wait_reply {
+    let r = @event.wait(["replied", "resolved"], Some(wait_seconds)) #wait_customer
+    match r {
+        Arrived(name, data) => {
+            if name == "resolved" {
+                jump closed
+            }
+            お客様から返信がありました。担当者に回します。 #replied
+            end
+        }
+        TimedOut => {
+            if reminders >= max_reminders {
+                返信がないため、自動で閉じます。 #auto_close
+                end
+            }
+            reminders += 1
+            返信をお願いする連絡を送りました（${reminders} 回目）。 #reminder
+            jump wait_reply
+        }
+    }
+}
+
+label closed {
+    解決済みとして閉じました。 #closed
+    end
+}

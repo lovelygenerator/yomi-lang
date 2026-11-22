@@ -1,0 +1,19 @@
+label dup(a: int, a: str) {
+}
+label bad_type(a: foo) -> bar {
+}
+label no_colon(a int) {
+}
+label missing_close(a: int {
+}
+label trailing(a: int,) {
+}
+save var g: int = 0
+label shadow(g: int) {
+  let a = 1
+}
+label arrow() -> {
+}
+label ok(a: int, b: str) -> bool {
+  return true
+}

@@ -1,0 +1,13 @@
+// @seed: 5
+// @rollback: 1
+// @show: vars
+save var n: int = 0
+
+label start {
+  n = random(1, 1000000)
+  一 ${n} #a
+  n = random(1, 1000000)
+  二 ${n} #b
+  n = random(1, 1000000)
+  三 ${n} #c
+}

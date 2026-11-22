@@ -1,0 +1,7 @@
+停止 ui.say("main")
+停止 ui.say("ep1.a 2")
+停止 ui.say("ep2.b 1")
+停止 ui.say("ep1.a 1")
+停止 ui.say("ep2.b 0")
+停止 ui.say("ep1.a 0")
+終了

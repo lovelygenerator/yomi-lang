@@ -1,0 +1,16 @@
+// 負荷用: ラベルの call（引数 2 つ、ローカル変数 3 つのラベルを 10 万回呼ぶ）。
+label add(a: int, b: int) -> int {
+    let x = a * 2
+    let y = b + 1
+    let z = x + y
+    return z
+}
+
+label start {
+    let total = 0
+    for i in range(0, 100000) {
+        let r = call add(i, 3)
+        total += r
+    }
+    結果: ${total}
+}

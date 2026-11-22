@@ -1,0 +1,7 @@
+import std::text
+
+label start {
+  末尾 ${text.ends_with("こんにちは", "ちは")} ${text.ends_with("こんにちは", "こん")} ${text.ends_with("abc", "")}
+  置換 ${text.replace("あいあいあ", "あ", "ー")} ${text.replace("aaa", "aa", "b")} ${text.replace("abc", "x", "y")}
+  削除 ${text.replace("a-b-c", "-", "")} 空 ${text.replace("", "a", "b")}
+}

@@ -1,0 +1,7 @@
+import std::input
+
+label start {
+  @input.text("名前は？", "", 2)
+  @input.text("名前は？", "", 1)
+  おわり
+}

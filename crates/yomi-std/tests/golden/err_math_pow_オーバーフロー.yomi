@@ -1,0 +1,7 @@
+import std::math
+
+label start {
+  前
+  let _x = math.pow(2, 63)
+  後
+}

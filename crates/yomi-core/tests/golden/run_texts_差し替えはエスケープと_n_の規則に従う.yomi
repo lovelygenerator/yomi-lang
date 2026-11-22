@@ -1,0 +1,8 @@
+// @show: render
+save var n: int = 3
+
+label start {
+  値は ${n} です #p1
+  別の行 ${n} #p2
+  最後 #p3
+}

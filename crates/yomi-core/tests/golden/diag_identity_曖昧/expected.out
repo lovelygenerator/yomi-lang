@@ -1,0 +1,4 @@
+警告 a:2:7 label_falls_through name="x"
+警告 b:4:7 label_falls_through name="y"
+main:5:3 ambiguous_identity name="案内人" candidates=["a.案内人", "b.案内人"]
+main:8:3 module_not_imported name="c"

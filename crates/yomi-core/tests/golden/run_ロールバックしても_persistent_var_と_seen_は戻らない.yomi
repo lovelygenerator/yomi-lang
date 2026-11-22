@@ -1,0 +1,16 @@
+// @rollback: 1
+// @show: vars seen history
+persistent var best: int = 0
+save var n: int = 0
+
+label start {
+  n += 1
+  best += 1
+  一 ${n} ${best} #a
+  n += 1
+  best += 1
+  二 ${n} ${best} #b
+  n += 1
+  best += 1
+  三 ${n} ${best} #c
+}

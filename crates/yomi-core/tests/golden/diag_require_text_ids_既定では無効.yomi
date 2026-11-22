@@ -1,0 +1,9 @@
+identity 案内人 = "案内人"
+
+label start {
+  ID のない素の行
+  案内人「ID のない引用行」
+  choice {
+    「ID のない選択肢」 => end
+  }
+}

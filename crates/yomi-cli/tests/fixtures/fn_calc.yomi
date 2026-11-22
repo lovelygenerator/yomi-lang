@@ -1,0 +1,23 @@
+save var total: int = 0
+
+fn fact(n: int) -> int {
+  if n <= 1 {
+    return 1
+  }
+  return n * fact(n - 1)
+}
+
+fn sum(xs: list<int>) -> int {
+  let t = 0
+  for x in xs {
+    t += x
+  }
+  return t
+}
+
+label start {
+  階乗 ${fact(5)}
+  total = sum([1, 2, 3]) + fact(3)
+  合計 ${total}
+  おわり ${fact(total)}
+}

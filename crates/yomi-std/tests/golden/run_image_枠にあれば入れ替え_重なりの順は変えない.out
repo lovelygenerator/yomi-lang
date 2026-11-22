@@ -1,0 +1,6 @@
+  合図 画像 Show { slot: "a", fade: 0.0 }
+  合図 画像 Show { slot: "b", fade: 0.0 }
+  合図 画像 Show { slot: "a", fade: 0.3 }
+停止 ui.say("入れ替えた")
+  状態 画像 [Item { slot: "a", name: "three", x: 0.1, y: 0.2, layer: 0, scale: 1.0, flip: false, alpha: 1.0 }, Item { slot: "b", name: "two", x: 0.5, y: 0.5, layer: 0, scale: 1.0, flip: false, alpha: 1.0 }]
+終了

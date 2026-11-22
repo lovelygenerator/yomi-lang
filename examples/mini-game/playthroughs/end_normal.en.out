@@ -1,0 +1,104 @@
+[audio] bgm = village_day 音量 1（フェード 1 秒）
+[image] show bg = village_gate (0, 0)（フェード 0.5 秒）
+The village gate in the early afternoon. My partner Rion was waiting with a map spread open.
+[image] show partner = rion_travel (0.7, 0.5)（フェード 0.5 秒）
+Rion"You're late! We have to finish getting ready before sundown."
+Guild Clerk"Please write your name on the quest roster."
+[input] Your name?（文字列。6 文字まで。Enter で既定値: ゆうと）
+[input] みなと, is that right?（y/n。Enter で「はい」）
+Rion"みなと... there. Let's go!"
+[audio] bgm = village_evening 音量 1（フェード 1.5 秒）
+[image] hide bg（フェード 0.5 秒）
+[image] show bg = village_square (0, 0)（フェード 1 秒）
+"(I can visit 5 more places before sundown.)"
+Rion looks a little uneasy. (Trust 0)
+1: "Shop at the item store"
+2: "Go to the archery range"
+3: "Greet the village elder"
+4: "Fish at the pond"
+5: "Head for the forest"
+Shopkeeper"Welcome! Here's what we have today."
+回復薬　　　 400 gold
+携帯食　　　 250 gold
+護符　　　　 500 gold
+1: "Buy a potion"
+2: "Buy travel rations"
+3: "Buy an amulet"
+4: "Never mind"
+[audio] se coin（効果音）
+Shopkeeper"Thank you! One 回復薬, 400 gold."
+Rion"Now we can handle a few scrapes."
+"(I can visit 4 more places before sundown.)"
+Rion looks a little uneasy. (Trust 1)
+1: "Shop at the item store"
+2: "Go to the archery range"
+3: "Greet the village elder"
+4: "Fish at the pond"
+5: "Head for the forest"
+Shopkeeper"Welcome! Here's what we have today."
+回復薬　　　 400 gold
+携帯食　　　 250 gold
+護符　　　　 500 gold
+1: "Buy a potion"
+2: "Buy travel rations"
+3: "Buy an amulet"
+4: "Never mind"
+[audio] se coin（効果音）
+Shopkeeper"Thank you! One 携帯食, 250 gold."
+Rion"With these, even a long road is no worry."
+"(I can visit 3 more places before sundown.)"
+Rion looks as usual. (Trust 3)
+1: "Shop at the item store"
+2: "Go to the archery range"
+3: "Greet the village elder"
+4: "Fish at the pond"
+5: "Head for the forest"
+[audio] se coin（効果音）
+Shopkeeper"Thank you! One 釣り竿, 300 gold."
+Rion"A big one! Let's have it for dinner."
+"(I can visit 2 more places before sundown.)"
+Rion looks as usual. (Trust 5)
+1: "Shop at the item store"
+2: "Go to the archery range"
+3: "Greet the village elder"
+4: "Head for the forest"
+Shopkeeper"Welcome! Here's what we have today."
+回復薬　　　 400 gold
+携帯食　　　 250 gold
+護符　　　　 500 gold
+1: "Buy a potion"
+2: "Buy an amulet"
+3: "Never mind"
+Shopkeeper"Sorry, the 回復薬 is 400 gold. You're a bit short."
+"(I can visit 1 more places before sundown.)"
+Rion looks as usual. (Trust 5)
+1: "Shop at the item store"
+2: "Go to the archery range"
+3: "Greet the village elder"
+4: "Head for the forest"
+[image] show elder = elder_house (0.2, 0.5)（フェード 0.5 秒）
+Village Elder"Ah, みなと and Rion. A fine team."
+Rion"Yes, I'm counting on my partner."
+[audio] bgm = forest 音量 1（フェード 1 秒）
+[image] hide elder（フェード 0.5 秒）
+Deeper into the forest, the bustle of the village grew faint.
+Rion"Hey, みなと. Will you take the next quest with me, too?"
+1: "Of course. I promise."
+2: "Who knows."
+Rion"Okay. It's a promise."
+Remembering the elder's words, I tightened my grip on my staff.
+[audio] bgm 停止（フェード 2 秒）
+[image] hide partner（フェード 1 秒）
+（1.0 秒の待ち: Enter で進みます）
+[audio] bgm = road_home 音量 1（フェード 1 秒）
+We couldn't reach the shrine, so the two of us turned back to the village.
+Rion"I'm a little tired. But I'm glad we're safe."
+That was enough for today.
+[The Way Back]
+-- Ending 01/04 --
+Gold:   250 (best: 250)
+回復薬　　　× 1
+携帯食　　　× 1
+釣り竿　　　× 1
+Endings seen: 帰り道
+（おわり）

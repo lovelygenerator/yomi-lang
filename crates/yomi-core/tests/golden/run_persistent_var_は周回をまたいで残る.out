@@ -1,0 +1,15 @@
+停止 ui.say("はじめまして") #first
+停止 ui.say("スコア10 最高10") #result
+終了
+変数 plays = 1 (永続)
+変数 best = 10 (永続)
+変数 score = 10
+通過済み ["main.start#first", "main.start#result"]
+== 2 周目（永続データを引き継ぐ）
+停止 ui.say("また来たね 2") #again
+停止 ui.say("スコア20 最高20") #result
+終了
+変数 plays = 2 (永続)
+変数 best = 20 (永続)
+変数 score = 20
+通過済み ["main.start#again", "main.start#first", "main.start#result"]

@@ -1,0 +1,4 @@
+警告 15:7 label_falls_through name="skip"
+停止 ui.say("始まり")
+停止 ui.say("終わり")
+終了

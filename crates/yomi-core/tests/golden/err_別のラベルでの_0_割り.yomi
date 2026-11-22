@@ -1,0 +1,8 @@
+label start {
+  jump bad
+}
+
+label bad {
+  let d = 0
+  は ${1 / d}
+}

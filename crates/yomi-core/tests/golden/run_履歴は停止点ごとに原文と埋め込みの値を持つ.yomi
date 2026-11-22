@@ -1,0 +1,18 @@
+// @choose: 1
+// @show: history
+identity 案内人 = "あんないにん"
+save var n: int = 7
+
+label start {
+  素 ${n} と ${n + 1} #p1
+  案内人「やあ ${n * 2}」 #p2
+  @game.give("薬${n}", n)
+  choice {
+    「はい ${n}」 #yes => {
+      はいと答えた #e1
+    }
+    「いいえ」 #no => {
+      いいえと答えた #e2
+    }
+  }
+}

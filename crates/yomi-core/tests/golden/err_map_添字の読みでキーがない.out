@@ -1,0 +1,2 @@
+停止 ui.say("a")
+実行時エラー key_not_found label=start line=4

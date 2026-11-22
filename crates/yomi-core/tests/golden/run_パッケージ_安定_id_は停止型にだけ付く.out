@@ -1,0 +1,3 @@
+停止 counter.wait(1) #w
+停止 ui.say("1") #t
+終了

@@ -1,0 +1,4 @@
+@lang xx
+main.start#p1	\${1} は文字、${1} は値、\\ と \「\」\=\# と $5 と ${1}$
+main.start#p2	改行\nタブ\tここ ${1}
+main.start#p3	

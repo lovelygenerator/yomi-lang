@@ -1,0 +1,11 @@
+// @rollback: 2
+// @show: vars history
+save var g: int = 0
+
+label start {
+  let a = @game.roll(1)
+  あ ${a}
+  let b = @game.ask("二")
+  g = @game.roll(5)
+  い ${a} ${b} ${g}
+}

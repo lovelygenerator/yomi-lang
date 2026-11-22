@@ -1,0 +1,5 @@
+停止 ui.say("止めても何もない")
+  合図 音 Play { channel: "bgm", name: "town", volume: 1.0, fade: 0.0 }
+  合図 音 Stop { channel: "bgm", fade: 2.0 }
+停止 ui.say("止めた")
+終了

@@ -1,0 +1,22 @@
+save var fval: float = 1.5
+
+label start {
+  let a = to_int(1)
+  let b = to_float(1.5)
+  let c = to_int()
+  let d = to_int(1.5, 2.5)
+  let e = to_float(true)
+  let f = random(1, 2)
+  let g = seen(1)
+  let h = foo(1)
+  let i = fval(1)
+  let j = start(1)
+  let k = int(1)
+  let l = to_int(fval)(1)
+  let m = (1 + 2)(3)
+  let n = to_int
+  let o = to_int(
+  let p = to_int(1.5
+  let q = math.floor(1.5)
+  let r = to_int(to_int(fval) + 1)
+}

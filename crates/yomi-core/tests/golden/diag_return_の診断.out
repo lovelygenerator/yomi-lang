@@ -1,0 +1,5 @@
+2:10 unexpected_return_value
+6:10 unexpected_return_value
+10:3 missing_return_value expected="int"
+14:10 type_mismatch expected="int" found="str"
+18:3 jump_in_returning_label name="d"

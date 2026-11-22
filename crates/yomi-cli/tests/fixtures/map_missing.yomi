@@ -1,0 +1,7 @@
+save var scores: map<str, int> = map { "村長": 1 }
+
+label start {
+  はじまり
+  scores["案内人"] += 1
+  ここには来ない
+}

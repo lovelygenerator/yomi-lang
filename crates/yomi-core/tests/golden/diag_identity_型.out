@@ -1,0 +1,6 @@
+5:24 type_mismatch expected="Identity" found="int"
+6:24 unexpected_token found="Identity"
+10:11 unknown_field name="nope" type="Identity"
+11:21 type_mismatch expected="Identity" found="str"
+12:12 unknown_method name="len" type="str"
+14:10 arg_count name="Identity" expected=0 found=1

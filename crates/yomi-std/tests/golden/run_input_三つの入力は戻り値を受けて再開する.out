@@ -1,0 +1,8 @@
+停止 input.text("名前は？", "ゆみ", 8) #name
+  入力 "たろう"
+停止 input.integer("年齢は？", 10, 0, 120) #age
+  入力 42
+停止 input.confirm("よろしいですか？") #ok
+  入力 false
+停止 ui.say("おわり")
+終了

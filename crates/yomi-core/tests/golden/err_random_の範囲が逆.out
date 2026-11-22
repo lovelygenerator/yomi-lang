@@ -1,0 +1,2 @@
+停止 ui.say("あ") #a
+実行時エラー invalid_random_range label=start line=5

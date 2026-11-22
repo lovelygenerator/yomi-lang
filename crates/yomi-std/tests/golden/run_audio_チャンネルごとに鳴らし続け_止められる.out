@@ -1,0 +1,10 @@
+  合図 音 Play { channel: "rain", name: "rain_soft", volume: 0.5, fade: 1.0 }
+  合図 音 Play { channel: "wind", name: "wind", volume: 1.0, fade: 0.0 }
+停止 ui.say("一 Some(rain_soft) None")
+  合図 音 Play { channel: "rain", name: "rain_hard", volume: 0.8, fade: 2.0 }
+  合図 音 Volume { channel: "wind", volume: 0.2, fade: 0.5 }
+停止 ui.say("二")
+  合図 音 Stop { channel: "wind", fade: 1.0 }
+停止 ui.say("三")
+  状態 チャンネル [Channel { channel: "rain", name: "rain_hard", volume: 0.8 }]
+終了

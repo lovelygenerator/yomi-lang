@@ -1,0 +1,12 @@
+// @packages: probe counter
+import probe
+import std::counter
+import std::probe as p
+import counter as c
+import std
+import std::probe::x
+import {std::probe, counter}
+
+label start {
+  値 ${probe.get()}
+}

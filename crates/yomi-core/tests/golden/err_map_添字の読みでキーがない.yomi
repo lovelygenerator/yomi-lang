@@ -1,0 +1,6 @@
+label start {
+  let m: map<int, str> = map { 1: "a" }
+  ${m[1]}
+  ${m[2]}
+  後
+}

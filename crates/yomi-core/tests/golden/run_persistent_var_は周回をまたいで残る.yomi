@@ -1,0 +1,19 @@
+// @show: vars seen
+// @second-run: yes
+persistent var plays: int = 0
+persistent var best: int = 0
+save var score: int = 0
+
+label start {
+  plays += 1
+  score = plays * 10
+  if seen("start#first") {
+    また来たね ${plays} #again
+  } else {
+    はじめまして #first
+  }
+  if score > best {
+    best = score
+  }
+  スコア${score} 最高${best} #result
+}

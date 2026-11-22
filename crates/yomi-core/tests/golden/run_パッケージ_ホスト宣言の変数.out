@@ -1,0 +1,8 @@
+停止 ui.say("初期 1 0 false 無題")
+停止 ui.say("変更後 15 -2 新しい題")
+停止 ui.say("13")
+終了
+変数 step = 15
+変数 best = -2 (永続)
+変数 locked = false
+変数 title = "新しい題"

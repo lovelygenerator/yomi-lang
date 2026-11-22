@@ -1,0 +1,11 @@
+import std::math
+
+label start {
+  ${math.wrapping_add(9223372036854775807, 1)} ${math.wrapping_sub(-9223372036854775807 - 1, 1)} ${math.wrapping_mul(4611686018427387904, 4)}
+  ${math.wrapping_add(1, 2)} ${math.wrapping_mul(-3, 5)}
+  let h = 1469598103934665603
+  for c in [104, 105] {
+    h = math.wrapping_mul(h + c, 1099511628211)
+  }
+  ${h}
+}

@@ -1,0 +1,9 @@
+2:8 unexpected_token found="🐱"
+3:7 unexpected_token found="🐱"
+4:8 unexpected_token found="-"
+5:7 unexpected_token found="1"
+6:8 full_width_space
+8:5 unknown_name name="okがmx" suggestions=["okがme"]
+9:5 unknown_name name="ａ"
+10:3 unknown_label name="先がx" suggestions=["先がy"]
+警告 12:7 label_falls_through name="先がy"

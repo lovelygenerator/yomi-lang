@@ -1,0 +1,6 @@
+save var n: int = 0
+label start {
+  あ
+  n = 1 / n
+  い
+}

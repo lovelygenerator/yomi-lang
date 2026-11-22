@@ -1,0 +1,7 @@
+main:2:8 unknown_module name="probe" suggestions=["std::probe"]
+main:3:8 unknown_module name="std::counter"
+main:4:8 package_alias name="std::probe"
+main:5:8 package_alias name="counter"
+main:6:8 unknown_module name="std"
+main:7:8 unknown_module name="std::probe::x"
+std::x:1:1 invalid_module_name name="std::x"

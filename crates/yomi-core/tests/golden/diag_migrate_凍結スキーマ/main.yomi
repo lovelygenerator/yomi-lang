@@ -1,0 +1,4 @@
+save var hp: int = 1
+label start {
+  hp = 2
+}

@@ -1,0 +1,76 @@
+@lang en
+# 英語の差し替え表（ひな形は `yomi texts template examples/mini-game/main.yomi --text-language en`）
+identity:chara.相棒	Rion
+identity:chara.店主	Shopkeeper
+identity:chara.長老	Village Elder
+identity:chara.受付	Guild Clerk
+ending.finish#nt2857	-- Ending ${1}/04 --
+ending.finish#9pnseb	Gold: ${1} (best: ${2})
+ending.finish#5o06kx	${1}
+ending.finish#d98jle	Endings seen: ${1}
+ending.sealed#3albcf	When I raised the amulet, blue light poured out of the shrine.
+ending.sealed#z5ltr4	"We sealed it...! I'm glad we came prepared."
+ending.sealed#2slav2	The fog that covered the forest quietly lifted.
+ending.sealed#seal_last	"Let's take the next quest together, too."
+ending.sealed#9pnseb	[The Night of the Seal]
+ending.quiet#6wi6kw	We couldn't reach the shrine, so the two of us turned back to the village.
+ending.quiet#bgoyki	"I'm a little tired. But I'm glad we're safe."
+ending.quiet#nrrku1	That was enough for today.
+ending.quiet#d98jle	[The Way Back]
+ending.lost#x03a3u	Wrapped in thick fog, I lost sight of my partner.
+ending.lost#45d81r	I called out, but the rustling trees drowned out my voice.
+ending.lost#8ntkih	Later, I found my partner at the hunter's hut, looking utterly worn out.
+ending.lost#3albcf	[Lost in the Fog]
+ending.promise#0yh6f0	The second sealing went far better than the first.
+ending.promise#37hnvx	"You remembered our promise."
+ending.promise#ph815y	"Then... the next quest, and the one after that, too."
+ending.promise#z5ltr4	[The Next Quest, Too]
+game.archery#t4oio5	"Three arrows. Knock a target down and the prize is yours."
+game.archery#iq2fwr	"Stay calm and take good aim!"
+game.archery#9rapne	The ${1} target is the closest.
+game.archery#vnj9fh	No targets are left.
+game.archery#052elt	"Aim at the wooden shield target"
+game.archery#2a6y2h	"Aim at the silver ring target"
+game.archery#13pghs	${1} damage! (rolled ${2}, ${3} arrows left)
+game.archery#45jqrw	"Oh, the ${1} target is down!"
+game.archery#3ry93q	"So close! The ${1} target has ${2} left."
+main.start#vlrwbv	The village gate in the early afternoon. My partner Rion was waiting with a map spread open.
+main.start#87hoxu	"You're late! We have to finish getting ready before sundown."
+main.start#1mq9we	Strangely, I felt I had seen this scene before.
+main.start#bgpbo5	I still remember the light of the shrine that night.
+main.register#ewmpvk	"Please write your name on the quest roster."
+main.register#wlh37x	Your name?
+main.register#erbe71	${1}, is that right?
+main.register#ojypp0	"Oh, a slip of the pen? Please try again."
+main.register#6io7qk	"${1}... there. Let's go!"
+main.square#yjtlbt	"(I can visit ${1} more places before sundown.)"
+main.square#2slav2	Rion is full of energy. (Trust ${1})
+main.square#6wi6kw	Rion looks as usual. (Trust ${1})
+main.square#bgoyki	Rion looks a little uneasy. (Trust ${1})
+main.square#ewtm2h	"Shop at the item store"
+main.square#archery	"Go to the archery range"
+main.square#elder	"Greet the village elder"
+main.square#fishing	"Fish at the pond"
+main.square#83j1e2	"Head for the forest"
+main.square#t9z0ys	"A big one! Let's have it for dinner."
+main.greet_elder#e92s4l	"Ah, ${1} and Rion. A fine team."
+main.greet_elder#hfw81l	"Yes, I'm counting on my partner."
+main.forest#tvghl4	Deeper into the forest, the bustle of the village grew faint.
+main.forest#9z859j	"Hey, ${1}. Will you take the next quest with me, too?"
+main.forest#94p59w	"Of course. I promise."
+main.forest#xcagke	"Who knows."
+main.forest#9ytruu	"Okay. It's a promise."
+main.forest#xb5a3h	"...I see."
+main.forest#drokaa	Remembering the elder's words, I tightened my grip on my staff.
+shop.buy#dm6yin	"Sorry, the ${1} is ${2} gold. You're a bit short."
+shop.buy#kbacpk	"Thank you! One ${1}, ${2} gold."
+shop.store#e6r6yg	"Welcome! Here's what we have today."
+shop.store#r0a4wi	${1}${2} gold
+shop.store#vit5vc	"Buy a potion"
+shop.store#4gankn	"Buy travel rations"
+shop.store#amulet	"Buy an amulet"
+shop.store#m9c7xq	"Never mind"
+shop.store#jgelwf	"Now we can handle a few scrapes."
+shop.store#zwvrj0	"With these, even a long road is no worry."
+shop.store#8olq3g	"A ward amulet. We can use it to seal the shrine."
+shop.store#s86r5x	"Aww, just looking?"

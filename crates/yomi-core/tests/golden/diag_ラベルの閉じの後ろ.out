@@ -1,0 +1,6 @@
+2:3 unexpected_token found="junk"
+警告 3:7 label_falls_through name="b"
+警告 5:7 label_falls_through name="c"
+6:3 unexpected_token found="else"
+警告 9:7 label_falls_through name="d"
+9:11 unexpected_token found="余計な字句"

@@ -1,0 +1,14 @@
+save var a: int = 1
+save var a: int = 2
+
+label start {
+  let x = 1
+  let x = 2
+  let a = 3
+}
+
+label start {
+}
+
+label a {
+}

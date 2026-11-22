@@ -1,0 +1,7 @@
+import std::audio
+
+label start {
+  @audio.play("bgm", "town")
+  @audio.volume("bgm", -0.1)
+  後
+}

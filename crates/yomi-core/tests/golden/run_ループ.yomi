@@ -1,0 +1,16 @@
+save var n: int = 0
+save var total: int = 0
+
+label start {
+  n += 1
+  total += n * n
+  ${n}回目 合計${total}
+  if n < 5 {
+    jump start
+  }
+  jump finish
+}
+
+label finish {
+  おわり ${total}
+}

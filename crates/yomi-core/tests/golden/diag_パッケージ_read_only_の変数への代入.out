@@ -1,0 +1,6 @@
+5:3 assign_to_read_only name="counter.locked"
+6:3 assign_to_read_only name="counter.locked"
+7:18 type_mismatch expected="int" found="str"
+8:3 unknown_name name="counter.step_" suggestions=["counter.step"]
+9:3 unknown_name name="counter.stepp" suggestions=["counter.step"]
+10:11 unknown_name name="counter.lock" suggestions=["counter.locked"]

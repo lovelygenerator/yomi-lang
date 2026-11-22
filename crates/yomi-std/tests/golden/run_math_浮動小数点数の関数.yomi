@@ -1,0 +1,11 @@
+import std::math
+
+label start {
+  let a = math.abs_f(-2.5)
+  let b = math.min_f(1.5, -0.5)
+  let c = math.max_f(1.5, -0.5)
+  let d = math.clamp_f(9.5, 0.0, 1.0)
+  let e = math.pow_f(2.0, 0.5)
+  let f = math.pow_f(2.0, -2.0)
+  小数 ${a} ${b} ${c} ${d} ${e} ${f}
+}

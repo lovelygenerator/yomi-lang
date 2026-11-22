@@ -1,0 +1,14 @@
+save var scores: map<str, int> = map {}
+save var total: int = 0
+
+label start {
+  scores["案内人"] = 3
+  scores["村長"] = 5
+  登録 ${scores}
+  for k in scores.keys() {
+    total += scores[k]
+    ${k} ${total}
+  }
+  scores.remove("案内人")
+  おわり ${scores} ${total}
+}

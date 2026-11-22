@@ -1,0 +1,26 @@
+1:24 invalid_map_key type="float"
+3:20 invalid_map_key type="main.E"
+6:17 invalid_map_key type="list<int>"
+7:13 arg_count name="map" expected=2 found=1
+9:40 type_mismatch expected="int" found="float"
+13:11 cannot_infer_type
+14:37 type_mismatch expected="int" found="str"
+15:32 type_mismatch expected="str" found="int"
+17:13 type_mismatch expected="str" found="int"
+18:11 type_mismatch expected="str" found="int"
+19:5 unknown_method name="push" type="map<str, int>"
+20:5 statement_method_in_expression name="remove"
+21:5 unknown_method name="push" type="map<str, int>"
+22:5 unknown_method name="nope" type="map<str, int>"
+23:5 arg_count name="get" expected=1 found=0
+24:17 invalid_map_key type="float"
+25:17 invalid_map_key type="list<int>"
+26:17 invalid_map_key type="Option<int>"
+27:23 type_mismatch expected="int" found="str"
+28:26 type_mismatch expected="map<int, int>" found="list<_>"
+29:22 type_mismatch expected="list<int>" found="map<_, _>"
+30:5 type_mismatch expected="str" found="int"
+31:12 type_mismatch expected="int" found="str"
+32:13 type_mismatch expected="int" found="float"
+33:12 type_mismatch expected="str" found="int"
+34:5 arg_count name="clear" expected=0 found=1

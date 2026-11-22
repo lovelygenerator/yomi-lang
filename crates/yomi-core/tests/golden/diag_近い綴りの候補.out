@@ -1,0 +1,12 @@
+7:3 unknown_name name="gld" suggestions=["gold"]
+8:3 unknown_name name="heatlh" suggestions=["health"]
+9:5 unknown_name name="好感"
+10:5 unknown_name name="heroo" suggestions=["hero"]
+11:5 unknown_name name="hxyz"
+12:3 unknown_command name="game.giev" suggestions=["game.give"]
+13:3 unknown_command name="game.pauze" suggestions=["game.pause"]
+14:3 unknown_command name="ui.sai" suggestions=["ui.say"]
+15:3 unknown_label name="strat" suggestions=["strat2", "start"]
+16:3 unknown_label name="nothing_like_it"
+17:11 unknown_function name="to_flaot" suggestions=["to_float"]
+18:11 unknown_function name="rondom" suggestions=["random"]

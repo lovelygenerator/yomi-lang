@@ -1,0 +1,15 @@
+停止 ui.say("1 2")
+停止 ui.say("2 3")
+停止 ui.say("3 4")
+停止 ui.say("4 5")
+停止 ui.say("map { 薬: 1, x1: 1, x2: 2, x3: 3, x4: 4 }")
+終了
+変数 inv = Map([(Str("薬"), Int(1)), (Str("x1"), Int(1)), (Str("x2"), Int(2)), (Str("x3"), Int(3)), (Str("x4"), Int(4))])
+変数 total = 10
+== ロールバック（停止点 2 へ戻る）
+停止 ui.say("3 4")
+停止 ui.say("4 5")
+停止 ui.say("map { 薬: 1, x1: 1, x2: 2, x3: 3, x4: 4 }")
+終了
+変数 inv = Map([(Str("薬"), Int(1)), (Str("x1"), Int(1)), (Str("x2"), Int(2)), (Str("x3"), Int(3)), (Str("x4"), Int(4))])
+変数 total = 10

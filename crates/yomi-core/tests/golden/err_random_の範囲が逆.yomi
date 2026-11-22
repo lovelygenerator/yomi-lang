@@ -1,0 +1,7 @@
+save var lo: int = 5
+
+label start {
+  あ #a
+  let _n = random(lo, lo - 1)
+  ここには来ない #b
+}

@@ -1,0 +1,12 @@
+停止 ui.say("素 7 と 8") #p1
+停止 ui.say_as(Some(Identity(案内人, "あんないにん")), "「やあ 14」") #p2
+停止 game.give("薬7", 7)
+停止 ui.choose(["「はい 7」", "「いいえ」"], [Some("yes"), Some("no")])
+選択 1
+停止 ui.say("いいえと答えた") #e2
+終了
+履歴 main.start#p1 ui.say("素 7 と 8") 値=[["7", "8"]]
+履歴 main.start#p2 ui.say_as(Some(Identity(案内人, "あんないにん")), "「やあ 14」") 値=[["14"]]
+履歴 - game.give("薬7", 7) 値=[["7"]]
+履歴 - ui.choose(["「はい 7」", "「いいえ」"], [Some("yes"), Some("no")]) 値=[["7"], []] 戻り=1
+履歴 main.start#e2 ui.say("いいえと答えた") 値=[[]]

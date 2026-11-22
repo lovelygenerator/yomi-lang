@@ -1,0 +1,17 @@
+save var round: int = 0
+
+label start {
+  let x = 10
+  x += 1
+  round += 1
+  ${round}: ${x}
+  if round < 3 {
+    jump start
+  }
+  jump next
+}
+
+label next {
+  let x = "別のラベルの x"
+  ${x}
+}

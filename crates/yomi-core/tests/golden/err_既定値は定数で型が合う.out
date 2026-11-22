@@ -1,0 +1,2 @@
+3:15 not_constant
+3:27 type_mismatch expected="str" found="int"

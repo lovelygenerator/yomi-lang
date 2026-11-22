@@ -1,0 +1,11 @@
+// @packages: counter
+import counter
+
+label start {
+  counter.locked = true
+  counter.locked += 1
+  counter.step = "a"
+  counter.step_ = 1
+  counter.stepp += 1
+  let a = counter.lock
+}

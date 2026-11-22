@@ -1,0 +1,11 @@
+// @registry: ignore
+// @require-text-ids: yes
+identity 案内人 = "案内人"
+
+label start {
+  ID のある素の行 #a
+  案内人「無視された引用行に ID がない」
+  choice {
+    「無視された選択に ID がない」 => end
+  }
+}

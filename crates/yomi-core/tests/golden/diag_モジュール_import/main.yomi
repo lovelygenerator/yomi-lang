@@ -1,0 +1,27 @@
+import chapter2
+import chaptr2
+import chapter2
+label early {
+}
+import late
+
+label start {
+  jump chapter2.nowhere
+  jump chapter2.stat
+  call chapter2.add(1)
+  call chapter2.add(1, 2)
+  jump hidden.x
+  jump ghost.x
+  let a = chapter2.favor + 1
+  chapter2.favr = 1
+  hidden.v = 1
+  ghost.v = 1
+  let b = hidden.v
+  let c = ghost.v
+  let d = chapter2.nothing
+  let late = 1
+}
+
+save var chapter2: int = 1
+label util {
+}

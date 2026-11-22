@@ -1,0 +1,9 @@
+import std::math
+import std::text
+
+label start {
+  let name = "  ゆみ  "
+  let n = text.len(text.trim(name))
+  文字数 ${n}
+  最大 ${math.max(n, 5)} 小数 ${math.round(2.5)}
+}

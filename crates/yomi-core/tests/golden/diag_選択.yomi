@@ -1,0 +1,32 @@
+save var n: int = 0
+
+label start {
+  choice {
+  }
+  choice {
+    「a」 once => a
+    「b」 #x => b
+    「c」 #x => c
+    「d」 if 1 => d
+    「${nope}」 => d
+    「e」 jump start
+    「f」 once if n > 0 #y => { n += 1; jump start }
+    「g」 => if n > 0 {
+      jump start
+    }
+    「h」 => { if n > 0 { n = 1 } }
+    「i」
+    普通の行
+    「j」 #z => 到達
+  }
+  choice {
+    「k」 => jump nowhere
+    「l」 => { n += "x" }
+  }
+}
+
+label other {
+  choice {
+    「閉じない => z
+  }
+}

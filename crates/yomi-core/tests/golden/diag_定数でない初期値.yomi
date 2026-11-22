@@ -1,0 +1,7 @@
+save var a: int = 1 + 2
+save var b: int = c
+save var c: str = "x${1}"
+save var d: bool = !(true)
+
+label start {
+}

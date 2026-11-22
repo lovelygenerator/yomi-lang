@@ -1,0 +1,12 @@
+停止 ui.say("一行目 1") #a
+停止 ui.say("二行目 11") #b
+更新 ui.say("line two 11")
+停止 ui.say_as(Some(Identity(案内人, "案内人")), "「line three 11」") #c
+停止 game.give("そのまま11", 11) #d
+停止 ui.say("line four 11") #e
+終了
+描画 main.start#a ui.say("line one 1") 本文=Some("line one 1")
+描画 main.start#b ui.say("line two 11") 本文=Some("line two 11")
+描画 main.start#c ui.say_as(Some(Identity(案内人, "案内人")), "「line three 11」") 本文=Some("「line three 11」")
+描画 main.start#d game.give("そのまま11", 11) 本文=None
+描画 main.start#e ui.say("line four 11") 本文=Some("line four 11")

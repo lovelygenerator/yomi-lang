@@ -1,0 +1,8 @@
+// @packages: counter
+import counter
+
+label start {
+  @counter.wait(0) #zero
+  @counter.wait(3) #three
+  通った
+}

@@ -1,0 +1,7 @@
+label start {
+  @game.pause() #Bad
+  @game.pause() #あ
+  @game.pause() #
+  @game.pause() #aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  長すぎる #aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+}

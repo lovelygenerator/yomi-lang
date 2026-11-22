@@ -1,0 +1,21 @@
+identity 案内人 = "案内人"
+identity 案内人 = "重複"
+identity 変数 = "x"
+save var 変数: int = 0
+identity ミナ = "${1}"
+identity 数 = 3
+identity 長い名前の人 = "長い"
+identity = "x"
+
+label start {
+  案内入「近い綴り」
+  ミナ「正しい」
+  みな「平仮名」
+  長い名前のひと「近い」
+  全然違う名前「ただの素の行」
+  identity 案内人 = "ラベルの中"
+}
+
+label 案内人 {
+  あ
+}

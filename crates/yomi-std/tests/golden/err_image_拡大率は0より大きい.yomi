@@ -1,0 +1,6 @@
+import std::image
+
+label start {
+  @image.show("left", "guide", 0.2, 0.4, 0.0)
+  @image.scale("left", 0.0, 0.0)
+}

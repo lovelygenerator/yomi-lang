@@ -1,0 +1,24 @@
+// @choose: 1
+// @show: vars
+struct Pt { x: int, y: int }
+
+fn pt(x: int) -> Pt {
+  return Pt { x: x, y: x * 2 }
+}
+
+fn wrap(v: str) -> Option<str> {
+  let o = Some(v)
+  return o
+}
+
+label start {
+  let name = "ゆうと"
+  let o = Some(name)
+  let w = wrap(name)
+  let y = pt(3).y
+  choice {
+    「${name}」 #a => 一つめ
+    「${name}と」 #b => 二つめ
+  }
+  名前 ${name} ${o} ${w} ${y}
+}

@@ -1,0 +1,14 @@
+  合図 音 Play { channel: "bgm", name: "town", volume: 1.0, fade: 0.0 }
+  合図 音 Play { channel: "rain", name: "rain_soft", volume: 1.0, fade: 2.0 }
+  合図 画像 Show { slot: "bg", fade: 0.0 }
+  合図 画像 Show { slot: "left", fade: 0.5 }
+  合図 画面 FadeOut { color: "black", seconds: 0.0 }
+  合図 画面 FadeIn { seconds: 1.0 }
+停止 ui.say("abc 007 [x  ]")
+  合図 音 Volume { channel: "rain", volume: 0.5, fade: 0.0 }
+  合図 音 Stop { channel: "rain", fade: 0.0 }
+  合図 画像 Hide { slot: "left", fade: 0.0 }
+停止 ui.say("終わり")
+  状態 チャンネル [Channel { channel: "bgm", name: "town", volume: 1.0 }]
+  状態 画像 [Item { slot: "bg", name: "street", x: 0.0, y: 0.0, layer: 0, scale: 1.0, flip: false, alpha: 1.0 }]
+終了

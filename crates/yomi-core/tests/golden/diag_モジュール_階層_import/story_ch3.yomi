@@ -1,0 +1,4 @@
+// @module: story::ch3
+label go {
+  end
+}
