@@ -1,6 +1,6 @@
 [package]
 name = "yomi-derive"
-description = "yomi 言語の #[derive(YomiType)]（proc_macro だけで書く）"
+description = "Derive macro for yomi command argument and return types"
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true

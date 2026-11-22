@@ -1,20 +1,22 @@
 # yomi-cli
 
-yomi 言語の `yomi` コマンドです。
+English | [日本語](https://github.com/lovelygenerator/yomi-lang/blob/main/crates/yomi-cli/README.ja.md)
+
+The `yomi` command of the yomi language: a small, statically typed scripting language that you embed in a Rust application, whose scripts can stop, be saved and resume.
 
 ```bash
 cargo install yomi-cli
-yomi check main.yomi     # 実行せずに検査する
-yomi run main.yomi       # 停止点ごとに止めながら実行する
-yomi repl                # 式・文・宣言を試す
+yomi check main.yomi     # check without running
+yomi run main.yomi       # run, stopping at each stop point
+yomi repl                # try expressions, statements and declarations
 ```
 
-- `yomi lsp`：エディタ向けの Language Server（診断・補完・定義へ移動・参照・ホバー・名前の変更）
-- `yomi mcp`：AI エージェント向けの MCP サーバー（検査・予約語と診断コードの一覧・仕様書の閲覧・サンドボックスでの実行）。クライアントの設定に `{ "command": "yomi", "args": ["mcp"] }` を書きます。
-- ほかに `assign-ids`（安定 ID を書き足す）・`decls`（宣言ファイル）・`codes`（診断コードの一覧）・`texts`（本文の差し替え表）があります。`yomi --help` で一覧を見られます。
-- `lsp`・`mcp` は feature（既定で有効）で切り離せます（`cargo install yomi-cli --no-default-features`）。
-- 表示は英語と日本語です（`--lang`、または環境変数 `YOMI_CLI_LANG`・`LANG` など）。
+- `yomi lsp`: a Language Server for editors (diagnostics, completion, go to definition, references, hover, rename)
+- `yomi mcp`: an MCP server for AI agents (checking, listing reserved words and diagnostic codes, reading the specification, running in a sandbox). Put `{ "command": "yomi", "args": ["mcp"] }` in the client's configuration.
+- There are also `assign-ids` (add stable IDs), `decls` (declaration files), `codes` (list diagnostic codes) and `texts` (text replacement tables). See `yomi --help` for the full list.
+- `lsp` and `mcp` are features (enabled by default) and can be left out: `cargo install yomi-cli --no-default-features`.
+- Messages are shown in English or Japanese (`--lang`, or the environment variables `YOMI_CLI_LANG`, `LANG` and so on).
 
-## ライセンス
+## License
 
-[MIT](LICENSE-MIT) または [Apache-2.0](LICENSE-APACHE) のどちらかを選べます。
+Licensed under either of [MIT](LICENSE-MIT) or [Apache-2.0](LICENSE-APACHE), at your option.

@@ -1,8 +1,10 @@
 # yomi-derive
 
-yomi 言語の `#[derive(YomiType)]` です。Rust の `struct`・`enum` を、台本のコマンドの引数・戻り値にできる型にします。
+English | [日本語](https://github.com/lovelygenerator/yomi-lang/blob/main/crates/yomi-derive/README.ja.md)
 
-直接は使わず、`yomi-core` が再公開している `yomi_core::YomiType` を使ってください（生成するコードは `::yomi_core` を参照します）。
+`#[derive(YomiType)]` for the yomi language. It turns a Rust `struct` or `enum` into a type that can be an argument or a return value of a script command.
+
+Do not use it directly. Use `yomi_core::YomiType`, which `yomi-core` re-exports (the generated code refers to `::yomi_core`).
 
 ```rust
 use yomi_core::YomiType;
@@ -12,6 +14,6 @@ use yomi_core::YomiType;
 struct Chara { name: String, hp: i64 }
 ```
 
-## ライセンス
+## License
 
-[MIT](LICENSE-MIT) または [Apache-2.0](LICENSE-APACHE) のどちらかを選べます。
+Licensed under either of [MIT](LICENSE-MIT) or [Apache-2.0](LICENSE-APACHE), at your option.

@@ -1,6 +1,6 @@
 [package]
 name = "yomi-std"
-description = "yomi 言語の標準パッケージ（flow・math・text・json・audio・image・screen・input・event）"
+description = "Standard packages for the yomi scripting language: flow, math, text, json, audio, image, screen, input, event"
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true

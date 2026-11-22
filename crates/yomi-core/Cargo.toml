@@ -1,6 +1,6 @@
 [package]
 name = "yomi-core"
-description = "yomi 言語のコア（解析・型検査・VM）"
+description = "Core of the yomi scripting language: parser, type checker, VM and resumable saves"
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true

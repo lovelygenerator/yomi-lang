@@ -1,6 +1,6 @@
 [package]
 name = "yomi-cli"
-description = "yomi 言語の CLI"
+description = "Command-line tool for the yomi scripting language (check, run, REPL, LSP, MCP)"
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true
