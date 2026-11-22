@@ -2,7 +2,6 @@ use std::time::Duration;
 
 use bevy_app::{App, TaskPoolPlugin, Update};
 use bevy_asset::AssetPlugin;
-use bevy_ecs::prelude::*;
 use bevy_time::{Time, Virtual};
 use yomi_core::{Sugar, Value};
 
